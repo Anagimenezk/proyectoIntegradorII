@@ -527,4 +527,9 @@ textarea.form-input {
     width: 95%;
     margin: auto;
   }
+
+  .seccionprincipal{
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
 }
