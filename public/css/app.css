@@ -492,7 +492,23 @@ margin-top: 14px;
   right: 10%;
   left: 14%;
   
+
 }
+
+
+.imputradio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+}
+.radio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+
+}
+
+
 .imputradio{
   position: relative;
   right: 10%;
@@ -503,6 +519,10 @@ margin-top: 14px;
   right: 10%;
   left: 14%;
 }
+
+
+
+
 
 
 
@@ -520,8 +540,7 @@ margin-top: 14px;
   padding: 0 15px;
   position: relative;
   right: 10%;
-  left: 14%;
-}
+  left: 14%;}
 
 .error{
   color: rgb(209, 0, 0);
@@ -547,9 +566,10 @@ textarea.form-input {
   border-radius: 50%;
   height: 200px;
   width: 200px;
-    border-radius: 50%;
-}
 
+    border-radius: 50%;
+
+}
 .main-title{
   font-size: 25px;
   margin-bottom: 10px;
