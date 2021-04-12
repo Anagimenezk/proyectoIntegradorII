@@ -133,7 +133,9 @@ hr {
   padding: 5px 15px;
   display: block;
   margin: 20px auto 0;
+
 }
+
 
 .main-navbar {
   margin-top: 20px;
@@ -143,6 +145,21 @@ hr {
 .left-navbar,
 .right-navbar {
   font-size: 1.5em;
+
+}
+.left-navbar{
+  border: 1px solid var(--gray);
+  width: 170px
+  
+}
+#todosLosP{
+margin-left: 15px ;
+
+}
+
+.registrar{
+  font-size: 19px;
+  
 }
 
 .logout{
@@ -162,7 +179,9 @@ hr {
   padding: 5px 0;
   border-bottom: solid 1px var(--gray);
 }
-
+.main-header_credit-link{
+  font-size: 30px;
+}
 
 
 /*====== Banner ======*/
