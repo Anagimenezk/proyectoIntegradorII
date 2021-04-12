@@ -177,9 +177,10 @@ hr {
 }
 
 .products-title {
-  font-size: 2.4em;
+  font-size: 3.4em;
   font-weight: 400;
   color: var(--gray);
+  text-align: center;
 }
 
 .product-box {
@@ -314,7 +315,7 @@ hr {
 form.col-12{
   margin: 10px;
   font-size: 20px;
-
+ 
 }
 #nombre{
   margin-bottom: 10px;
@@ -487,11 +488,29 @@ margin-top: 14px;
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
+  position: relative;
+  right: 10%;
+  left: 14%;
+  
 }
+.imputradio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+}
+.radio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+}
+
+
+
+
 
 .form-input {
   display: block;
-  width: 100%;
+  width: 70%;
   height: 45px;
   margin-bottom: 15px;
   font-size: 1.5em;
@@ -499,6 +518,9 @@ margin-top: 14px;
   border: none;
   border: solid 1px var(--gray);
   padding: 0 15px;
+  position: relative;
+  right: 10%;
+  left: 14%;
 }
 
 .error{
@@ -520,7 +542,12 @@ textarea.form-input {
 }
 
 .foto-perfil{
+  position: relative;
+  right: 150px;
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
+    border-radius: 50%;
 }
 
 .main-title{
