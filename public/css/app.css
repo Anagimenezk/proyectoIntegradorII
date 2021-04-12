@@ -171,9 +171,10 @@ hr {
 }
 
 .products-title {
-  font-size: 2.4em;
+  font-size: 3.4em;
   font-weight: 400;
   color: var(--gray);
+  text-align: center;
 }
 
 .product-box {
@@ -430,11 +431,29 @@ hr {
   display: inline-block;
   font-size: 1.6em;
   margin: 10px 0;
+  position: relative;
+  right: 10%;
+  left: 14%;
+  
 }
+.imputradio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+}
+.radio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+}
+
+
+
+
 
 .form-input {
   display: block;
-  width: 100%;
+  width: 70%;
   height: 45px;
   margin-bottom: 15px;
   font-size: 1.5em;
@@ -442,6 +461,11 @@ hr {
   border: none;
   border: solid 1px var(--gray);
   padding: 0 15px;
+  position: relative;
+  right: 10%;
+  left: 14%;
+
+  
 }
 
 .error{
