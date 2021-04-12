@@ -4,6 +4,9 @@
 
 
 
+
+
+
 /*====== Variables ======*/
 :root {
   --yellow:#d1c3ac;
@@ -184,6 +187,7 @@ hr {
   font-weight: 400;
   color: var(--gray);
   text-align: center;
+  
 }
 
 .product-box {
@@ -457,6 +461,7 @@ hr {
   margin-top: 8px;
 
 
+
 }
 form.col-12{
   margin: 10px;
@@ -513,6 +518,10 @@ margin-top: 14px;
 }
 .bordear{
   border-bottom: 2px solid #4d4454;
+}
+.bordearDiferente{
+  border-bottom: 2px solid #4d4454;
+  border-top: 2px solid #4d4454;
 }
 
 .imputradio{
