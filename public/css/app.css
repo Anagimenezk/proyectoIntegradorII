@@ -6,12 +6,12 @@
 
 /*====== Variables ======*/
 :root {
-  --yellow: #d0c0a4;
-  --dark-blue: #c2bb97;
-  --light-blue: #4a2e3b;
+  --yellow:#d1c3ac;
+  --dark-blue: #1e8ca8;
+  --light-blue: #112f3b;
   --gray: #4a2e3b;
-  --light-gray: #b3a08a;
-  --green: #d9c183;
+  --light-gray: #f4efed;
+  --green: #1e8ca8;
   --base-font-family: 'Roboto', sans-serif;
   --black: #111111;
 }
@@ -102,7 +102,7 @@ hr {
   border-radius: 3px;
   height: 40px;
   font-size: 1.5em;
-  background-color: black;
+  background-color:#4a2e3b;
   color: white
 }
 
@@ -110,11 +110,14 @@ hr {
   position: absolute;
   right: 2px;
   height: 60%;
-  background-color: #111111;
+  background-color: #4a2e3b;
   border: none;
   border-left: solid 1px #111111;
   color: white;
   cursor: pointer;
+}
+.main-header_credit-link{
+  color: #4a2e3b
 }
 
 
@@ -148,7 +151,7 @@ hr {
 }
 
 .logout:hover{
-  color: #1259c3;
+  color: #4d3950;
 }
 
 .left-navbar a,
@@ -268,7 +271,7 @@ hr {
 
 /*====== Footer ======*/
 .main-footer {
-  background-color: #d0c0a4;
+  background-color: #d1c3ac;
   padding: 20px 0;
   margin-top: 80px;
 }
@@ -305,63 +308,13 @@ hr {
   padding: 15px 0;
 }
 
-.col-12{
-  color:#f9f8f4;
-  margin-top: 8px;
- 
-  
-  
-}
-form.col-12{
-  margin: 10px;
-  font-size: 20px;
- 
-}
-#nombre{
-  margin-bottom: 10px;
-  background-color: #111111;
-  border-color: white;
-  width: 17%;
-}
 
-
-#apellido{
-margin-top: 14x;
-background-color: #111111;
-border-color: white;
-width: 17%;
-}
-
-#sexo{
-margin-top: 14px;
-}
-#mail{
-  margin-top: 14px;
-  background-color: #111111;
-  border-color: white;
-  width: 17%;
-}
-
-#contraseña{
-  margin-top: 14px;
-  background-color: #111111;
-  border-color: white;
-  width: 17%;
-}
-
-#submit{
-  margin-top: 14px;
-  background-color: #111111;
-  border-color: white;
-  width: 17%;
-  color: white;
-  height: 40px
-}
 /*====== Product Detail ======*/
 .product-detail {
-  background-color: #ffffff;
+  background-color: #af946e;
   border-radius: 8px;
   overflow: hidden;
+
 }
 
 .product-detail-img {
@@ -385,6 +338,7 @@ margin-top: 14px;
   padding: 15px 15px 15px 40px;
   font-size: 1.8em;
   line-height: 1.5;
+  color: #4a2e3b;
 }
 
 .product-detail-price {
@@ -426,6 +380,9 @@ margin-top: 14px;
   color: var(--gray);
   font-size: 1.7em;
   margin: 0;
+}
+.user{
+  color: #4a2e3b;
 }
 
 .buy-now-button {
@@ -491,9 +448,86 @@ margin-top: 14px;
   position: relative;
   right: 10%;
   left: 14%;
+
   
 
 }
+.col-12{
+  color:#4d4454;
+  margin-top: 8px;
+
+
+}
+form.col-12{
+  margin: 10px;
+  font-size: 20px;
+ 
+}
+#nombre{
+  margin-bottom: 10px;
+  background-color: #6e6372;
+  border-color: white;
+  width: 50%;
+}
+
+
+#apellido{
+margin-top: 14x;
+background-color: #6e6372;
+border-color: white;
+width: 50%;
+}
+
+#sexo{
+margin-top: 14px;
+}
+#mail{
+  margin-top: 14px;
+  background-color:#6e6372;
+  
+  border-color: white;
+  width: 70%;
+}
+
+#contraseña{
+  margin-top: 14px;
+  background-color: #6e6372;
+  border-color: white;
+  width: 50%;
+  
+}
+
+#submit{
+  margin-top: 14px;
+  background-color: #111111;
+  border-color: white;
+  width: 17%;
+  color: white;
+  height: 40px;
+  margin-top: 14px;
+}
+
+.tablaRegistracion{
+  width: 65%;
+  margin: 0 auto;
+}
+.bordear{
+  border-bottom: 2px solid #4d4454;
+}
+
+.imputradio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+  
+}
+.radio{
+  position: relative;
+  right: 10%;
+  left: 14%;
+  font-size: 20px;
+
+}
 
 
 .imputradio{
@@ -501,30 +535,6 @@ margin-top: 14px;
   right: 10%;
   left: 14%;
 }
-.radio{
-  position: relative;
-  right: 10%;
-  left: 14%;
-
-}
-
-
-.imputradio{
-  position: relative;
-  right: 10%;
-  left: 14%;
-}
-.radio{
-  position: relative;
-  right: 10%;
-  left: 14%;
-}
-
-
-
-
-
-
 
 
 
@@ -540,7 +550,10 @@ margin-top: 14px;
   padding: 0 15px;
   position: relative;
   right: 10%;
-  left: 14%;}
+  left: 14%;
+  margin-top: 14px;
+  }
+
 
 .error{
   color: rgb(209, 0, 0);
