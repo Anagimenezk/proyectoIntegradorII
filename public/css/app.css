@@ -481,24 +481,30 @@ margin-left: 15px ;
 
 
 
+
 }
 form.col-12{
   margin: 10px;
   font-size: 20px;
  
+ 
 }
 #nombre{
   margin-bottom: 10px;
-  background-color: #6e6372;
-  border-color: white;
+  background-color: #f4efed;
+  border-color: #6e6372;
   width: 50%;
+  color:#6e6372
+}
+::placeholder{
+  color:#6e6372
 }
 
 
 #apellido{
 margin-top: 14x;
-background-color: #6e6372;
-border-color: white;
+background-color: #f4efed;
+border-color: #6e6372;
 width: 50%;
 }
 
@@ -507,16 +513,16 @@ margin-top: 14px;
 }
 #mail{
   margin-top: 14px;
-  background-color:#6e6372;
+  background-color:#f4efed;
   
-  border-color: white;
+  border-color: #6e6372;
   width: 70%;
 }
 
 #contraseña{
   margin-top: 14px;
-  background-color: #6e6372;
-  border-color: white;
+  background-color:#f4efed ;
+  border-color: #6e6372;
   width: 50%;
   
 }
@@ -524,7 +530,7 @@ margin-top: 14px;
 #submit{
   margin-top: 14px;
   background-color: #111111;
-  border-color: white;
+  border-color: #6e6372;
   width: 17%;
   color: white;
   height: 40px;
@@ -532,15 +538,22 @@ margin-top: 14px;
 }
 
 .tablaRegistracion{
-  width: 65%;
+  width: 80%;
   margin: 0 auto;
 }
 .bordear{
-  border-bottom: 2px solid #4d4454;
+  border-bottom: 2px solid #6e6372;
+  width: 100%;
 }
 .bordearDiferente{
   border-bottom: 2px solid #4d4454;
   border-top: 2px solid #4d4454;
+  width: 100%;
+}
+.bordearArriba{
+  border-top: 2px solid #6e6372;
+  border-bottom: 2px solid #6e6372;
+  width: 100%;
 }
 
 .imputradio{

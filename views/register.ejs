@@ -20,31 +20,35 @@
 			<h2 class="col-12"> 
 				<form class="tablaRegistracion">
 				<ul class= "registracionItems">
-				  <li class="bordearDiferente">
-				   <label class="form-label" for="nombre">Nombre:</label>
-				   <input class="form-input" type="text" id="nombre" name="user_nombre">
+				  <li class="bordearDiferente"> 
+					<!--<label class="form-label" for="nombre">Nombre:</label> -->
+					<input class="form-input" type="text" id="nombre" placeholder="Nombre"name="user_nombre">
+				   
 				 </li>
 				 <li class="bordear">
-					 <label class="form-label" for="apellido">Apellido:</label>
-					 <input class="form-input" type="text" id="apellido" name="user_apellido">
+					<!-- <label class="form-label" for="apellido">Apellido:</label>-->
+					 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
 				 </li>
-				 <li class="bordear">
+				
+				 
 
-					<label class="form-label" for="sexo">Sexo:</label> <br>
+				 <li>
+					<label class="form-label" for="sexo">Sexo:</label> <br/>
 					<input class="imputradio"  type="radio" id="sexo" name="user_sexo" value="masculino" > 
 					<p class="radio">Masculino</p> 
 					
 					<input  class="imputradio" type="radio" id="sexo" name="user_sexo" value="femenino">
 					 <p class="radio">Femenino</p> 
+				 </li>
+				
 
+				 <li class="bordearArriba">
+					<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
+					 <input class="form-input" type="email" id="mail" placeholder="Correo electrónico" name="user_mail">
 				 </li>
 				 <li class="bordear">
-					 <label class="form-label" for="mail">Correo electrónico:</label>
-					 <input class="form-input" type="email" id="mail" name="user_mail">
-				 </li>
-				 <li class="bordear">
-					 <label class="form-label" for="contraseña">Contraseña:</label>
-					 <input class="form-input" type="password" id="contraseña" name="user_contraseña">
+					<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+					 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="user_contraseña">
 				 </li>
 
 					 <input class="form-input" type="submit"  value="Registrarse">  
