@@ -81,11 +81,13 @@ hr {
 .main-header_credit-link {
   display: block;
 } 
-.main-header_credit-link {
+.main-header_credit-link  {
   font-size: 1.5em;
+  font-size: 30px;
   margin-top: 20px;
   text-align: center;
-}
+} 
+
 
 .search-form {
   position: relative;
@@ -148,7 +150,7 @@ hr {
 
 }
 .left-navbar{
-  border: 1px solid var(--gray);
+  
   width: 170px
   
 }
@@ -160,6 +162,11 @@ margin-left: 15px ;
 .registrar{
   font-size: 19px;
   
+}
+.log{
+  border: solid 1px var(--gray);
+  width: 100%;
+  text-align: center;
 }
 
 .logout{
@@ -177,11 +184,11 @@ margin-left: 15px ;
 .right-navbar a {
   display: block;
   padding: 5px 0;
-  border-bottom: solid 1px var(--gray);
+  border-bottom: solid 1px var(--gray)
 }
-.main-header_credit-link{
-  font-size: 30px;
-}
+
+
+
 
 /*====== Banner ======*/
 .banner {
@@ -617,6 +624,7 @@ textarea.form-input {
   font-size: 16px;
 }
 
+
 .foto-perfil{
   position: relative;
   right: 150px;
@@ -628,15 +636,24 @@ textarea.form-input {
 
 }
 .main-title{
-  font-size: 25px;
+  font-size: 30px;
   margin-bottom: 10px;
+  color:#4d4454 ;
+}
+.infoUsuario{
+ padding-top: 12px;
+ color: #4d4454;
+ font-weight: bold;
 }
 
 .btn{
-  background-color: #1259c3;
+  background-color: #5C097D;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
+}
+.col-2{
+max-width: 70px;
 }
 
 
