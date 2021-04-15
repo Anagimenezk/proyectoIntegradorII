@@ -633,7 +633,13 @@ textarea.form-input {
   width: 200px;
 
     border-radius: 50%;
+    border: 3px solid #4d4454;
 
+}
+
+
+.el-usuario{
+  padding-left: 20px;
 }
 .main-title{
   font-size: 30px;
@@ -647,7 +653,7 @@ textarea.form-input {
 }
 
 .btn{
-  background-color: #5C097D;
+  background-color: #4d4454;
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
