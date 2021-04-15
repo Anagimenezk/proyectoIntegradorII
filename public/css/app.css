@@ -3,7 +3,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=Karantina&family=Open+Sans+Condensed:ital,wght@1,300&display=swap');
 
-
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
 
 
@@ -86,6 +86,7 @@ hr {
   font-size: 30px;
   margin-top: 20px;
   text-align: center;
+  font-family: 'Cedarville Cursive', cursive;
 } 
 
 
@@ -196,7 +197,8 @@ margin-left: 15px ;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 100px;
+  height: 150px;
+  margin-bottom: 100px;
 
 }
 
@@ -204,7 +206,7 @@ margin-left: 15px ;
 
 /*====== Products ======*/
 .products-wrapper {
-
+margin-top: 20px;
   margin-bottom: 20px;
 }
 
@@ -670,6 +672,7 @@ max-width: 70px;
   .main-header_credit-link {
     margin-top: 0;
     text-align: right;
+    font-family: 'Cedarville Cursive', cursive;
   }
 
   .banner {
