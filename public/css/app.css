@@ -77,6 +77,7 @@ hr {
   background-color: var(--yellow);
 }
 
+
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
@@ -723,5 +724,11 @@ max-width: 70px;
     padding: 5px;
     font-size: 20x;
 
+  }
+  .icono-usuario-comentario{
+    display: block;
+    font-size: 30px;
+    margin-left: 5px;
+    padding-left: 10px;
   }
 }
