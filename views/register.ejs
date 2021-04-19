@@ -17,45 +17,53 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-				<form class="tablaRegistracion">
-				<ul class= "registracionItems">
-				  <li class="bordearDiferente"> 
-					<!--<label class="form-label" for="nombre">Nombre:</label> -->
-					<input class="form-input" type="text" id="nombre" placeholder="Nombre"name="user_nombre">
-				   
-				 </li>
-				 <li class="bordear">
-					<!-- <label class="form-label" for="apellido">Apellido:</label>-->
-					 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
-				 </li>
-				
-				 
-
-				 <li>
-					<label class="form-label" for="sexo">Sexo:</label> <br/>
-					<input class="imputradio"  type="radio" id="sexo" name="user_sexo" value="masculino" > 
-					<p class="radio">Masculino</p> 
+			<div class="form-registracion">
+				<h2 class="col-12"> 
+					<form class="tablaRegistracion">
+					<ul class= "registracionItems">
+					  <li class="bordearDiferente"> 
+						<!--<label class="form-label" for="nombre">Nombre:</label> -->
+						<input class="form-input" type="text" id="nombre" placeholder="Nombre"name="user_nombre">
+					   
+					 </li>
+					 <li class="bordear">
+						<!-- <label class="form-label" for="apellido">Apellido:</label>-->
+						 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
+					 </li>
 					
-					<input  class="imputradio" type="radio" id="sexo" name="user_sexo" value="femenino">
-					 <p class="radio">Femenino</p> 
-				 </li>
-				
+					 
+					 <li class="sexo-entero">
+						<div><label class="form-label" for="sexo">Sexo</label> <br/></div>
+						<div class="sexo-eleccion">
 
-				 <li class="bordearArriba">
-					<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
-					 <input class="form-input" type="email" id="mail" placeholder="Correo electrónico" name="user_mail">
-				 </li>
-				 <li class="bordear">
-					<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-					 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="user_contraseña">
-				 </li>
-
-					 <input class="form-input" type="submit"  value="Registrarse">  
-
-			   </ul>
-			  </form>
-			</h2>
+							<div class="seleccionador-sexo"><input class="imputradio"  type="radio" id="sexo" name="user_sexo" value="masculino" > </div>
+							
+							<div><p class="radio">Masculino</p> </div>
+							
+							<div class="seleccionador-sexo"><input  class="imputradio" type="radio" id="sexo" name="user_sexo" value="femenino"></div>
+						 	
+							<div><p class="radio">Femenino</p> </div>
+						</div>
+						
+					 </li>
+					
+	
+					 <li class="bordearArriba">
+						<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
+						 <input class="form-input" type="email" id="mail" placeholder="Correo electrónico" name="user_mail">
+					 </li>
+					 <li class="bordear">
+						<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+						 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="user_contraseña">
+					 </li>
+	
+						 <input class="form-input" type="submit"  value="Registrarse">  
+	
+				   </ul>
+				  </form>
+				</h2>
+			</div>
+			
 
 		</div>
 	<!-- footer -->

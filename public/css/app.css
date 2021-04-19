@@ -484,8 +484,7 @@ margin-top: 20px;
   font-size: 1.6em;
   margin: 10px 0;
   position: relative;
-  right: 10%;
-  left: 14%;
+  
 
   
 
@@ -600,14 +599,16 @@ margin-top: 14px;
   height: 45px;
   margin-bottom: 15px;
   font-size: 1.5em;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
-  border: solid 1px var(--gray);
+  border: 3px solid #4d4454;
   padding: 0 15px;
   position: relative;
   right: 10%;
   left: 14%;
   margin-top: 14px;
+  font-family:'Antonio', sans-serif;
+  
   }
 
 
@@ -666,7 +667,33 @@ textarea.form-input {
 .col-2{
 max-width: 70px;
 }
-
+.icono-usuario-comentario{
+  display: block;
+  font-size: 30px;
+  margin-left: 5px;
+  padding-left: 10px;
+}
+.form-registracion{
+  display: grid;
+  width: 98%;
+  text-align: center;
+}
+.sexo-entero{
+  text-transform: uppercase;
+  font-family:'Antonio', sans-serif;
+}
+.sexo-eleccion{
+  display: grid;
+  grid-template-columns: 2% 45% 2% 45%;
+  padding-top: 5px;
+  justify-content: space-around;
+  
+}
+ 
+.seleccionador-sexo{
+  padding-top: 10px;
+ 
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
@@ -725,10 +752,5 @@ max-width: 70px;
     font-size: 20x;
 
   }
-  .icono-usuario-comentario{
-    display: block;
-    font-size: 30px;
-    margin-left: 5px;
-    padding-left: 10px;
-  }
+  
 }
