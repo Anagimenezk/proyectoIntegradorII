@@ -5,7 +5,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Oswald:wght@300&family=PT+Sans&family=Poppins:wght@200&display=swap');
 
+/*====== 
+font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Sans', sans-serif;
+ ======*/
 
 /*====== Variables ======*/
 :root {
@@ -235,6 +242,9 @@ margin-top: 20px;
 
 .product-box_image {
   border-bottom: 1px solid var(--light-gray);
+  width: 100%;
+ 
+ 
 }
 
 .product-box_data {
@@ -246,10 +256,16 @@ margin-top: 20px;
 }
 
 .product-box_data h2 {
-  font-size: 2.4em;
+  font-size: 30px;
   font-weight: 300;
   margin: 0;
+  color:rgba(156, 47, 63);
+  font-weight: bold;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+ 
 }
+
 
 .product-box_data span {
   font-size: 1.5em;
@@ -695,6 +711,7 @@ max-width: 70px;
   padding-top: 10px;
  
 }
+
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {
