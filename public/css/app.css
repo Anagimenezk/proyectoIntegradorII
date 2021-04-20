@@ -158,9 +158,11 @@ hr {
   font-size: 1.5em;
 
 }
+
 .left-navbar{
   
-  width: 170px
+  width: 200px;
+  
   
 }
 #todosLosP{
@@ -173,9 +175,14 @@ margin-left: 15px ;
   
 }
 .log{
-  border: solid 1px var(--gray);
+  border: solid 2px var(--gray);
   width: 100%;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f4efed;
+  background-color: #6e6372;
+  font-family: 'PT Sans', sans-serif;
 }
 
 .logout{
@@ -391,6 +398,8 @@ margin-top: 20px;
   font-size: 1.8em;
   line-height: 1.5;
   color: #4a2e3b;
+  font-family: 'PT Sans', sans-serif;
+
 }
 
 .product-detail-price {
@@ -624,7 +633,8 @@ margin-top: 14px;
   right: 10%;
   left: 14%;
   margin-top: 14px;
-  font-family:'Antonio', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+
   
   }
 
@@ -645,6 +655,11 @@ textarea.form-input {
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
   font-size: 16px;
+  
+}
+.data-container {
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 
