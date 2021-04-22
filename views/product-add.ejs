@@ -10,31 +10,47 @@
 	<%-include("./partials/headerlogueado.ejs")%>
 	<!-- /Header -->
 
+
 	<!-- Novedades -->
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Agregar productos</h2>
+				<h2 class="products-title">Agregar un producto</h2>
 			</div>
-			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-				<form>
-					<ul>
-					  <li>
-					   <label for="producto"></label>
-					   <input type="text" id="product_nombre" name="product_nombre">
-					 </li>
-					 <li>
-						 <label for="foto">Foto del producto:</label>
-						 <input type="image" id="image" name="product_image">
-					 </li>
-					 <li>
-						<label for="descripcion">descripcion del producto:</label>
-						<textarea name="descripcion"></textarea>
-					 </li>
-					    <input type="submit" value="Agregar producto">  
-				  </form>
-			</h2>
+			<!-- Show t
+	<div class="form-registracion">
+		<h2 class="col-12"> 
+			<form class="tablaRegistracion">
+			<ul class= "registracionItems">
+			  <li class="bordearDiferente"> 
+				<!<label class="form-label" for="nombre">Nombre:</label> -->
+				<input class="form-input" type="text" id="nombre" placeholder="Nombre del producto"name="user_nombre">
+			   
+			 </li>
+			
+				<!-- <label class="form-label" for="apellido">Apellido:</label>-->
+				 
+			
+			
+
+			 <li class="bordearDiferente">
+				<label class="añadir-foto" for="mail">Foto del producto:</label>
+
+				
+	 <input class="add" type="image" placeholder="Foto del producto" name="foto">
+			 </li>
+			 
+			 <li class="bordear">
+				<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+				
+				 <input class="add" type="password" id="descipcion"placeholder="Descripcion del producto" name="user_contraseña">
+			 </li>
+			 <a class="actualizar-perfil" href="/product">Añadir producto a Mis Favoritos</a>
+		   </ul>
+		  </form>
+		</h2>
+	</div>
+
 
 
 	<!-- footer -->

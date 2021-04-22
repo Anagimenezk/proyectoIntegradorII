@@ -22,6 +22,12 @@ const controlador = {
     profile: (req,res) => {
         res.render ('profile');
     },
+    profiledit: (req, res) => {
+        res.render ('profile-edit')
+    },
+    productadd: (req,res) => {
+        res.render ('product-add')
+    }
 
     
 

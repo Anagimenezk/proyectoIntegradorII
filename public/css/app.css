@@ -518,6 +518,19 @@ margin-top: 20px;
   
 
 }
+.añadir-foto{
+  display: inline-block;
+  font-size: 1.6em;
+  margin-left: 150px;
+  position: relative;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4d3950;
+  
+  
+  
+}
 .col-12{
   color:#4d4454;
   margin-top: 8px;
@@ -539,6 +552,7 @@ form.col-12{
   width: 50%;
   color:#6e6372
 }
+
 ::placeholder{
   color:#6e6372
 }
@@ -568,6 +582,22 @@ margin-top: 14px;
   border-color: #6e6372;
   width: 50%;
   
+}
+
+
+#descripcion{
+  margin-top: 14px;
+  background-color:#f4efed ;
+  border-color: #6e6372 ;
+  width: 50%;
+  height: 90px;
+}
+
+#nueva-contraseña{
+  margin-top: 14px;
+  background-color:#f4efed ;
+  border-color: #6e6372;
+  width: 50%;
 }
 
 #submit{
@@ -640,7 +670,58 @@ margin-top: 14px;
 
   
   }
+  .actualizar-perfil{
+    display: block;
+  width: 70%;
+  height: 45px;
+ background-color: #6e6372;;
+  font-size: 30px;
+  border-radius: 10px;
+  border: none;
+  border: 3px solid #4d4454;
+  padding: 0 15px;
+  position: relative;
+  right: 10%;
+  left: 14%;
+  margin-top: 14px;
+  padding-top: auto;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
 
+  }
+
+  .add{
+    display: block;
+  width: 70%;
+  height: 80px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: none;
+  border: 3px solid #4d4454;
+  padding: 0 15px;
+  position: relative;
+  right: 10%;
+  left: 14%;
+  margin-top: 14px;
+  font-family: 'PT Sans', sans-serif;
+  }
+.actualizar{
+  display: block;
+  width: 600px;
+  height: 45px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  border: none;
+  border: 3px solid #4d4454;
+  padding: 0 15px;
+  position: relative;
+  right: 10%;
+  left: 14%;
+  margin-top: 14px;
+  font-family: 'PT Sans', sans-serif;
+}
 
 .error{
   color: rgb(209, 0, 0);
@@ -668,10 +749,10 @@ textarea.form-input {
 
 .foto-perfil{
   position: relative;
-  right: 150px;
+  right: 160px;
   border-radius: 50%;
-  height: 200px;
-  width: 200px;
+  height: 230px;
+  width: 230px;
 
     border-radius: 50%;
     border: 3px solid #4d4454;
@@ -698,6 +779,12 @@ textarea.form-input {
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
+}
+.editar-perfil{
+  margin-left: 20px;
+  font-size: 15px;
+  border-radius: 2px;
+  background-color: var(--yellow);
 }
 .col-2{
 max-width: 70px;
