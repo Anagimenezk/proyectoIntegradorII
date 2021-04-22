@@ -16,7 +16,7 @@ const controlador = {
     },
 
     search: (req,res) => {
-        res.render ('search');
+        res.render ('search-results');
     },
  
     profile: (req,res) => {
@@ -27,7 +27,8 @@ const controlador = {
     },
     productadd: (req,res) => {
         res.render ('product-add')
-    }
+    },
+   
 
     
 
