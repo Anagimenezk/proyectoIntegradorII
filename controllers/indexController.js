@@ -23,7 +23,10 @@ const controlador = {
         res.render ('profile');
     },
 
-    
+    productAdd: (req,res) => {
+        res.render ('productAdd');
+    },
+
 
 }
      

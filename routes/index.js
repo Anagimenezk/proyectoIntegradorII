@@ -8,6 +8,8 @@ router.get ('/register', indexController.register);
 router.get ('/product', indexController.product);
 router.get ('/search', indexController.search);
 router.get ('/profile', indexController.profile);
+router.get ('/add', indexController.productAdd);
+
 
 
 /* GET home page. */
