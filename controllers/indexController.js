@@ -28,12 +28,8 @@ const controlador = {
     productadd: (req,res) => {
         res.render ('product-add')
     },
-   
 
-    productAdd: (req,res) => {
-        res.render ('productAdd');
-    },
-
+    
 
 }
      

@@ -9,7 +9,8 @@ router.get ('/product', indexController.product);
 router.get ('/search-results', indexController.search);
 router.get ('/profile', indexController.profile);
 router.get ('/profile-edit', indexController.profiledit);
-router.get ('/product-add', indexController.productadd);
+router.get ('/add', indexController.productadd);
+
 
 
 
