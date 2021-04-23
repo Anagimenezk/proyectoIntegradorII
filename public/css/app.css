@@ -88,6 +88,7 @@ hr {
 .main-header_home-link,
 .main-header_credit-link {
   display: block;
+  padding-top: 10px;
 } 
 .main-header_credit-link  {
   font-size: 1.5em;
@@ -329,6 +330,7 @@ margin-top: 20px;
   transform: rotate(360deg);
   box-shadow: 0 0 5px var(--green);
 }
+/*====== product detail ======*/
 
 /*====== Footer ======*/
 .main-footer {
@@ -375,6 +377,7 @@ margin-top: 20px;
   background-color: #af946e;
   border-radius: 8px;
   overflow: hidden;
+ 
 
 }
 
