@@ -1,6 +1,10 @@
+let productos = require ('../data/productos');
+const {json} = require ('express')
+
 const controlador = {
     index: (req,res) => {
-        res.render ('index');
+      /*let id = req.params.id*/  
+        res.render ('index',{ productos: productos.lista /* ,idSearch: id*/ });
     },
     
     login: (req,res) => {
