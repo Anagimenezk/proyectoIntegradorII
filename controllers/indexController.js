@@ -30,7 +30,10 @@ const controlador = {
     },
    
 
-    
+    productAdd: (req,res) => {
+        res.render ('productAdd');
+    },
+
 
 }
      
