@@ -16,12 +16,19 @@ const controlador = {
     },
 
     search: (req,res) => {
-        res.render ('search');
+        res.render ('search-results');
     },
  
     profile: (req,res) => {
         res.render ('profile');
     },
+    profiledit: (req, res) => {
+        res.render ('profile-edit')
+    },
+    productadd: (req,res) => {
+        res.render ('product-add')
+    },
+   
 
     productAdd: (req,res) => {
         res.render ('productAdd');

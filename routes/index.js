@@ -6,9 +6,11 @@ router.get ('/', indexController.index);
 router.get ('/login', indexController.login);
 router.get ('/register', indexController.register);
 router.get ('/product', indexController.product);
-router.get ('/search', indexController.search);
+router.get ('/search-results', indexController.search);
 router.get ('/profile', indexController.profile);
-router.get ('/add', indexController.productAdd);
+router.get ('/profile-edit', indexController.profiledit);
+router.get ('/product-add', indexController.productadd);
+
 
 
 
