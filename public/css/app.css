@@ -103,6 +103,8 @@ hr {
   position: relative;
   display: flex;
   align-items: center;
+  border-radius: 10px;
+  padding: 1px 1px 1px 1px;
   
 }
 ::placeholder{
@@ -113,11 +115,22 @@ hr {
   display: block;
   width: 100%;
   padding: 7px 35px 7px 7px;
-  border-radius: 3px;
+  border-radius: 10px;
   height: 40px;
   font-size: 1.5em;
   background-color:#4a2e3b;
-  color: white
+  color: white;
+  
+  
+}
+.search-form:hover{
+  text-decoration: none;
+}
+.search-form_input:hover{
+  text-decoration: none;
+}
+.search-form_button:hover{
+  text-decoration: none;
 }
 
 .search-form_button {
@@ -132,6 +145,10 @@ hr {
 }
 .main-header_credit-link{
   color: #4a2e3b
+}
+
+.search-form_input:hover{
+  color: #ab7d92;
 }
 
 
@@ -164,7 +181,7 @@ hr {
   
   width: 258px;
   font-weight: bold;
-  color: whitesmoke;
+  color: rgba(235, 235, 235);
   font-family: 'Poppins', sans-serif;
   border: solid 1px whitesmoke;
   padding-left: unset;
@@ -173,8 +190,8 @@ hr {
   padding-bottom: 3px;
   text-align: center;
   background-color: rgba(74, 46, 59,0.8);
-  
 }
+
 #todosLosP{
 margin-left: 15px ;
 
@@ -343,6 +360,8 @@ margin-top: 20px;
   transform: rotate(360deg);
   box-shadow: 0 0 5px var(--green);
 }
+
+
 /*====== product detail ======*/
 
 /*====== Footer ======*/
@@ -350,6 +369,9 @@ margin-top: 20px;
   background-color: #d1c3ac;
   padding: 20px 0;
   margin-top: 80px;
+  width: 100%;
+    margin-left: 0px;
+margin-right: 0px;
 }
 
 .footer-data {
@@ -398,7 +420,8 @@ margin-top: 20px;
   width: 70%;
   display: block;
   margin: auto;
-  border: 3px solid #4d4454;
+  border: solid 2px whitesmoke;
+  border-radius: 10px;
 }
 
 .product-detail-info {
@@ -473,6 +496,9 @@ margin-top: 20px;
   border-radius: 8px;
   border: none;
   margin-bottom: 15px;
+  background-color:#4a2e3b ;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
 }
 
 .action-button {
@@ -683,6 +709,8 @@ margin-top: 14px;
   left: 14%;
   margin-top: 14px;
   font-family: 'PT Sans', sans-serif;
+  background-color: #4d4454 ;
+color: white;
 
   
   }
