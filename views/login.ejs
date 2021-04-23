@@ -17,22 +17,22 @@
 				<h2 class="products-title">Ingresar</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-				<form>
-					<ul>
-				<li>
-					<label class="form-label" for="mail">Correo electrónico:</label>
-					<input class="form-input" type="email" id="mail" name="user_mail">
-				</li>
-				<li>
-					<label class="form-label" for="contraseña">Contraseña:</label>
-					<input class="form-input" type="password" id="contraseña" name="user_contraseña">
-				</li>
+			<div class="form-registracion">
+				<h2 class="col-12"> 
+					<form class="tablaRegistracion">
+					<ul class= "registracionItems">
+					  <li class="bordearDiferente"> 
+						<!--<label class="form-label" for="nombre">Nombre:</label> -->
+						<input class="form-input" type="text" id="nombre" placeholder="Usuario"name="user_nombre">
+					   
+					 </li>
+					 <li class="bordear">
+						<!-- <label class="form-label" for="apellido">Apellido:</label>-->
+						 <input class="form-input" type="text" id="apellido" placeholder="Contraseña"name="user_apellido">
+					 </li>
+					
 				<a class="actualizar-perfil" href="/profile">Iniciar sesión</a>
-					</ul>
-				</form>
-			</h2>
-
+			</div>
 
 	<!-- footer -->
 	<%-include("./partials/footer.ejs")%>
