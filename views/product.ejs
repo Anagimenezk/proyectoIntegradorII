@@ -12,35 +12,44 @@
 
 <div class="seccionprincipal"> 
 	
-
+	<!--<for (let i = 0; i<productos.lenght; i++)-->
 			<!-- product detail  -->
+
 	<div class="container products-wrapper">
+
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Niño Gordo</h2> 
+			<h2 class="products-title">
+				<%= productos[idSearch].nombre %></h2> 
 			<p class="product-detail-description">
-				<a href="/product-add">Editar</a>
+				<a href="/product-add">Agregar Producto</a>
 			</p>
 		</div>
+
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="/images/products/dabbang.jpg" alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						Tal vez uno de los restaurantes de la lista más difíciles de encasillar. La comida tiene mucha influencia de platos y street food asiático, pero no es un restaurante asiático. Se siente bastante argentino. </p>
+					<img src="<%= productos[idSearch].imagen %> " alt="" class="product-detail-img">
+					<p class="product-detail-description"> <%= productos[idSearch].descripcion %>  </p>
 				</article>
+
 				<div class="col-12 col-lg-4">
 					<section class="comments">
+
+					<% for (let i=0; i< productos[idSearch].comentarios.search; i++ ) { %> 
 						<article>
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
 							<div class="data">
-								<p class="user">
-								<strong> <a href="/profile"> Marcos Tortielo</a> </strong>
-								Desde la ambientación hasta los platos son un auténtico disfrute. No es barato, pero vale la pena probarlo una vez.</p>
+							<p class="user">
+								<strong> <a href="/profile"> <%= productos[idSearch].comentarios[i].usuario %> </a> </strong>
+								<%= productos[idSearch].comentarios[i].comentario %>
+							</p>
 							</div>
 						</article>
-						<article>
+						<% } %> 
+
+						<!--<article>
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
@@ -80,7 +89,7 @@
 									<strong> <a href="/profile"> Indira Josefa </a> </strong>
 									Vale la pena conocerlo sin dudas, aunque los valores de los platos están por encima de la media, la comida es increíble y vale cada centavo pagado.</p>
 							</div>
-						</article>
+						</article>-->
 
 					</section>
 					<form class="form" action="" method="POST">
@@ -92,6 +101,7 @@
 			</div>
 		</div>
 	</div>
+	
 	<!-- /product detail  -->
 
 	

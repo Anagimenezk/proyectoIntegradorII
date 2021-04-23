@@ -3,8 +3,8 @@ const {json} = require ('express')
 
 const controlador = {
     index: (req,res) => {
-      /*let id = req.params.id*/  
-        res.render ('index',{ productos: productos.lista /* ,idSearch: id*/ });
+      let id = req.params.id
+       return res.render ('index',{productos: productos.lista,idSearch:id });
     },
     
     login: (req,res) => {
@@ -16,7 +16,8 @@ const controlador = {
     },
 
     product: (req,res) => {
-        res.render ('product');
+        let id = req.params.id
+        return res.render ('product',{productos: productos.lista, idSearch:id});
     },
 
     search: (req,res) => {
@@ -32,13 +33,12 @@ const controlador = {
     productadd: (req,res) => {
         res.render ('product-add')
     },
+    allProducts: (req,res) => {
+       return res.render ('allProducts', {productos: productos.lista})
+    },
 
-    
 
 }
      
-
-
-
 
 module.exports = controlador;
