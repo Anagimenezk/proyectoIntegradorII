@@ -156,14 +156,23 @@ hr {
 
 .left-navbar,
 .right-navbar {
-  font-size: 1.5em;
-
+  font-size: 20px;
+  
 }
 
 .left-navbar{
   
-  width: 200px;
-  
+  width: 258px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  border: solid 1px whitesmoke;
+  padding-left: unset;
+  padding-left: 8px;
+  padding-right: unset;
+  padding-bottom: 3px;
+  text-align: center;
+  background-color: rgba(74, 46, 59,0.8);
   
 }
 #todosLosP{
@@ -173,6 +182,9 @@ margin-left: 15px ;
 
 .registrar{
   font-size: 19px;
+  font-family: 'Poppins', sans-serif;
+  color: #4a2e3b;
+  font-weight: bold;
   
 }
 .log{
@@ -202,7 +214,8 @@ margin-left: 15px ;
 .right-navbar a {
   display: block;
   padding: 5px 0;
-  border-bottom: solid 1px var(--gray)
+  border-bottom: solid 1px var(--gray);
+  font-size: 20px;
 }
 
 
