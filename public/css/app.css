@@ -104,7 +104,6 @@ hr {
   display: flex;
   align-items: center;
   border-radius: 10px;
-  padding: 1px 1px 1px 1px;
   
 }
 ::placeholder{
@@ -121,16 +120,6 @@ hr {
   background-color:#4a2e3b;
   color: white;
   
-  
-}
-.search-form:hover{
-  text-decoration: none;
-}
-.search-form_input:hover{
-  text-decoration: none;
-}
-.search-form_button:hover{
-  text-decoration: none;
 }
 
 .search-form_button {
@@ -145,10 +134,6 @@ hr {
 }
 .main-header_credit-link{
   color: #4a2e3b
-}
-
-.search-form_input:hover{
-  color: #ab7d92;
 }
 
 
