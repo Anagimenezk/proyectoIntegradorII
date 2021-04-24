@@ -19,7 +19,7 @@
 
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
-				<%= productos[idSearch].nombre %></h2> 
+				<%= productos[idSearch-1].nombre %></h2> 
 			<p class="product-detail-description">
 				<a href="/add">Agregar Producto</a>
 			</p>
@@ -28,7 +28,7 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= productos[idSearch].imagen %> " alt="" class="product-detail-img">
+					<img src="<%= productos[idSearch-1].imagen %> " alt="" class="product-detail-img">
 					<p class="product-detail-description"> <%= productos[idSearch].descripcion %>  </p>
 				</article>
 
