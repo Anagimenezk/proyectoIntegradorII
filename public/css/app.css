@@ -288,7 +288,7 @@ color:white;
 
 
 .products-wrapper {
-margin-top: 20px;
+margin-top: 35px;
   margin-bottom: 20px;
 }
 
@@ -781,7 +781,12 @@ color: #6e6372;
   margin-top: 14px;
   padding-top: auto;
   text-align: center;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color:#4a2e3b ;
+  font-weight: bold;
+  color: whitesmoke;
+  text-transform: uppercase;
+  
 
   }
 
