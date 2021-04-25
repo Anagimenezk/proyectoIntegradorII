@@ -177,7 +177,7 @@ hr {
   padding-left: unset;
   padding-left: 12px;
   padding-right: unset;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
   text-align: center;
   background-color: var(--yellow);
 }
@@ -197,16 +197,42 @@ margin-left: 15px ;
   font-weight: bold;
   
 }
+.registrar a:hover{
+color:white;
+}
+
+.left-navbar2,
+.right-navbar {
+  font-size: 20px;
+  
+}
+.left-navbar2{
+  
+  width: 230px;
+  font-weight: bold;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  padding-left: unset;
+  padding-left: 12px;
+  padding-right: unset;
+  padding-bottom: 6px;
+  text-align: center;
+  background-color: var(--yellow);
+}
+
 .log{
-  border: solid 2px var(--gray);
+ 
   width: 100%;
   text-align: center;
-  text-transform: uppercase;
   font-weight: bold;
-  color: #f4efed;
-  background-color: #6e6372;
-  font-family: 'PT Sans', sans-serif;
+  border: solid 1px black;
+  margin-bottom: 4px;
+  border-radius: 8px;
 }
+.log:hover{
+  background-color: rgba(237, 230, 211,0.5)
+}
+
 
 .logout{
   background: transparent;
