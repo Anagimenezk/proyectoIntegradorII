@@ -2,7 +2,8 @@ CREATE TABLE usuarios (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT , 
 nombre VARCHAR (50) NOT NULL, 
 apellido VARCHAR (50) NOT NULL,
-mail VARCHAR (200) NOT NULL,  
+mail VARCHAR (200) NOT NULL, 
+contraseña VARCHAR (50) NOT NULL, 
 telefono INT(10) NOT NULL,
 fecha DATE NOT NULL
 );
@@ -29,11 +30,11 @@ FOREIGN KEY (user_id) REFERENCES usuarios (id),
 FOREIGN KEY (product_id) REFERENCES productos (id)
 );
 
-INSERT INTO usuarios VALUES (default, "Luisa", "Bengolea", "lbengolea@udesa.edu.ar", "1167591509", "2001-10-09");
-INSERT INTO usuarios VALUES (default, "Martina", "Pawluk", "mpawluk@udesa.edu.ar", "1155606574", "2001-01-20");
-INSERT INTO usuarios VALUES (default, "Ana", "Gimenez", "gimeneza@udesa.edu.ar", "1163772273", "2002-06-23");
-INSERT INTO usuarios VALUES (default, "Cala", "Ruggeri", "cruggeri@udesa.edu.ar", "1126445245", "2001-12-26");
-INSERT INTO usuarios VALUES (default, "Jacinta", "Valdez", "jvaldez@udesa.edu.ar", "1136164418", "2001-07-08");
+INSERT INTO usuarios VALUES (default, "Luisa", "Bengolea", "lbengolea@udesa.edu.ar", "Luisa", "1167591509", "2001-10-09");
+INSERT INTO usuarios VALUES (default, "Martina", "Pawluk", "mpawluk@udesa.edu.ar","Martina", "1155606574", "2001-01-20");
+INSERT INTO usuarios VALUES (default, "Ana", "Gimenez", "gimeneza@udesa.edu.ar","Ana", "1163772273", "2002-06-23");
+INSERT INTO usuarios VALUES (default, "Cala", "Ruggeri", "cruggeri@udesa.edu.ar","Cala", "1126445245", "2001-12-26");
+INSERT INTO usuarios VALUES (default, "Jacinta", "Valdez", "jvaldez@udesa.edu.ar","Jacinta", "1136164418", "2001-07-08");
 
 SELECT * FROM usuarios;
 
