@@ -972,6 +972,12 @@ max-width: 70px;
     display: grid;
     grid-template-columns: 45% 45%;
   }
+  @media ( max-width: 760px) {
+    .banner {
+      height: 320px;
+      margin-bottom: 20px;
+    }
+  }
 
   
 }
