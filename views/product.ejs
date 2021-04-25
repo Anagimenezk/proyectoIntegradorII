@@ -12,7 +12,7 @@
 
 <div class="seccionprincipal"> 
 	
-	<!--<for (let i = 0; i<productos.lenght; i++)-->
+	
 			<!-- product detail  -->
 
 	<div class="container products-wrapper">
@@ -35,61 +35,21 @@
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 
-					<!--<% for (let i=0; i< productos[idSearch].comentarios.search; i++ ) { %> 
+					<% for (let i = 0; i < productos[idSearch-1].comentarios.length; i++ ) { %> 
 						<article>
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
 							<div class="data">
 							<p class="user">
-								<strong> <a href="/profile"> <%= productos[idSearch].comentarios[i].usuario %> </a> </strong>
-								<%= productos[idSearch].comentarios[i].comentario %>
+								<strong> <a href="/profile"> <%= productos[idSearch-1].comentarios[i].usuario %> </a> </strong>
+								<%= productos[idSearch-1].comentarios[i].comentario %>
 							</p>
 							</div>
 						</article>
-						<% } %> -->
+						<% } %> 
 
-						<article>
-							<div class="icono-usuario-comentario">
-								<i class="far fa-user"></i>
-							</div>
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"> Ana Gimenez </a> </strong>
-									Un lugar distinto, altamente recomendable. Comida fusión Arg-Japón con algo de picante y salsa agridulces. 👌🏾</p>
-							</div>
-						</article>
-						<article>
-							<div class="icono-usuario-comentario">
-								<i class="far fa-user"></i>
-							</div>
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"> Luisa Bengolea</a> </strong>
-									Excelente lugar para probar sabores distintos. Platos completamente distintos a los que probé. Sabores muy suaves que en combinación son increíbles. La atención de 10 también. Super recomendable.
-									</p>
-							</div>
-						</article>
-						<article>
-							<div class="icono-usuario-comentario">
-								<i class="far fa-user"></i>
-							</div>
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"> Marina Lafourcade </a> </strong>
-									Muy rica la comida, un lugar para ir una vez a comer algo distinto y una ocasion especial ya que el precio es un poco elevado.</p>
-							</div>
-						</article>
-						<article>
-							<div class="icono-usuario-comentario">
-								<i class="far fa-user"></i>
-							</div>
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"> Indira Josefa </a> </strong>
-									Vale la pena conocerlo sin dudas, aunque los valores de los platos están por encima de la media, la comida es increíble y vale cada centavo pagado.</p>
-							</div>
-						</article>-->
+					
 
 					</section>
 					<form class="form" action="" method="POST">

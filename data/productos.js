@@ -9,21 +9,25 @@ let productos = {
             idUsario: 1,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
+                },
+                {
+                    usuario: 'Jacinta Valdez' ,
+                    comentario: 'Me encanto la ambientacion',
                 }
 
             ]
@@ -37,22 +41,27 @@ let productos = {
             idUsario: 3,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
+                },
+                {
+                    usuario: 'Jacinta Valdez' ,
+                    comentario: 'Me encanto la ambientacion',
                 }
+
             ]
         },
         {
@@ -64,22 +73,27 @@ let productos = {
             idUsario: 2,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
+                },
+                {
+                    usuario: 'Jacinta Valdez' ,
+                    comentario: 'Me encanto la ambientacion',
                 }
+
             ]
         },
         {
@@ -91,22 +105,27 @@ let productos = {
             idUsario: 4,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
+                },
+                {
+                    usuario: 'Jacinta Valdez' ,
+                    comentario: 'Me encanto la ambientacion',
                 }
+
             ]
         },
         {
@@ -118,53 +137,51 @@ let productos = {
             idUsario: 3,
             comentarios: [
                 {
-                    id: 1,
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    id:2,
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
-                },
-                {
-                    id: 3,
                     usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    id:4,
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
+                },
+                {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
             id: 6,
             nombre: "Mishiguene",
             fecha: 2020/06/20,
-            descripcion: "Todos los platos (además de deliciosos) tienen una historia que contar, y en general, esta se relaciona a la vida de Tomas Kalika, el cocinero, y sus raíces judías. . ",
+            descripcion: "Todos los platos (además de deliciosos) tienen una historia que contar, y en general, esta se relaciona a la vida de Tomas Kalika, el cocinero, y sus raíces judías. ",
             imagen: "/images/products/mishiguene.jpg",
             idUsario: 5,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
@@ -176,22 +193,23 @@ let productos = {
             idUsario: 1,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
@@ -203,22 +221,23 @@ let productos = {
             idUsario: 4,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
@@ -230,22 +249,23 @@ let productos = {
             idUsario: 2,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
@@ -257,22 +277,23 @@ let productos = {
             idUsario: 5,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
@@ -284,22 +305,23 @@ let productos = {
             idUsario: 1,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         },
         {
@@ -311,22 +333,23 @@ let productos = {
             idUsario: 3,
             comentarios: [
                 {
-                    usuario: 'Ana Gimenez' ,
-                    Comentario: 'Muy buen restaurante, volveria mil veces mas.',
+                    usuario: 'Luisa Bengolea' ,
+                    comentario: 'Increible, volveria una y mil veces mas.',
                 },
 
                 {
-                    usuario: 'Luisa Bengolea' ,
-                    Comentario: 'Muy buena ambientacion y servicio',
+                    usuario: 'Martina Pawluk' ,
+                    comentario: 'La comida es espectacular, la atencion ni hablar',
                 },
                 {
-                    usuario: 'Martina Pawluk' ,
-                    Comentario: 'La comida muy rica, la atencion excelente',
+                    usuario: 'Ana Gimenez' ,
+                    comentario: 'Muy rico, bastante caro',
                 },
                 {
                     usuario: 'Cala Ruggeri' ,
-                    Comentario: 'De los mejores resturantes que fui en esta cuidad, felicitaciones',
+                    comentario: 'De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.',
                 }
+
             ]
         }
         
