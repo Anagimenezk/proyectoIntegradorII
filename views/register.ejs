@@ -4,6 +4,7 @@
 <!-- Include Head -->
 <%-include("./partials/head.ejs")%>
 
+
 <body>
 
 	<!-- Header -->
@@ -32,21 +33,24 @@
 						 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
 					 </li>
 					
-					 
-					 <li class="sexo-entero">
+					<div class="sexo-entero">
+					
 						<div><label class="form-label" for="sexo">Sexo</label> <br/></div>
 						<div class="sexo-eleccion">
 
-							<div class="seleccionador-sexo"><input class="imputradio"  type="radio" id="sexo" name="user_sexo" value="masculino" > </div>
+							<div class="seleccionador-sexo">
+								<input class="imputradio"  type="radio" id="sexo" name="user_sexo" value="masculino" > <p class="radio">Masculino</p> 
+							</div>
 							
-							<div><p class="radio">Masculino</p> </div>
-							
-							<div class="seleccionador-sexo"><input  class="imputradio" type="radio" id="sexo" name="user_sexo" value="femenino"></div>
+				
+							<div class="seleccionador-sexo">
+								<input  class="imputradio" type="radio" id="sexo" name="user_sexo" value="femenino"><p class="radio">Femenino</p> 
+							 </div>
 						 	
-							<div><p class="radio">Femenino</p> </div>
+					
 						</div>
-						
-					 </li>
+					</div>
+				
 					
 	
 					 <li class="bordearArriba">
