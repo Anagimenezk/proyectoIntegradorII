@@ -37,12 +37,17 @@ body {
   min-height: 100vh;
   margin: 0;
   font-size: 10px;
+  width: 100%;
+
+  
 }
 
 body {
   font-family: var(--base-font-family);
   font-weight: 300;
   background-color: var(--light-gray);
+  width: 100%;
+  
 }
 
 ul,
@@ -93,6 +98,7 @@ hr {
 .main-header {
   padding: 15px 0;
   background-color: var(--yellow);
+
 }
 
 
@@ -276,9 +282,8 @@ color:white;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 150px;
-  margin-bottom: 100px;
-
+  height: 300px;
+ margin-bottom: 300px;
 
 }
 
@@ -290,6 +295,8 @@ color:white;
 .products-wrapper {
 margin-top: 35px;
   margin-bottom: 20px;
+  
+  
 }
 
 .products-title {
@@ -403,7 +410,7 @@ margin-top: 35px;
   padding: 20px 0;
   margin-top: 80px;
   width: 100%;
-    margin-left: 0px;
+  margin: unset;
 margin-right: 0px;
 }
 
@@ -779,14 +786,13 @@ color: #6e6372;
   right: 10%;
   left: 14%;
   margin-top: 14px;
-  padding-top: auto;
+  padding-top: 5px;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   background-color:#4a2e3b ;
   font-weight: bold;
   color: whitesmoke;
   text-transform: uppercase;
-  
 
   }
 
@@ -839,6 +845,7 @@ textarea.form-input {
   border-bottom: 1px solid #ccc;
   padding-bottom: 30px;
   font-size: 16px;
+  margin-top: 50px;
   
 }
 .data-container {
@@ -911,6 +918,7 @@ max-width: 70px;
 
   .banner {
     height: 320px;
+    margin-bottom: 100px;
   }
 
   .btn-toggle-navbar {
@@ -963,15 +971,5 @@ max-width: 70px;
     grid-template-columns: 45% 45%;
   }
 
-  /*====== Media-Queries IPhone ======*/
-
-  @media (min-width: 320px) {
-    
-   
-    .col-12 col-sm-6 col-lg-3{
-      display: grid;
-      grid-template-columns: 45% 45%;
-    }
-  }
   
 }
