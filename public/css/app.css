@@ -602,6 +602,15 @@ margin-right: 0px;
   
 
 }
+.selector-de-sexo{
+  width: 50%;
+  
+}
+.sexo-entero{
+  text-transform: uppercase;
+  font-family:'Antonio', sans-serif;
+  background-color: transparent ;
+}
 .añadir-foto{
   display: inline-block;
   font-size: 1.6em;
@@ -744,15 +753,15 @@ margin-top: 14px;
   font-size: 1.5em;
   border-radius: 10px;
   border: none;
-  border: 3px solid #4d4454;
+  border: 3px solid #6e6372;
   padding: 0 15px;
   position: relative;
   right: 10%;
   left: 14%;
   margin-top: 14px;
   font-family: 'PT Sans', sans-serif;
-  background-color: #4d4454 ;
-color: white;
+  background-color: transparent;
+color: #6e6372;
 
   
   }
@@ -881,22 +890,10 @@ max-width: 70px;
   width: 98%;
   text-align: center;
 }
-.sexo-entero{
-  text-transform: uppercase;
-  font-family:'Antonio', sans-serif;
-}
-.sexo-eleccion{
-  display: grid;
-  grid-template-columns: 45% 45%;
-  padding-top: 5px;
-  justify-content: space-around;
-  
-}
+
+
  
-.seleccionador-sexo{
-  padding-top: 10px;
- 
-}
+
 
 
 /*====== Media-Queries IPAD ======*/
