@@ -270,6 +270,7 @@ color:white;
   height: 150px;
   margin-bottom: 100px;
 
+
 }
 
 
@@ -888,7 +889,7 @@ max-width: 70px;
 }
 
 
-/*====== Media-Queries ======*/
+/*====== Media-Queries IPAD ======*/
 @media (min-width: 768px) {
   .main-header_credit-link {
     margin-top: 0;
@@ -944,6 +945,21 @@ max-width: 70px;
     padding: 5px;
     font-size: 20x;
 
+  }
+  .col-12 col-sm-6 col-lg-3{
+    display: grid;
+    grid-template-columns: 45% 45%;
+  }
+
+  /*====== Media-Queries IPhone ======*/
+
+  @media (min-width: 320px) {
+    
+   
+    .col-12 col-sm-6 col-lg-3{
+      display: grid;
+      grid-template-columns: 45% 45%;
+    }
   }
   
 }
