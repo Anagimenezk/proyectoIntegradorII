@@ -81,7 +81,14 @@ hr {
   border-bottom: solid 1px var(--light-gray);
 }
 
-
+/*=== Resultados ===*/
+.resultados{
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 27%;
+}
 /*====== Main Header ======*/
 .main-header {
   padding: 15px 0;
@@ -110,6 +117,7 @@ hr {
   border-radius: 10px;
   
 }
+
 ::placeholder{
   color: white;
 }
@@ -253,7 +261,7 @@ color:white;
 .left-navbar a,
 .right-navbar a {
   display: block;
-  padding: 5px 0;
+  
   border-bottom: solid 1px var(--gray);
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
