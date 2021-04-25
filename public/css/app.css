@@ -892,6 +892,8 @@ textarea.form-input {
   font-size: 15px;
   border-radius: 2px;
   background-color: var(--yellow);
+  border: solid 1px #4d4454;
+  padding: 6px
 }
 .col-2{
 max-width: 70px;
