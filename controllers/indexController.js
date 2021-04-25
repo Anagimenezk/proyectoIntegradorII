@@ -25,7 +25,8 @@ const controlador = {
     },
  
     profile: (req,res) => {
-        res.render ('profile');
+        let id = req.params.id
+        res.render ('profile', {productos: productos.lista,idSearch:id });
     },
     profiledit: (req, res) => {
         res.render ('profile-edit')
