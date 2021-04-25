@@ -21,7 +21,9 @@ const controlador = {
     },
 
     search: (req,res) => {
-        res.render ('search-results');
+        res.render ('search-results', {results: productos.byName(req.query.search), 
+            search: req.query.search.toUpperCase()});
+
     },
  
     profile: (req,res) => {

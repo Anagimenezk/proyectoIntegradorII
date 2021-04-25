@@ -351,9 +351,19 @@ let productos = {
                 }
 
             ]
-        }
+        },
         
-    ]
-}
+        
+    ],
+    byName: function (nombre) {
+        let answer = [];
+        this.lista.forEach (productos => {
+        if (productos.nombre.toLowerCase().includes(nombre.toLowerCase())){
+            answer.push(productos)
+        }
+    });
+    return answer;}
+};
+
 
 module.exports = productos;
