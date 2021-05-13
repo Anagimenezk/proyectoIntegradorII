@@ -122,3 +122,5 @@ INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi e
 SELECT * FROM usuarios;
 SELECT * FROM productos;
 SELECT * FROM comentarios;
+
+SELECT * FROM comentarios;
