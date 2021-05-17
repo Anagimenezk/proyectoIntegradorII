@@ -5,6 +5,7 @@ const controlador = {
     index: (req,res) => {
       let id = req.params.id
        return res.render ('index',{productos: productos.lista,idSearch:id });
+
     },
     
     login: (req,res) => {
@@ -39,6 +40,9 @@ const controlador = {
     allProducts: (req,res) => {
        return res.render ('allProducts', {productos: productos.lista})
     },
+
+//FALTAN LOS CONTORLADOR  QUE CREAMOS LAS RUTAS DE POST POR ESO CRASHEA 
+// NOS CRASHEA PORQUE MNO ESTA DEFINIDO EL PORDUCTO EN MODELOS REVISAR LO DE SEARCH Y CREATE 
 
 
 }
