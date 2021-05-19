@@ -8,6 +8,8 @@ router.get ('/product/:id', indexController.product);
 
 router.get ('/search-results', indexController.search);
 
+   // router.get('/buscar',indexController.listar);
+
 router.get ('/profile', indexController.profile);
 
 router.get ('/profile-edit', indexController.profiledit);
@@ -15,6 +17,8 @@ router.get ('/profile-edit', indexController.profiledit);
 router.get ('/add', indexController.productadd);
 
 router.get ('/allProducts/:id', indexController.allProducts);
+
+    router.post('/crear',indexController.crear);
 
 router.get ('/login', indexController.login);
 //router.post('/login', controller.loginValidate);

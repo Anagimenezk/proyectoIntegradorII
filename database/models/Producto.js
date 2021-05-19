@@ -1,7 +1,7 @@
 
 module.exports = (sequelize, dataTypes) => {
 
-        const Producto = sequelize.define('Producto', {
+        const Product = sequelize.define('Producto', {
 
             id: {
                 autoIncrement: true,
@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         });
     
-        return Producto;
+        return Product;
     }
     
     //nombre de la constante 'Peli' es intenro: coincide el const y el return proque sino va a devolver vacio el return
