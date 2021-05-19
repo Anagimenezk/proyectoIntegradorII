@@ -2,7 +2,7 @@ let productos = require ('../data/productos');
 const {json} = require ('express')
 
 const db = require('../database/models')
-//const Op = db.Sequelize.Op;
+const Op = db.Sequelize.Op;
 const bycrypt = require ('bcryptjs');
 
 const controlador = {
