@@ -21,9 +21,13 @@ const controlador = {
     },
 
     product: (req,res) => {
-        let id = req.params.id
-        return res.render ('product',{productos: productos.lista, idSearch:id});
+        db.Producto.finbyPk(req.params.id).then(resultado =>{
+            res.render('product',{productos:resultado})
+        })
+        //let id = req.params.id
+        //return res.render ('product',{productos: productos.lista, idSearch:id});
     },
+    // tiene que ser un select de todos los datos de la base de datos 
 
     //search: (req,res) => {
         //res.render ('search-results', {results: productos.byName(req.query.search), 
@@ -59,15 +63,22 @@ const controlador = {
             descripcion: req.body.descripcion,
     
         }).then(productoCreado =>{
-                res.redirect('product/'+ productoCreado.id);
+                res.redirect('/product/'+ productoCreado.id);
             });
     },
     
     allProducts: (req,res) => {
-       return res.render ('allProducts', {productos: productos.lista})
+        db.Producto.findAll({
+            
+        }).then(resultado =>{ 
+            res.render('allProducts',{productos:resultado})
+        })
+
+        .catch(function (error){ console.log(error);})
+        //return res.render ('allProducts', {productos: productos.lista})
     },
-  // .catch(function (error){
- // console.log(error);})
+
+ 
     
    
 //FALTAN LOS CONTORLADOR  QUE CREAMOS LAS RUTAS DE POST POR ESO CRASHEA 
