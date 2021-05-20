@@ -37,7 +37,7 @@ const controlador = {
             }
         }
         db.Producto.findAll(filtro).then(resultado =>{
-            res.render('search-results', {productos:resultado});
+            res.render('search-results', {results: resultado});
         });
     },
  
@@ -51,22 +51,25 @@ const controlador = {
     productadd: (req,res) => {
         res.render ('product-add')
     },
-    allProducts: (req,res) => {
-       return res.render ('allProducts', {productos: productos.lista})
-    },
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,
             image:req.body.image,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
-            user_id: req.body.user_id
-
+    
         }).then(productoCreado =>{
                 res.redirect('product/'+ productoCreado.id);
             });
     },
-
+    
+    allProducts: (req,res) => {
+       return res.render ('allProducts', {productos: productos.lista})
+    },
+  // .catch(function (error){
+ // console.log(error);})
+    
+   
 //FALTAN LOS CONTORLADOR  QUE CREAMOS LAS RUTAS DE POST POR ESO CRASHEA 
 // NOS CRASHEA PORQUE MNO ESTA DEFINIDO EL PORDUCTO EN MODELOS REVISAR LO DE SEARCH Y CREATE 
 

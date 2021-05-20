@@ -15,10 +15,11 @@ router.get ('/profile', indexController.profile);
 router.get ('/profile-edit', indexController.profiledit);
 
 router.get ('/add', indexController.productadd);
+    router.post('/add',indexController.crear);
 
 router.get ('/allProducts/:id', indexController.allProducts);
 
-    router.post('/crear',indexController.crear);
+    
 
 router.get ('/login', indexController.login);
 //router.post('/login', controller.loginValidate);

@@ -20,30 +20,26 @@
 			
 	<div class="form-registracion">
 		<h2 class="col-12"> 
-			<form class="tablaRegistracion">
+		<form class="tablaRegistracion" action="/add" method="post">
 			<ul class= "registracionItems">
 			  <li class="bordearDiferente"> 
-				
 				<input class="form-input" type="text" id="nombre" placeholder="Nombre del producto"name="user_nombre">
-			   
 			 </li>
 			
 				 
-
 			 <li class="bordear">
-				<form name="subida-imagenes" type="POST" enctype="multipart/formdata" >
 					<input class="form-input" type="file" name="imagen1" />
-				</form>
 			 </li>
 			 
 			 <li class="bordear">
-				<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-				
-				 <input class="form-input" type="mail" id="descipcion"placeholder="Descripcion del producto" name="user_contraseña">
+				 <input class="form-input" type="text" placeholder="Descripcion del producto" name="descripcion">
 			 </li>
-			 <a class="actualizar-perfil" href="/allProducts/:id">Añadir producto</a>
+			 <li class="bordear">
+				<input class="actualizar-perfil" type="submit" placeholder="Añadir producto">
+			</li>
+			<!--<a class="actualizar-perfil" href="/allProducts/:id">Añadir producto</a>--> 
 		   </ul>
-		  </form>
+		</form>
 		</h2>
 	</div>
 
