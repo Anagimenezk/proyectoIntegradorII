@@ -21,11 +21,15 @@ const controlador = {
     },
 
     product: (req,res) => {
-        db.Producto.finbyPk(req.params.id).then(resultado =>{
-            res.render('product',{productos:resultado})
+        db.Producto.findByPk(req.params.id).then(resultado =>{
+            db.Comentario.findAll().then(resultadoComentarios=> {
+
+            res.render('product',{productos:resultado,comentarios:resultadoComentarios})
         })
+      })
         //let id = req.params.id
         //return res.render ('product',{productos: productos.lista, idSearch:id});
+        .catch(function (error){ console.log(error);})
     },
     // tiene que ser un select de todos los datos de la base de datos 
 
@@ -37,7 +41,7 @@ const controlador = {
     search: (req,res)=> {
         const filtro = {
             where:{
-                nombre: {[Op.like]: '%'+ req.query.filtro+ '%'}
+                nombre: {[Op.like]: '%'+ req.query.search+ '%'}
             }
         }
         db.Producto.findAll(filtro).then(resultado =>{

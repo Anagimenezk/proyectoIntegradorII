@@ -19,7 +19,7 @@
 
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
-				<%= productos[idSearch-1].nombre %></h2> 
+				<%= productos.nombre %></h2> 
 			<p class="product-detail-description">
 				<a href="/register">Agregar Producto</a>
 			</p>
@@ -28,22 +28,23 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= productos[idSearch-1].imagen %> " alt="" class="product-detail-img">
-					<p class="product-detail-description"> <%= productos[idSearch-1].descripcion %>  </p>
+					<img src="<%= productos.image %> " alt="" class="product-detail-img">
+					<p class="product-detail-description"> <%= productos.descripcion %>  </p>
 				</article>
 
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-
-					<% for (let i = 0; i < productos[idSearch-1].comentarios.length; i++ ) { %> 
+     
+				<!--for (let i = 0; i < productos.comentarios.length; i++ ) -->
+					<% comentarios.forEach(comentario=> { %> 
 						<article>
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
 							<div class="data">
 							<p class="user">
-								<strong> <a href="/profile"> <%= productos[idSearch-1].comentarios[i].usuario %> </a> </strong>
-								<%= productos[idSearch-1].comentarios[i].comentario %>
+								<strong> <a href="/profile"> <%=comentario.user_id %> </a> </strong>
+								<%=comentario.texto %>
 							</p>
 							</div>
 						</article>
