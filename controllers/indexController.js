@@ -29,7 +29,7 @@ const controlador = {
       })
         //let id = req.params.id
         //return res.render ('product',{productos: productos.lista, idSearch:id});
-        .catch(function (error){ console.log(error);})
+        
     },
     // tiene que ser un select de todos los datos de la base de datos 
 
@@ -68,7 +68,9 @@ const controlador = {
     
         }).then(productoCreado =>{
                 res.redirect('/product/'+ productoCreado.id);
+            
             });
+    
     },
     
     allProducts: (req,res) => {
@@ -78,7 +80,7 @@ const controlador = {
             res.render('allProducts',{productos:resultado})
         })
 
-        .catch(function (error){ console.log(error);})
+        
         //return res.render ('allProducts', {productos: productos.lista})
     },
 

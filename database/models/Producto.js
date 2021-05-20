@@ -15,11 +15,11 @@ module.exports = (sequelize, dataTypes) => {
             image: {
                 type: dataTypes.STRING(500)
             },
-            fecha: {
-                type: dataTypes.DATE
-            },
             descripcion: {
                 type: dataTypes.STRING(1000)
+            },
+            fecha: {
+                type: dataTypes.DATE
             },
             user_id: {
                 type: dataTypes.INTEGER
