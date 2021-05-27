@@ -7,8 +7,16 @@ const bycrypt = require ('bcryptjs');
 
 const controlador = {
     index: (req,res) => {
-      let id = req.params.id
-       return res.render ('index',{productos: productos.lista,idSearch:id });
+     // let id = req.params.id
+       //return res.render ('index',{productos: productos.lista,idSearch:id });
+       const filtro = {
+        where:{
+            nombre: {[Op.like]: '%'+ req.query.search+ '%'}
+        }
+    }
+    db.Producto.findAll(filtro).then(resultado =>{
+        res.render('search-results', {results: resultado});
+    });
 
     },
     
