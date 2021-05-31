@@ -36,15 +36,15 @@
 					<section class="comments">
       
 				<%for (let i = 0; i < productos.comentarios.length; i++ ) { %>
-					<% comentarios.forEach(comentario=> { %> 
+			
 						<article>
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
 							<div class="data">
 							<p class="user">
-								<strong> <a href="/profile"> <%=comentario.user_id %> </a> </strong>
-								<%=comentario.texto %>
+								<strong> <a href="/profile"> <%=productos.comentarios.user_id %> </a> </strong>
+								<%=productos.comentarios.texto %>
 							</p>
 							</div>
 						</article>

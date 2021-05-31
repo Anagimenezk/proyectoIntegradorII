@@ -30,6 +30,12 @@ module.exports = (sequelize, dataTypes) => {
             tableName: "productos",
             timestamps: false
         });
+        Product.associate = (db)=>{
+            Product.hasMany (db.Comentario, {
+                as: 'comentarios',
+                foreignKey: 'product_id'
+            })
+        }
     
         return Product;
     }

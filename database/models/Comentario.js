@@ -1,3 +1,4 @@
+const { ForeignKeyConstraintError } = require("sequelize/types");
 
 module.exports = (sequelize, dataTypes) => {
 
@@ -29,7 +30,17 @@ module.exports = (sequelize, dataTypes) => {
     }, {
         tableName: "productos",
         timestamps: false
-    });
+    })
+    Comentario.associate = (db)=> {
+        Comentario.belongsTo (db.Product, {
+            as: 'productos',
+            ForeignKey: product_id
+        })
+        Comentario.belongsTo(db.Usuario, {
+            as: 'usuarios',
+            foreignKey: 'user_id'
+        });
+    }
 
     return Comentario;
 }

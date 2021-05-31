@@ -33,6 +33,13 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "usuarios",
         timestamps: false
     });
+    
+    Comentario.associate = (db)=> {
+        Comentario.hasMany (db.Comentario, {
+            as: 'comentarios',
+            ForeignKey: user_id
+        })
+    }
 
     return Usuario;
 }

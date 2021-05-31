@@ -29,11 +29,15 @@ const controlador = {
     },
 
     product: (req,res) => {
-        db.Producto.findByPk(req.params.id).then(resultado =>{
-            db.Comentario.findAll().then(resultadoComentarios=> {
-
-            res.render('product',{productos:resultado,comentarios:resultadoComentarios})
-        })
+        const filtro = {
+            include: [
+                {association:'comentarios', include: 'usuario'}
+            ]
+        }
+        db.Producto.findByPk(req.query.id, filtro).then(resultado =>{
+          
+        res.render('product',{productos:resultado})
+        
       })
         //let id = req.params.id
         //return res.render ('product',{productos: productos.lista, idSearch:id});
