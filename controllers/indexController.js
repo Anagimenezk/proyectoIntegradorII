@@ -17,7 +17,7 @@ const controlador = {
     db.Producto.findAll(filtro).then(resultado =>{
         res.render('search-results', {results: resultado});
     });
-
+ 
     },
     
     login: (req,res) => {
