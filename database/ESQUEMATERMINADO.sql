@@ -53,6 +53,8 @@ INSERT INTO productos VALUES (default, "/images/products/tegui.jpg", "Tegui", "2
 INSERT INTO productos VALUES (default, "/images/products/sacro.jpeg", "Sacro", "2020-10-07", "La elegante arquitectura de Sacro, atrae a la multitud vegana y carnívora en busca de platos creativos y sabrosos a base de plantas. El menú de inspiración internacional fue diseñado por el chef ejecutivo Maximiliano Rossi.", 1);
 INSERT INTO productos VALUES (default, "/images/products/casacavia.jpeg", "Casa Cavia", "2020-12-28", "El exclusivo restaurante judío del chef Tomás Kalika recrea platos asquenazíes, sefardíes, israelíes y del Medio Oriente utilizando ingredientes frescos y técnicas modernas de una manera que intriga y evoca nostalgia.", 3);
 
+
+
 INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 1);
 INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 1);
 INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 1);
@@ -124,3 +126,21 @@ SELECT * FROM productos;
 SELECT * FROM comentarios;
 
 SELECT * FROM comentarios;
+
+UPDATE productos 
+SET image = "/images/products/narda.jpg"
+WHERE id = 8;
+
+ALTER TABLE productos
+ADD createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+
+ALTER TABLE usuarios
+ADD createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
+
+
+ALTER TABLE comentarios
+ADD createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ADD updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
