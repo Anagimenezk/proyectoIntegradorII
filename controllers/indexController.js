@@ -19,14 +19,63 @@ const controlador = {
     });
  
     },
+
+
+    register: (req,res) => {
+        res.render ('register');
+    },
+
+    crearUsuario: (req,res)=> {
+        const contraseñaEncriptada = bycrypt.hashSync (req.body.contraseña);
+       
+        db.Usuario.create({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            mail: req.body.mail,
+            contraseña: contraseñaEncriptada,
+            telefono: req.body.telefono,
+            fecha: req.body.fecha
+
+        }).then (usuarioCreado => {
+            res.redirect('/')
+        })
+
+    },
+    
     
     login: (req,res) => {
         res.render ('login');
     },
 
-    register: (req,res) => {
-        res.render ('register');
+    loginUsuario: (req,res)=> {
+        const filtro= {
+            where: {
+                nombre:req.body.nombre
+            }
+        }
+        db.Usuario.findOne(filtro).then(usuario =>{
+            
+            if(bycrypt.compareSync(req.body.contraseña, usuario.constraseña)){
+                req.session.usuario = usario.nombre
+                req.session.id = usuario.id
+
+                if (req.body.recordarme){
+                    res.cookie('user_id',usuario.id,{maxAge: 1000 * 60 * 5})
+                }
+            }
+            else{
+                console.log('contraseñaIncorrecta')
+            }
+            res.redirect('/')
+        })
     },
+
+    logout: (req,res,next)=> {
+        req.session.destroy()
+        res.clearCookie('user_id')
+        res.redirect('/')
+    },
+
 
     product: (req,res) => {
         const filtro = {
@@ -45,8 +94,6 @@ const controlador = {
     },
 
 
-
-
     search: (req,res)=> {
         const filtro = {
             where:{
@@ -62,12 +109,15 @@ const controlador = {
         let id = req.params.id
         res.render ('profile', {productos: productos.lista,idSearch:id });
     },
+
     profiledit: (req, res) => {
         res.render ('profile-edit')
     },
+
     productadd: (req,res) => {
         res.render ('product-add')
     },
+
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,

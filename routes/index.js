@@ -22,12 +22,12 @@ router.get ('/allProducts', indexController.allProducts);
     
 
 router.get ('/login', indexController.login);
-//router.post('/login', controller.loginValidate);
+router.post('/login', indexController.loginUsuario);
 
 router.get ('/register', indexController.register);
-//router.post('/register', controller.registerCreateUser);
+router.post('/register', indexController.crearUsuario);
 
-//router.get('/logout', controller.logout);
+router.get('/logout', indexController.logout);
 
 
 

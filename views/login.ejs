@@ -19,19 +19,34 @@
 			<!-- Show the "ultimos" products -->
 			<div class="form-registracion">
 				<h2 class="col-12"> 
-					<form class="tablaRegistracion">
+				<!--FORMULARIO LOGIN-->
+					<form class="tablaRegistracion" action="/login" method="POST" id="form">
 					<ul class= "registracionItems">
+
 					  <li class="bordearDiferente"> 
-						<!--<label class="form-label" for="nombre">Nombre:</label> -->
-						<input class="form-input" type="text" id="nombre" placeholder="Usuario"name="user_nombre">
-					   
+						<input class="form-input" type="nombre" id="nombre" placeholder="nombre" name="nombre">
 					 </li>
-					 <li class="bordear">
-						<!-- <label class="form-label" for="apellido">Apellido:</label>-->
-						 <input class="form-input" type="text" id="apellido" placeholder="Contraseña"name="user_apellido">
-					 </li>
+
+					 <li class="bordear"> 
 					
-				<a class="actualizar-perfil" href="/profile">Iniciar sesión</a>
+						<input class="form-input" type="apellido" id="apellido" placeholder="apellido" name="apellido">
+					 </li>
+
+					 <li class="bordear">
+						 <input class="form-input" type="contraseña" id="contraseña" placeholder="Contraseña"name="contrseña">
+					 </li>
+
+					 <br>
+
+					 <!--CAMBAIR CSS DE RECORDARME-->
+					 <li class="bordear">
+						RECORDARME <input class="form-input" type="checkbox" id="" placeholder="Recordarme"name="recordarme">
+					</li>
+					<br>
+					
+					<button class="actualizar-perfil" type="submit"> Iniciar sesión </button>
+				
+
 			</div>
 
 	
