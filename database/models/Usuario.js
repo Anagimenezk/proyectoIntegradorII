@@ -34,12 +34,12 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     });
     
-    Comentario.associate = (db)=> {
-        Comentario.hasMany (db.Comentario, {
-            as: 'comentarios',
-            ForeignKey: user_id
-        })
-    }
+    //Usuario.associate = (db)=> {
+       // Usuario.hasMany (db.Comentario, {
+           // as: 'comentarios',
+            //ForeignKey: user_id
+       // })
+   // }
 
     return Usuario;
 }

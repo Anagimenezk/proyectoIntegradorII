@@ -36,19 +36,16 @@ const controlador = {
         }
         db.Producto.findByPk(req.query.id, filtro).then(resultado =>{
           
-        res.render('product',{productos:resultado})
+        res.render('product')
+        //{productos:resultado}
         
       })
-        //let id = req.params.id
-        //return res.render ('product',{productos: productos.lista, idSearch:id});
+        
         
     },
-    // tiene que ser un select de todos los datos de la base de datos 
 
-    //search: (req,res) => {
-        //res.render ('search-results', {results: productos.byName(req.query.search), 
-           // search: req.query.search.toUpperCase()});
-   // },
+
+
 
     search: (req,res)=> {
         const filtro = {
