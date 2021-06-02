@@ -10,15 +10,21 @@ router.get ('/search-results', indexController.search);
 
    // router.get('/buscar',indexController.listar);
 
-router.get ('/profile', indexController.profile);
+router.get ('/profile/:id', indexController.profile);
 
 router.get ('/profile-edit', indexController.profiledit);
 
-router.get ('/add', indexController.productadd);
-    router.post('/add',indexController.crear);
-
 router.get ('/allProducts', indexController.allProducts);
 
+//router.get('/modificar', indexController.modificarForm);
+
+//router.get('/modificar', indexController.modificarProducto);
+
+//router.get('/borrar', indexController.borrarProducto);
+
+
+router.get ('/add', indexController.productadd);
+    router.post('/add',indexController.crear);
     
 
 router.get ('/login', indexController.login);
