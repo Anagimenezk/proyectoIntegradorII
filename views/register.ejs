@@ -21,44 +21,41 @@
 			<!-- Show the "ultimos" products -->
 			<div class="form-registracion">
 				<h2 class="col-12"> 
-					<form class="tablaRegistracion">
+					<form class="tablaRegistracion" action="/register" method="POST" >
 					<ul class= "registracionItems">
-					  <li class="bordearDiferente"> 
+					  
+						<li class="bordearDiferente"> 
 						<!--<label class="form-label" for="nombre">Nombre:</label> -->
-						<input class="form-input" type="text" id="nombre" placeholder="Nombre"name="user_nombre">
+						<input class="form-input" type="nombre" id="nombre" placeholder="Nombre" name="nombre">
 					   
 					 </li>
 					 <li class="bordear">
 						<!-- <label class="form-label" for="apellido">Apellido:</label>-->
-						 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
+						 <input class="form-input" type="apllido" id="apellido" placeholder="Apellido"name="apellido">
 					 </li>
 					
-					<li class="sexo-entero">
-						<select class="form-input" name="sexo">
-
-							<option>Sexo</option>
-							
-							<option>Femenino</option>
-							<option>Masculino</option>
-							
-							<option>Prefiero no decirlo</option>
-							
-							</select>
-						
-						</li>
-				
 					
 	
-					 <li class="bordearArriba">
+					 <li class="bordear">
 						<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
-						 <input class="form-input" type="email" id="mail" placeholder="Correo electrónico" name="user_mail">
+						 <input class="form-input" type="mail" id="mail" placeholder="Correo electrónico" name="mail">
+					 </li>
+
+					 <li class="bordear">
+						<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+						 <input class="form-input" type="telefono" id="telefono" placeholder="Telefono celular" name="telefono">
 					 </li>
 					 <li class="bordear">
 						<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-						 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="user_contraseña">
+						 <input class="form-input" type="date" id="fecha" placeholder="Fecha de nacimiento" name="fecha">
+					 </li>
+					 <li class="bordear">
+						<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+						 <input class="form-input" type="contraseña" id="contraseña"placeholder="Contraseña" name="contraseña">
 					 </li>
 	
-					 <a class="actualizar-perfil" href="/profile">Registrarme</a>
+
+					 <button class="actualizar-perfil" type="submit" value="Register"> Registrarme</button>
 	
 				   </ul>
 				  </form>

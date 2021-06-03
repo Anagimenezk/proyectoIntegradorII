@@ -27,21 +27,22 @@ const controlador = {
 
     crearUsuario: (req,res)=> {
         const contraseñaEncriptada = bycrypt.hashSync (req.body.contraseña);
-       
+       //revisar si el bycrypt lleva otro campo
         db.Usuario.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             mail: req.body.mail,
-            contraseña: contraseñaEncriptada,
             telefono: req.body.telefono,
-            fecha: req.body.fecha
+            fecha: req.body.fecha,
+            contraseña: contraseñaEncriptada
 
         }).then (usuarioCreado => {
-            res.redirect('/')
-        })
+            res.redirect('/profile/' + usuarioCreado.id)
+        }).catch(error => console.log(error))
 
+        console.log(contraseñaEncriptada.lenght)
     },
-    
+
     
     login: (req,res) => {
         res.render ('login');
@@ -50,14 +51,14 @@ const controlador = {
     loginUsuario: (req,res)=> {
         const filtro= {
             where: {
-                nombre:req.body.nombre
+                nombre:req.body.mail
             }
         }
         db.Usuario.findOne(filtro).then(usuario =>{
             
             if(bycrypt.compareSync(req.body.contraseña, usuario.constraseña)){
-                req.session.usuario = usario.nombre
-                req.session.id = usuario.id
+                req.session.usuario = usuario.mail
+                req.session.userId = usuario.id
 
                 if (req.body.recordarme){
                     res.cookie('user_id',usuario.id,{maxAge: 1000 * 60 * 5})
@@ -66,7 +67,7 @@ const controlador = {
             else{
                 console.log('contraseñaIncorrecta')
             }
-            res.redirect('/')
+            res.redirect('/profile/' + usuarioCreado.id)
         })
     },
 
@@ -85,7 +86,7 @@ const controlador = {
         }
         db.Producto.findByPk(req.query.id, filtro).then(resultado =>{
           
-        res.render('product')
+        res.render('product', {productos:resultado})
         //{productos:resultado}
         
       })
