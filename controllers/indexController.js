@@ -7,17 +7,22 @@ const bycrypt = require ('bcryptjs');
 
 const controlador = {
     index: (req,res) => {
+        let filtro = {
+            limit: 4
+        }
+       db.Producto.findAll(filtro).then(resultado =>{
+           res.render('index', {productos:resultado})
+       })
      // let id = req.params.id
        //return res.render ('index',{productos: productos.lista,idSearch:id });
-       const filtro = {
-        where:{
-            nombre: {[Op.like]: '%'+ req.query.search+ '%'}
-        }
-    }
-    db.Producto.findAll(filtro).then(resultado =>{
-        res.render('search-results', {results: resultado});
-    });
- 
+       if (req.session.usuario){
+           res.render('index', {usuario: req.session.mail})
+       }
+       else{
+           res.render ('index', {usuario:'anonimo'})
+       }
+       
+       
     },
 
 
@@ -70,7 +75,7 @@ const controlador = {
             else{
                 console.log('contraseñaIncorrecta')
             }
-            res.redirect('/profile/' + usuarioCreado.id)
+            res.redirect('/')
         }).catch(error => console.log(error))
     },
 
