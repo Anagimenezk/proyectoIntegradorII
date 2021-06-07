@@ -1,5 +1,6 @@
 
 <header class="main-header">
+    <% if (! logueado) { %> 
     <div class="container">
         <div class="row align-items-center">
             <div class="col-5 col-md-2">
@@ -53,4 +54,64 @@
             </ul>
         </nav>
     </div>
+    <% } else { %> 
+        <div class="container">
+			<div class="row align-items-center">
+				<div class="col-5 col-md-2">
+					<a href="/" class="main-header_home-link">
+						<img src="/images/Logo.png">
+					</a>
+				</div>
+	
+				<div class="col-7 col-md-6">
+					<form action="/search-results" method="GET" class="search-form">
+						<input type="text" name="search" placeholder="Buscar productos, marcas y más" class="search-form_input">
+						<button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+					</form>
+				</div>
+	
+				<div class="col-12 col-md-4">
+					<a class="main-header_credit-link">
+						
+						Comer bien, es vivir bien..
+					</a>
+				</div>
+			</div>
+	
+			<button class="btn-toggle-navbar">
+				<a href="/search-results"> <i class="fas fa-bars"></i></a>
+			</button>
+	
+			<nav class="main-navbar">
+				<ul class="left-navbar2">
+					<li class="log"><a href="/">Restaurantes</a></li>
+					<li class="log"><a href="/add">Añadir restaurante</a></li>
+				</ul>
+	
+				<ul class="right-navbar">
+					<li><a href="/profile">
+							Cala Ruggeri <i class="fas fa-user"></i>
+						</a>
+					</li>
+					<li>
+						<form action="/logout" method="post">
+						
+							<button class="logout" type="submit">
+							Cerrar sesión <i class="fas fa-sign-in-alt"></i> 
+						</a>
+							</button>	 
+						</form>
+					</li>
+					<!-- Solo deslogueado <li>
+						<a href="register.html">Creá tu cuenta <i class="far fa-address-card"></i>
+						</a>
+					</li>
+					<li>
+						<a href="login.html">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+					</li> -->
+				</ul>
+			</nav>
+		</div>
+        <% } %> 
+
 </header>
