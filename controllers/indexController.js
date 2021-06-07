@@ -13,6 +13,7 @@ const controlador = {
        db.Producto.findAll(filtro).then(resultado =>{
            res.render('index', {productos:resultado})
        })
+       .catch(error => console.log(error))
      // let id = req.params.id
        //return res.render ('index',{productos: productos.lista,idSearch:id });
        if (req.session.usuario){
