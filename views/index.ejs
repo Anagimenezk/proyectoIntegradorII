@@ -87,7 +87,7 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Mas comentados</h2>
+				<h2 class="products-title">Nustras Recomendaciones</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
 
@@ -95,13 +95,13 @@
 
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
-					<a href="/product/<%= productos.id %> ">
+					<a href="/product/<%= productos[i].id %> ">
 						<figure class="product-box_image">
-							<img src="<%= productos.image %>" alt="">
+							<img src="<%= productos[i].image %>" alt="">
 						</figure>
 						<article class="product-box_data">
-							<h2><%= productos.nombre %></h2>
-							<p><%= productos.descripcion %></p>
+							<h2><%= productos[i].nombre %></h2>
+							<p><%= productos[i].descripcion %></p>
 							<p>Comentarios: 4 </p>
 						</article>
 					</a>

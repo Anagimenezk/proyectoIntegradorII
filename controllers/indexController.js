@@ -11,17 +11,16 @@ const controlador = {
             limit: 4
         }
        db.Producto.findAll(filtro).then(resultado =>{
-           res.render('index', {productos:resultado})
+        if (req.session.usuario){
+            res.render('index', {usuario: req.session.mail,productos:resultado})
+        }
+        else{
+            res.render ('index', {usuario:'anonimo',productos:resultado})
+        }
        })
-       .catch(error => console.log(error))
      // let id = req.params.id
        //return res.render ('index',{productos: productos.lista,idSearch:id });
-       if (req.session.usuario){
-           res.render('index', {usuario: req.session.mail})
-       }
-       else{
-           res.render ('index', {usuario:'anonimo'})
-       }
+      
        
        
     },
