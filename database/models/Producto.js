@@ -40,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
         return Product;
     }
     
-    //nombre de la constante 'Peli' es intenro: coincide el const y el return proque sino va a devolver vacio el return
+    //nombre de la constante 'Product' es intenro: coincide el const y el return proque sino va a devolver vacio el return
     // nombre 'PElicula' es importante proque con este vamos a requerir desde el controlador
     // nombre tablename "movies", es el mismo nombre que esta en SQl, con este se va a ahcer el SELECT 
     

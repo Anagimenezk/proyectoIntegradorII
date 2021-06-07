@@ -26,8 +26,8 @@ const controlador = {
     },
 
     crearUsuario: (req,res)=> {
-        const contraseñaEncriptada = bycrypt.hashSync (req.body.contraseña);
-       //revisar si el bycrypt lleva otro campo
+        const contraseñaEncriptada = bycrypt.hashSync (req.body.contraseña, 10);
+   
         db.Usuario.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -51,14 +51,17 @@ const controlador = {
     loginUsuario: (req,res)=> {
         const filtro= {
             where: {
-                nombre:req.body.mail
+                mail:req.body.mail
             }
         }
         db.Usuario.findOne(filtro).then(usuario =>{
             
             if(bycrypt.compareSync(req.body.contraseña, usuario.constraseña)){
-                req.session.usuario = usuario.mail
-                req.session.userId = usuario.id
+                req.session.usuario = {
+                    mail: usuario.mail,
+                    id: usuario.id
+                }
+                
 
                 if (req.body.recordarme){
                     res.cookie('user_id',usuario.id,{maxAge: 1000 * 60 * 5})
@@ -68,7 +71,7 @@ const controlador = {
                 console.log('contraseñaIncorrecta')
             }
             res.redirect('/profile/' + usuarioCreado.id)
-        })
+        }).catch(error => console.log(error))
     },
 
     logout: (req,res,next)=> {
