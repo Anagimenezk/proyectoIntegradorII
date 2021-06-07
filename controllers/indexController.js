@@ -3,7 +3,7 @@ const {json} = require ('express')
 
 const db = require('../database/models')
 const Op = db.Sequelize.Op;
-const bycrypt = require ('bcryptjs');
+const bcrypt = require ('bcryptjs');
 
 const controlador = {
     index: (req,res) => {
@@ -58,14 +58,17 @@ const controlador = {
     },
 
     loginUsuario: (req,res)=> {
-        const filtro= {
+        const filtro = {
             where: {
                 mail:req.body.mail
             }
         }
         db.Usuario.findOne(filtro).then(usuario =>{
+            console.log(req.body.contrasenia)
+            console.log(usuario.contraseña)
+            console.log(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña));
             
-            if(bycrypt.compareSync(req.body.contraseña, usuario.constraseña)){
+            if(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)){
                 req.session.usuario = {
                     mail: usuario.mail,
                     id: usuario.id
@@ -75,11 +78,12 @@ const controlador = {
                 if (req.body.recordarme){
                     res.cookie('user_id',usuario.id,{maxAge: 1000 * 60 * 5})
                 }
+                res.redirect('/')
             }
             else{
                 console.log('contraseñaIncorrecta')
             }
-            res.redirect('/')
+            
         }).catch(error => console.log(error))
     },
 
