@@ -8,6 +8,9 @@ const bycrypt = require ('bcryptjs');
 const controlador = {
     index: (req,res) => {
         let filtro = {
+            order:[
+                ['createdAt','DESC' ]
+            ],
             limit: 4
         }
        db.Producto.findAll(filtro).then(resultado =>{
@@ -39,6 +42,7 @@ const controlador = {
             mail: req.body.mail,
             telefono: req.body.telefono,
             fecha: req.body.fecha,
+            image: req.body.image,
             contraseña: contraseñaEncriptada
 
         }).then (usuarioCreado => {
