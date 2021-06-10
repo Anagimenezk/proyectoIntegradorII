@@ -21,7 +21,7 @@
 	
 			<div class="form-registracion">
 				<h2 class="col-12"> 
-					<form class="tablaRegistracion">
+					<form class="tablaRegistracion" method="POST" action="/profile-edit" enctype="multipart/form-data">
 					<ul class= "registracionItems">
 					  <li class="bordearDiferente"> 
 						<!--<label class="form-label" for="nombre">Nombre:</label> -->
@@ -32,7 +32,10 @@
 						<!-- <label class="form-label" for="apellido">Apellido:</label>-->
 						 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
 					 </li>
+					 <li class="bordear">
 					
+						 <input class="form-input" type="file" id="apellido" placeholder="Apellido"name="edit_image">
+					 </li>
 					 
 					 <li class="sexo-entero">
 						<select class="form-input" name="sexo">

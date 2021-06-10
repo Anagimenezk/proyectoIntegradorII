@@ -20,7 +20,7 @@
 			
 	<div class="form-registracion">
 		<h2 class="col-12"> 
-		<form class="tablaRegistracion" action="/add" method="post">
+		<form class="tablaRegistracion" action="/add" method="POST" enctype="multipart/form-data">
 			<ul class= "registracionItems">
 			  <li class="bordearDiferente"> 
 				<input class="form-input" type="text" id="nombre" placeholder="Nombre del producto"name="nombre">
@@ -28,7 +28,7 @@
 			
 				 
 			 <li class="bordear">
-					<input class="form-input" type="file" name="image" />
+					<input class="form-input" type="file" name="productImage" />
 			 </li>
 			 
 			 <li class="bordear">

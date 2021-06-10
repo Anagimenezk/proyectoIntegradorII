@@ -135,7 +135,7 @@ hr {
   border-radius: 10px;
   height: 40px;
   font-size: 1.5em;
-  background-color:#4a2e3b;
+  background-color: white;
   color: white;
   
 }
@@ -144,11 +144,12 @@ hr {
   position: absolute;
   right: 2px;
   height: 60%;
-  background-color: #4a2e3b;
+  background-color:black;
   border: none;
   border-left: solid 1px #111111;
   color: white;
   cursor: pointer;
+  border-radius: 10%;
 }
 .main-header_credit-link{
   color: #4a2e3b
