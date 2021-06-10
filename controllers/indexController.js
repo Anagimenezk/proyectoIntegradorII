@@ -91,6 +91,7 @@ const controlador = {
         req.session.destroy()
         res.clearCookie('user_id')
         res.redirect('/')
+        .catch(error => console.log(error))
     },
 
 
