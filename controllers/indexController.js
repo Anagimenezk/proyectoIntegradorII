@@ -34,7 +34,7 @@ const controlador = {
     },
 
     crearUsuario: (req,res)=> {
-        const contraseñaEncriptada = bycrypt.hashSync (req.body.contraseña, 10);
+        const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
    
         db.Usuario.create({
             nombre: req.body.nombre,
