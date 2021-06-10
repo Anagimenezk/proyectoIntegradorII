@@ -1,11 +1,11 @@
 CREATE TABLE usuarios (
-id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT ,
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT , 
 nombre VARCHAR (50) NOT NULL, 
 apellido VARCHAR (50) NOT NULL,
 mail VARCHAR (200) NOT NULL, 
 contraseña VARCHAR (50) NOT NULL, 
 telefono INT(10) NOT NULL,
-fecha DATE NOT NULL,
+fecha DATE NOT NULL
 );
 
 CREATE TABLE productos (
@@ -160,3 +160,10 @@ ALTER TABLE usuarios
 MODIFY telefono INT(20) NOT NULL;
 
 SELECT * FROM usuarios;
+
+SELECT * FROM usuarios;
+
+SELECT * FROM usuarios;
+
+ALTER TABLE usuarios
+ADD image VARCHAR (500) NOT NULL;
