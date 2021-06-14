@@ -35,14 +35,16 @@ const controlador = {
 
     crearUsuario: (req,res)=> {
         const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
-   
+        console.log(req.body) 
+        console.log(req.file)
+
         db.Usuario.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             mail: req.body.mail,
             telefono: req.body.telefono,
             fecha: req.body.fecha,
-            image: req.body.image,
+            image: req.file.filename,
             contraseña: contraseñaEncriptada
 
         }).then (usuarioCreado => {
@@ -139,7 +141,7 @@ const controlador = {
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,
-            image:req.body.image,
+            image:req.file.image,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
     
