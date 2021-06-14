@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
 
 
     }, {
-        tableName: "productos",
+        tableName: "comentarios",
         timestamps: false
     })
    Comentario.associate = (db)=> {

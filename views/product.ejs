@@ -36,7 +36,7 @@
 				<div class="col-12 col-lg-4">
 					<section class="comments">
       
-				<%for (let i = 0; i < producto.comentarios.length; i++ ) { %>
+				<%for (let i = 0; i < producto.comentarios[i].length; i++ ) { %>
 			
 						<article>
 							<div class="icono-usuario-comentario">
@@ -44,8 +44,8 @@
 							</div>
 							<div class="data">
 							<p class="user">
-								<strong> <a href="/profile"> <%=producto.comentarios.user_id %> </a> </strong>
-								<%=producto.comentarios.texto %>
+								<strong> <a href="/profile"> <%=producto.comentarios[i].user_id %> </a> </strong>
+								<%=producto.comentarios[i].texto %>
 							</p>
 							</div>
 						</article>

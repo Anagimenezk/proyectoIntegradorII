@@ -101,7 +101,7 @@ const controlador = {
        console.log(req.params)
         const filtro = {
             include: [
-                {association:'comentarios'}
+                {association:'comentarios', include: 'usuarios'}
             ]
         }
         db.Producto.findByPk(req.params.id,filtro).then(producto =>{
