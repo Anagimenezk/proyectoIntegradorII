@@ -142,7 +142,7 @@ const controlador = {
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,
-            image:req.file.image,
+            image:req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
     
@@ -151,6 +151,39 @@ const controlador = {
             
             });
     
+    },
+
+    modificarForm: (req,res) => { 
+        db.Producto.findByPk (req.query.id).then (
+           productoModificado =>  res.render ('modificar', {producto: productoModificado})
+        )
+    },
+
+    modificarProducto: (req,res)=> {
+        db.Producto.update ({
+            nombre: req.body.nombre,
+            image:req.file.filename,
+            fecha: req.body.fecha,
+            descripcion: req.body.descripcion
+
+        },{
+            where: {
+                id: req.body.id
+            }
+        } ).then(() => {
+            res.redirect ('/product/'+ productoModificado.id)
+        }
+        )
+    },
+
+    borrarProducto: (re,res) => {
+        db.Producto.destroy({
+            where: {
+                id: req.body.id
+            }
+        }).then(() => {
+            res.redirect('/allProducts')
+        });
     },
     
     allProducts: (req,res) => {

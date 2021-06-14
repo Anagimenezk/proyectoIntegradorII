@@ -35,11 +35,11 @@ router.get ('/profile-edit',uploadEdit.single('edit_image'), indexController.pro
 
 router.get ('/allProducts', indexController.allProducts);
 
-//router.get('/modificar', indexController.modificarForm);
+router.get('/modificar', indexController.modificarForm);
 
-//router.get('/modificar', indexController.modificarProducto);
+router.post('/modificar', indexController.modificarProducto);
 
-//router.get('/borrar', indexController.borrarProducto);
+router.get('/borrar', indexController.borrarProducto);
 
 
 const multerAdd = multer.diskStorage({

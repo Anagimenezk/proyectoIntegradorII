@@ -21,7 +21,14 @@
 			<h2 class="products-title">
 				<%= producto.nombre %></h2> 
 			<p class="product-detail-description">
-				<a href="/register">Agregar Producto</a>
+				<form class="tablaRegistracion" action="/modificar" method="GET">
+					<input type="hidden" name="id" value="<%= producto.id %>">
+					<input class="actualizar-perfil"  type="submit" value="Modificar">
+				  </form>
+				  <form class="tablaRegistracion" action="/borrar" method="POST">
+					<input type="hidden" name="id" value="<%= producto.id %>">
+					<input  class="actualizar-perfil" type="submit" value="Borrar">
+				  </form>
 			</p>
 		</div>
 

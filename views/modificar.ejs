@@ -15,7 +15,7 @@
 	<div class="container products-wrapper">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="products-title">Agregar un producto</h2>
+				<h2 class="products-title">Editar producto</h2>
 			</div>
 			
 	<div class="form-registracion">
@@ -23,25 +23,25 @@
 		<form class="tablaRegistracion" action="/add" method="POST" enctype="multipart/form-data">
 			<ul class= "registracionItems">
 			  <li class="bordearDiferente"> 
-				<input class="form-input" type="text" id="nombre" placeholder="Nombre del producto"name="nombre">
+				<input class="form-input" type="text" id="nombre" placeholder="Nombre del producto"name="nombre" value="<% producto.nombre %> ">
 			 </li>
 			
 				 
 			 <li class="bordear">
-					<input class="form-input" type="file" name="productImage" />
+					<input class="form-input" type="file" name="productImage" value="<% producto.image %> "/>
 			 </li>
 			 
 			 <li class="bordear">
-				 <input class="form-input" type="text" placeholder="Descripcion del producto" name="descripcion">
+				 <input class="form-input" type="text" placeholder="Descripcion del producto" name="descripcion" value="<% producto.descripcion %> ">
 			 </li>
 			 <li class="bordear">
-				<input class="form-input" type="date" placeholder="fecha de creacion" name="fecha">
+				<input class="form-input" type="date" placeholder="fecha de creacion" name="fecha" value="<% producto.fecha %> ">
 			</li>
-			<li class="bordear">
-				<input type="hidden" name="id" >
+            <li class="bordear">
+				<input type="hidden" name="id" value="<% producto.id %> ">
 			</li>
 			 <li class="bordear">
-				<input class="actualizar-perfil" type="submit" placeholder="Añadir producto">
+				<input class="actualizar-perfil" type="submit" placeholder="Confirmar">
 			</li>
 			<!--<a class="actualizar-perfil" href="/allProducts/:id">Añadir producto</a>--> 
 		   </ul>
