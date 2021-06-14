@@ -98,14 +98,15 @@ const controlador = {
 
 
     product: (req,res) => {
+       console.log(req.params)
         const filtro = {
             include: [
-                {association:'comentarios', include: 'usuario'}
+                {association:'comentarios'}
             ]
         }
-        db.Producto.findByPk(req.query.id, filtro).then(resultado =>{
-          
-        res.render('product', {productos:resultado})
+        db.Producto.findByPk(req.params.id,filtro).then(producto =>{
+         console.log(producto) 
+        res.render('product', {producto:producto})
         //{productos:resultado}
         
       })

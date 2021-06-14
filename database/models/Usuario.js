@@ -37,16 +37,16 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     });
     
-    //Usuario.associate = (db)=> {
-       // Usuario.hasMany (db.Comentario, {
-           // as: 'comentarios',
-            //ForeignKey: user_id
-       // })
-       //Usuario.hasMany (db.Producto, {
-        // as: 'productos',
-         //ForeignKey: user_id
-    // })
-   // }
+    Usuario.associate = (db)=> {
+       Usuario.hasMany (db.Comentario, {
+           as: 'comentarios',
+        foreignKey: "user_id"
+       })
+       Usuario.hasMany (db.Producto, {
+        as: 'productos',
+        foreignKey: "user_id"
+    })
+    }
 
     return Usuario;
 }

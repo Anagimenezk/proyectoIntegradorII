@@ -19,7 +19,7 @@
 	
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
-				<%= productos.nombre %></h2> 
+				<%= producto.nombre %></h2> 
 			<p class="product-detail-description">
 				<a href="/register">Agregar Producto</a>
 			</p>
@@ -28,15 +28,15 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="<%= productos.image %> " alt="" class="product-detail-img">
-					<p class="product-detail-description"> <%= productos.descripcion %>  </p>
+					<img src="<%= producto.image %> " alt="" class="product-detail-img">
+					<p class="product-detail-description"> <%= producto.descripcion %>  </p>
 				</article>
 
 
 				<div class="col-12 col-lg-4">
 					<section class="comments">
       
-				<%for (let i = 0; i < productos.comentarios.length; i++ ) { %>
+				<%for (let i = 0; i < producto.comentarios.length; i++ ) { %>
 			
 						<article>
 							<div class="icono-usuario-comentario">
@@ -44,8 +44,8 @@
 							</div>
 							<div class="data">
 							<p class="user">
-								<strong> <a href="/profile"> <%=productos.comentarios.user_id %> </a> </strong>
-								<%=productos.comentarios.texto %>
+								<strong> <a href="/profile"> <%=producto.comentarios.user_id %> </a> </strong>
+								<%=producto.comentarios.texto %>
 							</p>
 							</div>
 						</article>
