@@ -156,6 +156,3 @@ MODIFY telefono INT(20) NOT NULL;
 ALTER TABLE usuarios
 ADD image VARCHAR (500) NOT NULL;
 
-INSERT INTO usuarios VALUES (default, "Catalina", "Orlando", "corli@udesa.edu.ar","Cata", "1112123434", "2001-04-22","/images/users/Foto2.jpg");
-
-
