@@ -127,9 +127,18 @@ const controlador = {
     },
  
     profile: (req,res) => {
-        let id = req.params.id
-        res.render ('profile', {productos: productos.lista,idSearch:id });
-    },
+        console.log(req.params)
+        const filtro = {
+            include: [
+                {association:'productos'}
+            ]
+        }
+        db.Usuario.findByPk(req.params.id,filtro).then(usuario =>{
+         console.log(usuario)
+
+        res.render('profile', {usuario:usuario})
+    
+    })},
 
     profiledit: (req, res) => {
         res.render ('profile-edit')
@@ -183,7 +192,7 @@ const controlador = {
             }
         }).then(() => {
             res.redirect('/allProducts')
-        });
+        })
     },
     
     allProducts: (req,res) => {
