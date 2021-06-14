@@ -35,6 +35,10 @@ module.exports = (sequelize, dataTypes) => {
               //  as: 'comentarios',
                 //foreignKey: 'product_id'
             //})
+            //Product.belongsTo(db.Usuario, {
+          //  as: 'usuarios',
+           // foreignKey: 'user_id'
+        //});
        // }
     
         return Product;

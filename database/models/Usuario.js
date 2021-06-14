@@ -42,6 +42,10 @@ module.exports = (sequelize, dataTypes) => {
            // as: 'comentarios',
             //ForeignKey: user_id
        // })
+       //Usuario.hasMany (db.Producto, {
+        // as: 'productos',
+         //ForeignKey: user_id
+    // })
    // }
 
     return Usuario;
