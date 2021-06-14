@@ -125,7 +125,6 @@ SELECT * FROM usuarios;
 SELECT * FROM productos;
 SELECT * FROM comentarios;
 
-SELECT * FROM comentarios;
 
 UPDATE productos 
 SET image = "/images/products/narda.jpg"
@@ -145,32 +144,18 @@ ALTER TABLE comentarios
 ADD createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 ADD updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
 
-SELECT * FROM usuarios;
 
 ALTER TABLE usuarios 
 MODIFY contraseña VARCHAR (300) NOT NULL;
 
-ALTER TABLE usarios
-MODIFY telefono INT(30) NOT NULL;
-
-ALTER TABLE usarios
-MODIFY telefono INT(20) NOT NULL;
 
 ALTER TABLE usuarios
 MODIFY telefono INT(20) NOT NULL;
 
-SELECT * FROM usuarios;
-
-SELECT * FROM usuarios;
-
-SELECT * FROM usuarios;
-
-ALTER TABLE usuarios
-ADD image VARCHAR (500) NOT NULL;
 
 ALTER TABLE usuarios
 ADD image VARCHAR (500) NOT NULL;
 
 INSERT INTO usuarios VALUES (default, "Catalina", "Orlando", "corli@udesa.edu.ar","Cata", "1112123434", "2001-04-22","/images/users/Foto2.jpg");
 
-SELECT * FROM usuarios;
+
