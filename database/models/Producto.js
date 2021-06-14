@@ -30,16 +30,16 @@ module.exports = (sequelize, dataTypes) => {
             tableName: "productos",
             timestamps: false
         });
-       // Product.associate = (db)=>{
-          //  Product.hasMany (db.Comentario, {
-              //  as: 'comentarios',
-                //foreignKey: 'product_id'
-            //})
-            //Product.belongsTo(db.Usuario, {
-          //  as: 'usuarios',
-           // foreignKey: 'user_id'
-        //});
-       // }
+       Product.associate = (db)=>{
+          Product.hasMany (db.Comentario, {
+            as: 'comentarios',
+            foreignKey: 'product_id'
+            })
+          Product.belongsTo(db.Usuario, {
+            as: 'usuarios',
+            foreignKey: 'user_id'
+        });
+        }
     
         return Product;
     }
