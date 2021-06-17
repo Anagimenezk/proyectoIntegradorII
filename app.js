@@ -56,7 +56,8 @@ app.use(function(req, res, next) {
   if(req.session.usuario){
     res.locals = {
       logueado: true,
-      mail: req.session.usuario.mail
+      nombreCompleto: req.session.usuario.nombre + " " + req.session.usuario.apellido,
+      userId: req.session.usuario.id
     }
   } else {
     res.locals = {

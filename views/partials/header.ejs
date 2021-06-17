@@ -89,10 +89,11 @@
 				</ul>
 	
 				<ul class="right-navbar">
-					<li><a href="/profile/:id">
-							Cala Ruggeri <i class="fas fa-user"></i>
+					<li><a href="/profile/<%= locals.userId %> ">
+							<%= locals.nombreCompleto %>  <i class="fas fa-user"></i>
 						</a>
 					</li>
+        <!--NO HACE FALTA LLAMAR A LOCALS PORQUE LO RECOCNOCE SOLO-->
 					<li>
 						<form action="/logout">
 						

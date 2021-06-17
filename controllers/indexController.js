@@ -73,7 +73,9 @@ const controlador = {
             if(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)){
                 req.session.usuario = {
                     mail: usuario.mail,
-                    id: usuario.id
+                    id: usuario.id, 
+                    nombre: usuario.nombre, 
+                    apellido: usuario.apellido
                 }
                 
 
