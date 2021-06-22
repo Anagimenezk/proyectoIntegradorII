@@ -86,6 +86,7 @@ const controlador = {
             }
             else{
                 console.log('contraseñaIncorrecta')
+                
             }
             
         }).catch(error => console.log(error))

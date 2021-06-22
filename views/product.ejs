@@ -49,11 +49,11 @@
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
-							<div class="data">
-							<p class="user">
-								<strong> <a href="/profile"> <%=producto.comentarios[i].user_id %> </a> </strong>
-								<%=producto.comentarios[i].texto %>
-							</p>
+						<div class="data">
+							<div class="user">
+								<strong> <a href="/profile/<%=producto.comentarios[i].user_id %> "><%=producto.comentarios[i].texto %> </a> </strong>
+							
+							</div>
 							</div>
 						</article>
 						<% } %> 
