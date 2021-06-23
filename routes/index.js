@@ -11,6 +11,7 @@ const path = require ('path')
 router.get ('/', indexController.index);
 
 router.get ('/product/:id', indexController.product);
+router.post ('/product/:id',indexController.crearComentario);
 
 router.get ('/search-results', indexController.search);
 

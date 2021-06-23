@@ -51,7 +51,7 @@ const controlador = {
             res.redirect('/profile/' + usuarioCreado.id)
         }).catch(error => console.log(error))
 
-        console.log(contraseñaEncriptada.lenght)
+        console.log(contraseñaEncriptada.length)
     },
 
     
@@ -115,6 +115,18 @@ const controlador = {
       })
         
         
+    },
+    crearComentario: (req,res) => {
+        db.Comentario.create( {
+            texto: req.body.texto,
+            user_id: req.session.id,
+            product_id: req.body.id
+    
+        }).then(comentarioCreado =>{
+                res.redirect('/product/'+ productoCreado.id );
+            
+            });
+    
     },
 
 

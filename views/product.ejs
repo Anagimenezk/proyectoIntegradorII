@@ -60,12 +60,23 @@
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					
 
-					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+				</section>
+					<form class="form" action="/product/:id" method="POST">
+						<li>
+							<input  type="hidden"  name="id" value="<%= producto.id %>">
+						</li>
+						<li>
+							<input class="form-input" type="text" value="texto" name="texto" placeholder="Agregar comentario">
+						</li>
+						<li>
+							<button class="actualizar-perfil"type="submit" class="buy-now-button" type="submit"> AGREGAR COMENTARIO</button>
+
+							
+						</li>
+						
 						
 					</form>
-					<button class="actualizar-perfil"type="submit" class="buy-now-button"><a href="/register"> AGREGAR COMENTARIO</a> </button>
+					
 					<hr>
 				</div>
 			</div>
