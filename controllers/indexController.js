@@ -56,7 +56,8 @@ const controlador = {
             contraseña: contraseñaEncriptada
 
         }).then (usuarioCreado => {
-            res.redirect('/')
+            req.session.usuario = usuarioCreado
+            res.redirect('/profile/'+ usuarioCreado.id)
         }).catch(error => console.log(error))
 
         //console.log(contraseñaEncriptada.length)
