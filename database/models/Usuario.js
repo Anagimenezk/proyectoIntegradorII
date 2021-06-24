@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(50)
         },
         telefono: {
-            type: dataTypes.INTEGER(10)
+            type: dataTypes.INTEGER
         },
         fecha: {
             type: dataTypes.DATE
