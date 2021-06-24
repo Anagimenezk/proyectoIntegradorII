@@ -33,7 +33,8 @@ router.get ('/search-results', indexController.search);
 router.get ('/profile/:id', indexController.profile);
 
 router.get ('/profile-edit', indexController.profiledit);
-  router.post('/profile-edit',uploadEdit.single('edit_image'), indexController.modificarUsuario);
+
+router.post('/profile-edit',uploadEdit.single('edit_image'), indexController.modificarUsuario);
 
 router.get ('/allProducts', indexController.allProducts);
 
