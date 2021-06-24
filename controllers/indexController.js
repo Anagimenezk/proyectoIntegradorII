@@ -148,11 +148,11 @@ const controlador = {
     crearComentario: (req,res) => {
         db.Comentario.create( {
             texto: req.body.texto,
-            user_id: req.session.id,
+            user_id: req.session.usuario.id,
             product_id: req.body.id
     
         }).then(comentarioCreado =>{
-                res.redirect('/product/'+ productoCreado.id );
+                res.render('/product/'+ req.body.id );
             
             });
     
@@ -195,6 +195,7 @@ const controlador = {
             image:req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
+            userId: req.session.usuario.id
     
         }).then(productoCreado =>{
                 res.redirect('/product/'+ productoCreado.id);
