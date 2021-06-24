@@ -13,19 +13,26 @@ const controlador = {
             ],
             limit: 4
         }
-       db.Producto.findAll(filtro).then(resultado =>{
-        if (req.session.usuario){
-            res.render('index', {usuario: req.session.mail,productos:resultado})
+        let filtro2 = {
+            order:[
+                ['createdAt','ASC' ]
+            ],
+            limit: 4
         }
-        else{
-            res.render ('index', {usuario:'anonimo',productos:resultado})
-        }
+       db.Producto.findAll(filtro).then(resultado=>{
+           db.Producto.findAll(filtro2).then(resultado2=>{
+            if (req.session.usuario){
+                res.render('index', {usuario: req.session.mail,productos:resultado, productos2:resultado2})
+            }
+            else{
+                res.render ('index', {usuario:'anonimo',productos:resultado, productos2:resultado2})
+            }
+        
+           })
+      
        })
      // let id = req.params.id
-       //return res.render ('index',{productos: productos.lista,idSearch:id });
-      
-       
-       
+       //return res.render ('index',{productos: productos.lista,idSearch:id }); 
     },
 
 
