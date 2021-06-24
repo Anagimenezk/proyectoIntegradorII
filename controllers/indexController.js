@@ -227,7 +227,7 @@ const controlador = {
         )
     },
 
-    borrarProducto: (re,res) => {
+    borrarProducto: (req,res) => {
         db.Producto.destroy({
             where: {
                 id: req.body.id
