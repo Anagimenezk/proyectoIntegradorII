@@ -155,6 +155,31 @@ const controlador = {
         res.render('profile', {usuario:usuario})
     
     })},
+    profiledit: (req, res) => {
+        db.Usuario.findByPk (req.query.id).then (
+            usuarioModificado => res.render ('profile-edit', {usuario: usuarioModificado})
+        )
+    },
+
+    modificarUsuario: (req,res)=> {
+        db.Usuario.update ({
+            nombre: req.body.nombre,
+            apellido: req.body.apellido,
+            mail: req.body.mail,
+            telefono: req.body.telefono,
+            fecha: req.body.fecha,
+            image: req.file.filename,
+            contraseña: contraseñaEncriptada
+
+        },{
+            where: {
+                id: req.body.id
+            }
+        } ).then(() => {
+            res.redirect ('/profile/'+ usuarioModificado.id)
+        }
+        )
+    },
 
 
     productadd: (req,res) => {
@@ -173,11 +198,6 @@ const controlador = {
             
             });
     
-    },
-    profiledit: (req, res) => {
-        db.Usuario.findByPk (req.query.id).then (
-            usuarioModificado => res.render ('profile-edit', {usuario: usuarioModificado})
-        )
     },
 
     modificarForm: (req,res) => { 
