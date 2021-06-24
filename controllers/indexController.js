@@ -156,9 +156,6 @@ const controlador = {
     
     })},
 
-    profiledit: (req, res) => {
-        res.render ('profile-edit')
-    },
 
     productadd: (req,res) => {
         res.render ('product-add')
@@ -176,6 +173,11 @@ const controlador = {
             
             });
     
+    },
+    profiledit: (req, res) => {
+        db.Usuario.findByPk (req.query.id).then (
+            usuarioModificado => res.render ('profile-edit', {usuario: usuarioModificado})
+        )
     },
 
     modificarForm: (req,res) => { 
