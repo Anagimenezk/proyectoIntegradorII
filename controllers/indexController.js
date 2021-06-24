@@ -159,9 +159,9 @@ const controlador = {
             product_id: req.body.id
     
         }).then(comentarioCreado =>{
-                res.redirect('/product/'+ req.body.id );
+                res.render('/product/'+ req.body.id );
             
-            }).catch(error => console.log(error))
+            });
     
     },
 
@@ -182,14 +182,12 @@ const controlador = {
         const filtro = {
             include: [
                 {association:'productos', include: 'comentarios'}
-                
             ]
         }
         db.Usuario.findByPk(req.params.id,filtro).then(usuario =>{
          //return res.send(usuario)
 
         res.render('profile', {usuario:usuario})
-      
     
     })},
 
