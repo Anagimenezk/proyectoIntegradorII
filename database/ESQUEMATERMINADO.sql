@@ -22,7 +22,6 @@ FOREIGN KEY (user_id) REFERENCES usuarios (id)
 CREATE TABLE comentarios (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT ,
 texto VARCHAR (500) NOT NULL, 
-creacion DATE NOT NULL, 
 user_id INT UNSIGNED NOT NULL, 
 product_id INT UNSIGNED NOT NULL, 
 
@@ -55,69 +54,69 @@ INSERT INTO productos VALUES (default, "/images/products/casacavia.jpeg", "Casa 
 
 
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 1);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 1);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 1);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 1);
-INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion", "2021-01-20", 5, 1);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", 1, 1);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 1);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 1);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", 4, 1);
+INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion",  5, 1);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 2);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 2);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 2);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 2);
-INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion", "2021-01-20", 5, 2);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", 1, 2);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 2);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 2);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", 4, 2);
+INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion", 5, 2);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 3);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 3);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 3);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 3);
-INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion", "2021-01-20", 5, 3);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", 1, 3);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 3);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 3);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.",  4, 3);
+INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion",  5, 3);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 4);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 4);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 4);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 4);
-INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion", "2021-01-20", 5, 4);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", 1, 4);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 4);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro",  3, 4);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", 4, 4);
+INSERT INTO comentarios VALUES (default, "Me encanto la ambientacion", 5, 4);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 5);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 5);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 5);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 5);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", 1, 5);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 5);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 5);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", 4, 5);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 6);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 6);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 6);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 6);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas",  1, 6);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar",  2, 6);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 6);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion." ,4, 6);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 7);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 7);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 7);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4,7 );
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas",1, 7);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 7);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro",  3, 7);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.",  4,7 );
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 8);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 8);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 8);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 8);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", 1, 8);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", 2, 8);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 8);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.",  4, 8);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 9);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 9);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 9);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 9);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas",1, 9);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar",  2, 9);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 9);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", 4, 9);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 10);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 10);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 10);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 10);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas",  1, 10);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar",2, 10);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 10);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", 4, 10);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 11);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 11);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 11);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 11);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas",  1, 11);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar",  2, 11);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", 3, 11);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.",  4, 11);
 
-INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas", "2020-12-20", 1, 12);
-INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar", "2020-12-24", 2, 12);
-INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro", "2020-12-20", 3, 12);
-INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.", "2021-01-05", 4, 12);
+INSERT INTO comentarios VALUES (default, "Increible, volveria una y mil veces mas",  1, 12);
+INSERT INTO comentarios VALUES (default, "La comida es espectacular, la atencion ni hablar",  2, 12);
+INSERT INTO comentarios VALUES (default, "Muy rico, bastante caro",  3, 12);
+INSERT INTO comentarios VALUES (default, "De los mejores restaurantes que comi en BSAS, desde la comida hasta la atencion.",  4, 12);
 
 
 
