@@ -62,12 +62,13 @@
 					
 
 				</section>
-					<form class="form" action="/product/:id" method="POST">
-						<li>
-							<input  type="hidden"  name="id" value="<%= producto.id %>">
-						</li>
+					<form class="form" action="/comentario" method="POST">
+						
 						<li>
 							<input class="form-input" type="text"  name="texto" placeholder="Agregar comentario">
+						</li>
+						<li>
+							<input  type="hidden" name="id" value="<%= producto.id %> ">
 						</li>
 						<li>
 							<button class="actualizar-perfil"type="submit" class="buy-now-button" type="submit"> AGREGAR COMENTARIO</button>
