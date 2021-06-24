@@ -43,7 +43,7 @@ router.get('/modificar', indexController.modificarForm);
 router.post('/modificar', indexController.modificarProducto);
 //falta agregar multer
 
-router.get('/borrar', indexController.borrarProducto);
+router.post('/borrar', indexController.borrarProducto);
 
 
 const multerAdd = multer.diskStorage({
@@ -82,6 +82,7 @@ router.get ('/register', indexController.register);
 router.post('/register', upload.single('image') , indexController.crearUsuario);
 
 router.get('/logout', indexController.logout);
+
 
 
 

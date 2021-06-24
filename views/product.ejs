@@ -46,28 +46,37 @@
 				<% producto.comentarios.forEach(element => { %>
 			
 						<article>
+						
+				
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
 						<div class="data">
 							<div class="user">
+
 								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
-								<strong> <a href="/profile/<%=element.user_id %> "><%=element.texto %> </a> </strong>
+								<strong> <a href="/profile/<%=element.user_id %> "></a> <%=element.texto %> </a> </strong>
+
+								
+
 							
 							</div>
 							</div>
+				
+			
 						</article>
 						<% }) %> 
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					
 
 				</section>
-					<form class="form" action="/product/:id" method="POST">
-						<li>
-							<input  type="hidden"  name="id" value="<%= producto.id %>">
-						</li>
+					<form class="form" action="/product/<%=producto.id  %> " method="POST">
+						
 						<li>
 							<input class="form-input" type="text"  name="texto" placeholder="Agregar comentario">
+						</li>
+						<li>
+							<input  type="hidden" name="id" value="<%= producto.id %> ">
 						</li>
 						<li>
 							<button class="actualizar-perfil"type="submit" class="buy-now-button" type="submit"> AGREGAR COMENTARIO</button>

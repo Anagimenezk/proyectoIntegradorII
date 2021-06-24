@@ -14,9 +14,6 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(500)
         },
         
-        creacion: {
-            type: dataTypes.DATE
-        },
 
         user_id: {
             type: dataTypes.INTEGER
