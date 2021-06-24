@@ -159,7 +159,7 @@ const controlador = {
             product_id: req.body.id
     
         }).then(comentarioCreado =>{
-                res.render('/product/'+ req.body.id );
+                res.redirect('/product/'+ req.body.id );
             
             });
     
