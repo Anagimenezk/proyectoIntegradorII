@@ -46,17 +46,19 @@
 				<% producto.comentarios.forEach(element => { %>
 			
 						<article>
-					
+						
+				
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
 						<div class="data">
 							<div class="user">
 								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
-								<strong> <a href="/profile/<%=element.user_id %> "><%=element.texto %> </a> </strong>
+								<strong> <a href="/profile/<%=element.user_id %> "></a> <%=element.texto %> </a> </strong>
 							
 							</div>
 							</div>
+				
 			
 						</article>
 						<% }) %> 

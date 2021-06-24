@@ -188,6 +188,7 @@ const controlador = {
          //return res.send(usuario)
 
         res.render('profile', {usuario:usuario})
+      
     
     })},
 
