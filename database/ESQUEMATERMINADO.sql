@@ -151,4 +151,3 @@ MODIFY contraseña VARCHAR (300) NOT NULL;
 
 ALTER TABLE usuarios
 ADD image VARCHAR (500) NOT NULL;
-

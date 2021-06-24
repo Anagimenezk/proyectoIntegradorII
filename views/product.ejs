@@ -51,12 +51,13 @@
 							</div>
 						<div class="data">
 							<div class="user">
-								<strong> <a href="/profile/<%=producto.comentarios[i].user_id %> "><%=producto.comentarios[i].texto %> </a> </strong>
+								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
+								<strong> <a href="/profile/<%=element.user_id %> "><%=element.texto %> </a> </strong>
 							
 							</div>
 							</div>
 						</article>
-						<% } %> 
+						<% }) %> 
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					
 

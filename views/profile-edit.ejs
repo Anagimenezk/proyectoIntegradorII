@@ -21,53 +21,48 @@
 	
 			<div class="form-registracion">
 				<h2 class="col-12"> 
-					<form class="tablaRegistracion" method="POST" action="/profile-edit" enctype="multipart/form-data">
-					<ul class= "registracionItems">
+					<form class="tablaRegistracion" action="/register" method="POST" enctype="multipart/form-data" > 
+						<ul class= "registracionItems">
+						  
 							<li class="bordearDiferente"> 
 							<!--<label class="form-label" for="nombre">Nombre:</label> -->
-						<input class="form-input" type="text" id="nombre" placeholder="Nombre"name="user_nombre">
-					   
-					 </li>
-					 <li class="bordear">
-						<!-- <label class="form-label" for="apellido">Apellido:</label>-->
-						 <input class="form-input" type="text" id="apellido" placeholder="Apellido"name="user_apellido">
-					 </li>
-					 <li class="bordear">
-					
-						 <input class="form-input" type="file" id="apellido" placeholder="Apellido"name="edit_image">
-					 </li>
-					 
-					 <li class="sexo-entero">
-						<select class="form-input" name="sexo">
-
-							<option>Sexo</option>
-							
-							<option>Femenino</option>
-							<option>Masculino</option>
-							
-							<option>Prefiero no decirlo</option>
-							
-							</select>
+							<input class="form-input" type="nombre" id="nombre" placeholder="Nombre" name="nombre" value="<% usuario.nombre %> ">
+						   
+						 </li>
+						 <li class="bordear">
+							<!-- <label class="form-label" for="apellido">Apellido:</label>-->
+							 <input class="form-input" type="apellido" id="apellido" placeholder="Apellido"name="apellido" value="<% usuario.apellido %> ">
+						 </li>
 						
-						</li>
-					
+					 
+		
+						 <li class="bordear">
+							<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
+							 <input class="form-input" type="mail" id="mail" placeholder="Correo electrónico" name="mail" value="<% usuario.mail %> ">
+						 </li>
 	
-					 <li class="bordearArriba">
-						<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
-						 <input class="form-input" type="email" id="mail" placeholder="Correo electrónico" name="user_mail">
-					 </li>
-					 <li class="bordear">
-						<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-						 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña actual" name="user_contraseña">
-						 <input class="form-input" type="password" id="nueva-contraseña"placeholder="Nueva contraseña" name="user_contraseña">
-					 </li>
+						 <li class="bordear">
+							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+							 <input class="form-input" type="telefono" id="telefono" placeholder="Telefono celular" name="telefono" value="<% usuario.telefono %> ">
+						 </li>
+						 <li class="bordear">
+							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+							 <input class="form-input" type="date" id="fecha" placeholder="Fecha de nacimiento" name="fecha" value="<% usuario.fecha %> ">
+						 </li>
+						 <li class="bordear">
+							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+							 <input class="form-input" type="file" id="image" placeholder="Imagen" name="image" value="<% usuario.image %> ">
+						 </li>
+						 <li class="bordear">
+							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
+							 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="contraseña" value="<% usuario.contraseña %> ">
+						 </li>
+		
 	
-				
-					<a class="actualizar-perfil" href="/profile">Actualizar mi perfil</a>
-					
-	
-				   </ul>
-				  </form>
+						 <button class="actualizar-perfil" type="submit" value="Register"> Registrarme</button>
+		
+					   </ul>
+					  </form>
 				</h2>
 			</div>
 
