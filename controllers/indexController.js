@@ -105,6 +105,7 @@ const controlador = {
        console.log(req.params)
         const filtro = {
             include: [
+                {association:'usuarios'},
                 {association:'comentarios', include: 'usuarios'}
             ]
         }
@@ -143,7 +144,7 @@ const controlador = {
         }
         )
     },
-    
+
     crearComentario: (req,res) => {
         db.Comentario.create( {
             texto: req.body.texto,
