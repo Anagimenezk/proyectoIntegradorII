@@ -42,7 +42,7 @@ router.get('/modificar', indexController.modificarForm);
 router.post('/modificar', indexController.modificarProducto);
 //falta agregar multer
 
-router.get('/borrar', indexController.borrarProducto);
+router.post('/borrar', indexController.borrarProducto);
 
 
 const multerAdd = multer.diskStorage({
