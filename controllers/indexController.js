@@ -155,8 +155,8 @@ const controlador = {
     crearComentario: (req,res) => {
         db.Comentario.create( {
             texto: req.body.texto,
-            userId: req.session.usuario.id,
-            productId: req.body.id
+            user_id: req.session.usuario.id,
+            product_id: req.body.id
     
         }).then(comentarioCreado =>{
                 res.render('/product/'+ req.body.id );

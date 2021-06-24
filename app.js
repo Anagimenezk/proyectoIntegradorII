@@ -40,8 +40,8 @@ app.use(function(req, res, next) {
   if(req.cookies.userId && !req.session.usuario) {
     db.Usuario.findByPk(req.cookies.userId).then(resultado => {
       req.session.usuario = {
-        mail: resultado.mail,
-        id: resultado.id
+        mail: usuario.mail,
+        id: usuario.id
       }
       return next();
     });
