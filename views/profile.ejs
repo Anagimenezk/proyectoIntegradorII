@@ -47,25 +47,25 @@
 			
 			
 			<!-- Show mis productos -->
-
-			<% for (let i = 0; i < usuario.productos[i].length; i++ ) { %> 
+			
+			<% usuario.productos.forEach(element=> { %> 
 
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/<%= productos[i].id %> ">
+						<a href="/product/<%= element.productos.id%> ">
 							<figure class="product-box_image">
-								<img src="<%= usuario. productos[i].image %>" alt="">
+								<img src="<%= element.image %>" alt="">
 							</figure>
 							<article class="product-box_data">
-								<h2><%= usuario.productos[i].nombre %></h2>
-								<p><%= usuario. productos[i].descripcion %></p>
+								<h2><%= element.nombre %></h2>
+								<p><%= element.descripcion %></p>
 								<p>Comentarios: 4 </p>
 							</article>
 						</a>
 					</section>
 				</div>
 	
-				<% } %> 
+				<% }) %> 
 
 		<!--<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
