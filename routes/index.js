@@ -32,13 +32,15 @@ router.get ('/search-results', indexController.search);
 
 router.get ('/profile/:id', indexController.profile);
 
-router.get ('/profile-edit',uploadEdit.single('edit_image'), indexController.profiledit);
+router.get ('/profile-edit', indexController.profiledit);
+  router.post('/profile-edit',uploadEdit.single('edit_image'), indexController.modificarUsuario);
 
 router.get ('/allProducts', indexController.allProducts);
 
 router.get('/modificar', indexController.modificarForm);
 
 router.post('/modificar', indexController.modificarProducto);
+//falta agregar multer
 
 router.get('/borrar', indexController.borrarProducto);
 
