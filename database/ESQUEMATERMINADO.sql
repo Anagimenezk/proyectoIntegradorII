@@ -4,7 +4,7 @@ nombre VARCHAR (50) NOT NULL,
 apellido VARCHAR (50) NOT NULL,
 mail VARCHAR (200) NOT NULL, 
 contraseña VARCHAR (50) NOT NULL, 
-telefono INT(10) NOT NULL,
+telefono INT UNSIGNED NOT NULL,
 fecha DATE NOT NULL
 );
 
@@ -147,10 +147,6 @@ ADD updatedAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP;
 
 ALTER TABLE usuarios 
 MODIFY contraseña VARCHAR (300) NOT NULL;
-
-
-ALTER TABLE usuarios
-MODIFY telefono INT(20) NOT NULL;
 
 
 ALTER TABLE usuarios

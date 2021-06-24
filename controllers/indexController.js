@@ -35,8 +35,9 @@ const controlador = {
 
     crearUsuario: (req,res)=> {
         const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
-        console.log(req.body) 
-        console.log(req.file)
+       // console.log(req.body) 
+       // console.log(req.file)
+        console.log (req.body.telefono.length)
 
         db.Usuario.create({
             nombre: req.body.nombre,
@@ -51,7 +52,7 @@ const controlador = {
             res.redirect('/profile/' + usuarioCreado.id)
         }).catch(error => console.log(error))
 
-        console.log(contraseñaEncriptada.length)
+        //console.log(contraseñaEncriptada.length)
     },
 
     
@@ -149,7 +150,7 @@ const controlador = {
             ]
         }
         db.Usuario.findByPk(req.params.id,filtro).then(usuario =>{
-         console.log(usuario)
+         //return res.send(usuario)
 
         res.render('profile', {usuario:usuario})
     
