@@ -44,7 +44,7 @@ const controlador = {
         const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
        // console.log(req.body) 
        // console.log(req.file)
-        console.log (req.body.telefono.length)
+       //console.log (req.body.telefono.length)
 
         db.Usuario.create({
             nombre: req.body.nombre,
