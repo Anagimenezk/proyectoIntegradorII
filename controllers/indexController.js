@@ -55,11 +55,14 @@ const controlador = {
             image: req.file.filename,
             contraseña: contraseñaEncriptada
 
+            
+
         }).then (usuarioCreado => {
             res.redirect('/profile/' + usuarioCreado.id)
         }).catch(error => console.log(error))
 
-        //console.log(contraseñaEncriptada.length)
+        console.log(contraseñaEncriptada.length)
+        console.log (req.file.filename)
     },
 
     
