@@ -20,7 +20,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
 				<%= producto.nombre %></h2> 
-				<% if (locals.logueado && locals.userId == producto.usuarios.id){%>
+				<!--if (locals.logueado && locals.userId == producto.usuarios.id){--> 
 			<p class="product-detail-description">
 				<form class="tablaRegistracion" action="/modificar" method="GET">
 					<input type="hidden" name="id" value="<%= producto.id %>">
@@ -31,13 +31,14 @@
 					<input  class="actualizar-perfil" type="submit" value="Borrar">
 				  </form>
 			</p>
-			<% } %>
+			<!--}-->  
 		</div>
 
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src="<%= producto.image %> " alt="" class="product-detail-img">
+					<strong class="product-detail-description"> COMMPLETAR CON NOMBRE DEL CREADOR </strong>
 					<p class="product-detail-description"> <%= producto.descripcion %>  </p>
 				</article>
 
