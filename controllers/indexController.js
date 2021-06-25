@@ -126,7 +126,7 @@ const controlador = {
         
         
     },
-
+   
     profiledit: (req, res) => {
         db.Usuario.findByPk (req.query.id).then (
             usuarioModificado => res.render ('profile-edit', {usuario: usuarioModificado})

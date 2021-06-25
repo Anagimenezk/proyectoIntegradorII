@@ -25,8 +25,11 @@
 					<a href='/allProducts/:id' class="btn mt-3 ml-4" href="">SEGUIR</a>
 					
 				</div>
-				<a class="editar-perfil" href="/profile-edit">Editar perfil</a>
-				<!--ESTO TIENE QUE SER EL FORM DE MODIFICAR PERFIL-->
+				<form  action="/profile-edit" method="GET">
+					<input type="hidden" name="id" value="<%- usuario.id %>" >
+					<button class="editar-perfil" type="submit" > EDITAR PERFIL </button>
+				</form>
+				<!--<a class="editar-perfil" href="/profile-edit">Editar perfil</a>-->
 				<div>
 					<ul class="el-usuario">
 						<li class="infoUsuario">8 productos</li>
