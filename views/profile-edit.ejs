@@ -21,17 +21,17 @@
 	
 			<div class="form-registracion">
 				<h2 class="col-12"> 
-					<form class="tablaRegistracion" action="/register" method="POST" enctype="multipart/form-data" > 
+					<form class="tablaRegistracion" action="/profile-edit" method="POST" enctype="multipart/form-data" > 
 						<ul class= "registracionItems">
 						  
 							<li class="bordearDiferente"> 
 							<!--<label class="form-label" for="nombre">Nombre:</label> -->
-							<input class="form-input" type="nombre" id="nombre" placeholder="Nombre" name="nombre" >
+							<input class="form-input" type="nombre" placeholder="Nombre" name="nombre" value="<%= usuario.nombre %> ">
 						   
 						 </li>
 						 <li class="bordear">
 							<!-- <label class="form-label" for="apellido">Apellido:</label>-->
-							 <input class="form-input" type="apellido" id="apellido" placeholder="Apellido"name="apellido" >
+							 <input class="form-input" type="apellido" placeholder="Apellido"name="apellido" value="<%= usuario.apellido  %> " >
 						 </li>
 						 <li class="bordear">
 							<input type="hidden" name="id" >
@@ -40,28 +40,28 @@
 		
 						 <li class="bordear">
 							<!--- <label class="form-label" for="mail">Correo electrónico:</label> -->
-							 <input class="form-input" type="mail" id="mail" placeholder="Correo electrónico" name="mail" >
+							 <input class="form-input" type="mail"  placeholder="Correo electrónico" name="mail" value="<%= usuario.mail  %> ">
 						 </li>
 	
 						 <li class="bordear">
 							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-							 <input class="form-input" type="telefono" id="telefono" placeholder="Telefono celular" name="telefono" >
+							 <input class="form-input" type="telefono"  placeholder="Telefono celular" name="telefono" value="<%= usuario.telefono  %> " >
 						 </li>
 						 <li class="bordear">
 							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-							 <input class="form-input" type="date" id="fecha" placeholder="Fecha de nacimiento" name="fecha" >
+							 <input class="form-input" type="date"  placeholder="Fecha de nacimiento" name="fecha"  value="<%= usuario.fecha %> ">
 						 </li>
 						 <li class="bordear">
 							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-							 <input class="form-input" type="file" id="image" placeholder="Imagen" name="image" >
+							 <input class="form-input" type="file" placeholder="Imagen" name="image" value="<%= usuario.image %> ">
 						 </li>
 						 <li class="bordear">
 							<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
-							 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="contraseña" >
+							 <input class="form-input" type="password" placeholder="Contraseña" name="contraseña" value="<%= usuario.contraseña  %> " >
 						 </li>
 		
 	
-						 <button class="actualizar-perfil" type="submit" value="Register"> Registrarme</button>
+						 <button class="actualizar-perfil" type="submit" value="Register"> Editar Perfil</button>
 		
 					   </ul>
 					  </form>

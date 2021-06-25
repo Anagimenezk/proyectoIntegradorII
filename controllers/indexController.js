@@ -58,7 +58,8 @@ const controlador = {
             
 
         }).then (usuarioCreado => {
-            res.redirect('/profile/' + usuarioCreado.id)
+            req.session.usuario = usuarioCreado
+            res.redirect('/profile/'+ usuarioCreado.id)
         }).catch(error => console.log(error))
 
         console.log(contraseñaEncriptada.length)
@@ -128,7 +129,7 @@ const controlador = {
         
         
     },
-
+   
     profiledit: (req, res) => {
         db.Usuario.findByPk (req.query.id).then (
             usuarioModificado => res.render ('profile-edit', {usuario: usuarioModificado})
@@ -162,7 +163,7 @@ const controlador = {
             product_id: req.body.id
     
         }).then(comentarioCreado =>{
-                res.render('/product/'+ req.body.id );
+                res.redirect('/product/'+ req.body.id );
             
             });
     
