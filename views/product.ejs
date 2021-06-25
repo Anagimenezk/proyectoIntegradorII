@@ -47,7 +47,7 @@
       
 				<% producto.comentarios.forEach(element => { %>
 			
-						<article>
+						<article class="comentarios">
 						
 				
 							<div class="icono-usuario-comentario">
@@ -56,8 +56,8 @@
 						<div class="data">
 							<div class="user">
 
-								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
-								<strong> <a href="/profile/<%=element.user_id %> "></a> <%=element.texto %> </a> </strong>
+								<p class="nombreUsu"> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
+								<strong> <a href="/profile/<%= element.user_id %> "></a> <%=element.texto %> </a> </strong>
 
 								
 
