@@ -195,7 +195,8 @@ const controlador = {
     search: (req,res)=> {
         const filtro = {
             where:{
-                nombre: {[Op.like]: '%'+ req.query.search+ '%'}
+                nombre: {[Op.like]: '%'+ req.query.search+  '%'},
+                descripcion: {[Op.like]:'%'+req.query.search + '%'}
             }
         }
         db.Producto.findAll(filtro).then(resultado =>{
