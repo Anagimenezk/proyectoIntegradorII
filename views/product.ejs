@@ -20,7 +20,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
 				<%= producto.nombre %></h2> 
-				<% if (locals.logueado && locals.userId == producto.usuarios.id){%>
+		<!--if (locals.logueado && locals.userId == producto.usuarios.id){-->
 			<p class="product-detail-description">
 				<form class="tablaRegistracion" action="/modificar" method="GET">
 					<input type="hidden" name="id" value="<%= producto.id %>">
@@ -31,7 +31,7 @@
 					<input  class="actualizar-perfil" type="submit" value="Borrar">
 				  </form>
 			</p>
-			<% } %>
+			<!--}-->
 		</div>
 
 		<div class="product-detail">
@@ -46,7 +46,7 @@
 					<section class="comments">
       
 				<% producto.comentarios.forEach(element => { %>
-			
+					<a href="/profile/<%= element.user_id %> ">
 						<article>
 						
 				
@@ -59,14 +59,14 @@
 								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
 								<strong> <a href="/profile/<%= element.user_id %> "></a> <%=element.texto %> </a> </strong>
 
-								
-
+									<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
+									<strong> <%=element.texto %> </strong>
+								</div>
+							</div>
 							
-							</div>
-							</div>
-				
 			
 						</article>
+					</a>
 						<% }) %> 
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					

@@ -137,23 +137,37 @@ const controlador = {
     },
 
     modificarUsuario: (req,res)=> {
-        db.Usuario.update ({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            mail: req.body.mail,
-            telefono: req.body.telefono,
-            fecha: req.body.fecha,
-            image: req.file.fieldname,
-            contraseña: contraseñaEncriptada
+        let errors = {}
 
-        },{
-            where: {
-                id: req.body.id
-            }
-        } ).then(() => {
-            res.redirect ('/profile/'+ usuarioModificado.id)
+        if (res.locals.userId!= req.body.id){
+            errors.message = "Lo siento, usted no tiene acceso a la edicion de este perfil"
+            res.locals.errors = errors 
+            db.Usuario.findbyPk(req.body.id).then(usuario =>{
+                res.render('profile/'+ req.body.id)
+            })
         }
-        )
+        if(req.body.contraseña){
+
+        let contraEncriptada = bcrypt.hashSync (req.body.contraseña);
+            db.Usuario.update ({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                mail: req.body.mail,
+                telefono: req.body.telefono,
+                fecha: req.body.fecha,
+                image: req.file.filename,
+                contraseña: contraEncriptada
+    
+            },{
+                where: {
+                    id: req.body.id
+                }
+            } ).then(usuarioModificado => {
+                req.session.usuario= usuarioModificado
+                res.redirect ('/profile/'+ usuarioModificado.id)
+            })
+        }
+       
     },
 
     crearComentario: (req,res) => {
