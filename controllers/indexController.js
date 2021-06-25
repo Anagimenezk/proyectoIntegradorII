@@ -199,11 +199,23 @@ const controlador = {
         console.log(req.params)
         const filtro = {
             include: [
-                {association:'productos', include: 'comentarios'}
-            ]
+                {association:'productos', include: 'comentarios'},
+                {association: 'comentarios'},
+        
+            ],
+
         }
         db.Usuario.findByPk(req.params.id,filtro).then(usuario =>{
          //return res.send(usuario)
+let respuesta= []
+usuario.comentarios.forEach(element =>{
+    respuesta.push (element.id) })
+usuario.productos.forEach(element =>{
+    respuesta.push (element.id) 
+});
+
+
+
 
         res.render('profile', {usuario:usuario})
     
@@ -224,7 +236,7 @@ const controlador = {
     
         }).then(productoCreado =>{
                 res.redirect('/product/'+ productoCreado.id);
-            
+
             });
     
     },
@@ -261,14 +273,18 @@ const controlador = {
             res.redirect('/allProducts')
         })
     },
+
     
     allProducts: (req,res) => {
-        db.Producto.findAll({
-            
-        }).then(resultado =>{ 
-            res.render('allProducts',{productos:resultado})
-        })
-
+     db.Producto.findAll({
+                
+            }).then(resultado =>{ 
+                res.render('allProducts',{productos:resultado})
+            })
+       
+       
+        
+        
         
         //return res.render ('allProducts', {productos: productos.lista})
     },
