@@ -22,13 +22,16 @@
 
 					<h1 class="main-title"> <%= usuario.nombre %> </h1>
 					<!--on click que cami-bie a "siguiendo"-->
-					<a href='/allProducts/:id' class="btn mt-3 ml-4" href="">SEGUIR</a>
+				
 					
 				</div>
+			<!-- CORROBORAR QUE ANDE BIEN -->
+			<% if (logueado && userId == usuario.id) { %> 
 				<form  action="/profile-edit" method="GET">
 					<input type="hidden" name="id" value="<%- usuario.id %>" >
-					<button class="editar-perfil" type="submit" > EDITAR PERFIL </button>
+					<button class="btn mt-3 ml-4" type="submit" > EDITAR PERFIL </button>
 				</form>
+				<% } %> 
 				<!--<a class="editar-perfil" href="/profile-edit">Editar perfil</a>-->
 				<div>
 					<ul class="el-usuario">
@@ -49,13 +52,13 @@
 			</div>
 			
 			
-			<!-- Show mis productos -->
+			<!-- NO ANDA ESTE SHOW DE RESTAURANTS -->
 			
 			<% usuario.productos.forEach(element=> { %> 
 
 				<div class="col-12 col-sm-6 col-lg-3">
 					<section class="product-box">
-						<a href="/product/<%= element.productos.id%> ">
+						<a href="/product/<%= element.id%> ">
 							<figure class="product-box_image">
 								<img src="<%= element.image %>" alt="">
 							</figure>

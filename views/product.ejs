@@ -20,7 +20,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
 				<%= producto.nombre %></h2> 
-				<% if (locals.logueado && locals.userId == producto.usuarios.id){%>
+				<!--if (locals.logueado && locals.userId == producto.usuarios.id){-->
 			<p class="product-detail-description">
 				<form class="tablaRegistracion" action="/modificar" method="GET">
 					<input type="hidden" name="id" value="<%= producto.id %>">
@@ -31,13 +31,14 @@
 					<input  class="actualizar-perfil" type="submit" value="Borrar">
 				  </form>
 			</p>
-			<% } %>
+			<!--}-->
 		</div>
 
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src="<%= producto.image %> " alt="" class="product-detail-img">
+					<strong class="product-detail-description"> COMMPLETAR CON NOMBRE DEL CREADOR </strong>
 					<p class="product-detail-description"> <%= producto.descripcion %>  </p>
 				</article>
 
@@ -47,15 +48,21 @@
       
 				<% producto.comentarios.forEach(element => { %>
 			
+<<<<<<< HEAD
 						<article class="comentarios">
+=======
+					<article> 
+>>>>>>> 45c2751dd38c2855210a15e413543a29002ee10a
 						
-				
-							<div class="icono-usuario-comentario">
+					   	<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
-							</div>
-						<div class="data">
+						</div>
+					
+					<div class="data">
+						<a href="/profile/<%= element.usuarios.id  %> ">
 							<div class="user">
 
+<<<<<<< HEAD
 								<p class="nombreUsu"> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
 								<strong> <a href="/profile/<%= element.user_id %> "></a> <%=element.texto %> </a> </strong>
 
@@ -63,10 +70,16 @@
 
 							
 							</div>
+=======
+								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
+								<strong> <%=element.texto %>  </strong>
+	
+>>>>>>> 45c2751dd38c2855210a15e413543a29002ee10a
 							</div>
-				
-			
-						</article>
+						</a>
+					</div>
+					
+					</article>
 						<% }) %> 
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					
