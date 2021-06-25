@@ -143,7 +143,7 @@ const controlador = {
             mail: req.body.mail,
             telefono: req.body.telefono,
             fecha: req.body.fecha,
-            image: req.file.filename,
+            image: req.file.fieldname,
             contraseña: contraseñaEncriptada
 
         },{
