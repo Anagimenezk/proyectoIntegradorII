@@ -224,7 +224,7 @@ const controlador = {
     
         }).then(productoCreado =>{
                 res.redirect('/product/'+ productoCreado.id);
-            
+
             });
     
     },
@@ -261,6 +261,7 @@ const controlador = {
             res.redirect('/allProducts')
         })
     },
+
     
     allProducts: (req,res) => {
         db.Producto.findAll({
