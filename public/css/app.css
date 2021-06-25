@@ -522,7 +522,7 @@ margin-right: 0px;
 
 .actions-list p {
   color: var(--gray);
-  font-size: 1.7em;
+  font-size: 1.3em;
   margin: 0;
 }
 .user{
@@ -530,6 +530,7 @@ margin-right: 0px;
   padding-top: 2px;
   
 }
+
 .icono-usuario-comentario{
   display: block;
   font-size: 20px;
@@ -580,7 +581,7 @@ margin-right: 0px;
   padding-bottom: 7.5px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .comments img{
   width: 40px;
@@ -589,6 +590,8 @@ margin-right: 0px;
 }
 .comments .data{
   width: 85%;
+  margin-left: 4px;
+  padding-top: 2px;
   
 }
 .comments p{
@@ -596,7 +599,9 @@ margin-right: 0px;
   margin-top: 0;
 }
 .comments .user{
-  font-size: 1.7em;
+  padding-left: 2px;
+  padding-top: 5px;
+  font-size: 1.4em;
 }
 
 /*====== Formularios ======*/

@@ -43,34 +43,36 @@
 
 
 				<div class="col-12 col-lg-4">
-					<section class="comments">
+			<section class="comments">
       
 			<% producto.comentarios.forEach(element => { %>
 				<a href="/profile/<%= element.user_id %> ">
 					<article>
-						<% if (element.usuarios.image == null)  {%> 
+						<% if (element.usuarios.image == undefined)  {%> 
 							<div class="icono-usuario-comentario">
-								<i class="far fa-user"></i>
+								<img src="/images/users/logo.png" alt="">
 							</div>
 
-							<% } %> 
+						<% } %> 
 						
-							<div class="icono-usuario-comentario">
-								<li>
-									<%= element.usuarios.image  %> 
-								</li>
-							</div>
 						
+						<div class="icono-usuario-comentario">
+								
+								<img src="<%= element.usuarios.image  %> " alt="">	
+						</div>
+					
 
 						<div class="data">
 							<div class="user">
 
-								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
+								<p > <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
 								<strong>  <%=element.texto %></strong>
+						<% if (logueado && userId == element.usuarios.id) { %> 
 								<form action="/borrarComentario" method="POST">
 									<input type="hidden" name="id" value="<%= element.id %> ">
-									<button type="submit" value="borrar" > Eliminar</button>
+									<button class="btn mt-3 ml-4" type="submit" value="borrar" > Eliminar</button>
 								</form>
+							<% } %> 
 							</div>
 						</div>
 						
@@ -90,18 +92,18 @@
 					<form class="form" action="/product/<%=producto.id  %> " method="POST">
 					
 						
-						<li>
+						<div>
 							<input class="form-input" type="text"  name="texto" placeholder="Agregar comentario">
-						</li>
-						<li>
+						</div>
+						<div>
 							<input  type="hidden" name="id" value="<%= producto.id %> ">
-						</li>
-						<li>
+						</div>
+						<div>
 
 							<button class="actualizar-perfil"type="submit" class="buy-now-button" type="submit"> AGREGAR COMENTARIO</button>
 
 							
-						</li>
+						</div>
 						
 						
 					</form>

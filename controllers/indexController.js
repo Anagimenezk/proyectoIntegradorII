@@ -118,7 +118,9 @@ const controlador = {
             include: [
                 {association:'usuarios'},
                 {association:'comentarios', include: 'usuarios'}
-            ]
+            ],
+             order:[
+                ['comentarios','createdAt','DESC' ]]
         }
         db.Producto.findByPk(req.params.id,filtro).then(producto =>{
          console.log(producto) 
