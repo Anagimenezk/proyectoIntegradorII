@@ -137,6 +137,15 @@ const controlador = {
     },
 
     modificarUsuario: (req,res)=> {
+        let errors = {}
+
+        if (res.locals.userId!= req.body.id){
+            errors.message = "Lo siento, usted no tiene acceso a la edicion de este perfil"
+            res.locals.errors = errors 
+            db.Usuario.findbyPk(req.body.id).then(usuario =>{
+                res.render('profile/'+ req.body.id)
+            })
+        }
         if(req.body.contraseña){
 
         let contraEncriptada = bcrypt.hashSync (req.body.contraseña);

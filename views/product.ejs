@@ -47,26 +47,24 @@
       
 				<% producto.comentarios.forEach(element => { %>
 			
-						<article>
+					<article> 
 						
-				
-							<div class="icono-usuario-comentario">
+					   	<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
-							</div>
-						<div class="data">
+						</div>
+					
+					<div class="data">
+						<a href="profile/<%= element.user_id  %> ">
 							<div class="user">
 
 								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
-								<strong> <a href="/profile/<%=element.user_id %> "></a> <%=element.texto %> </a> </strong>
-
-								
-
-							
+								<strong> <%=element.texto %>  </strong>
+	
 							</div>
-							</div>
-				
-			
-						</article>
+						</a>
+					</div>
+					
+					</article>
 						<% }) %> 
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					
