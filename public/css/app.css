@@ -527,14 +527,9 @@ margin-right: 0px;
 }
 .user{
   color: #4a2e3b;
+  padding-top: 2px;
   
 }
-.nombreUsu{
-  text-transform: capitalize;
-}
-
-
-
 .icono-usuario-comentario{
   display: block;
   font-size: 20px;
@@ -577,19 +572,12 @@ margin-right: 0px;
 .article{
   padding: 10px;
 }
-
-.comentarios{
-  padding-right: 20px;
-  text-align: justify;
-
- 
-}
 .comments {
   padding: 30px 15px 15px 0;
 }
 .comments article{
-  margin-bottom: 7px;
-  padding-bottom: 7px;
+  margin-bottom: 7.5px;
+  padding-bottom: 7.5px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
   justify-content: space-around;
