@@ -137,23 +137,28 @@ const controlador = {
     },
 
     modificarUsuario: (req,res)=> {
-        db.Usuario.update ({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            mail: req.body.mail,
-            telefono: req.body.telefono,
-            fecha: req.body.fecha,
-            image: req.file.filename,
-            contraseña: contraseñaEncriptada
+        if(req.body.contraseña){
 
-        },{
-            where: {
-                id: req.body.id
-            }
-        } ).then(() => {
-            res.redirect ('/profile/'+ usuarioModificado.id)
+        let contraEncriptada = bcrypt.hashSync (req.body.contraseña);
+            db.Usuario.update ({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                mail: req.body.mail,
+                telefono: req.body.telefono,
+                fecha: req.body.fecha,
+                image: req.file.filename,
+                contraseña: contraEncriptada
+    
+            },{
+                where: {
+                    id: req.body.id
+                }
+            } ).then(usuarioModificado => {
+                req.session.usuario= usuarioModificado
+                res.redirect ('/profile/'+ usuarioModificado.id)
+            })
         }
-        )
+       
     },
 
     crearComentario: (req,res) => {
