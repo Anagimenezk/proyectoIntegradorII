@@ -45,6 +45,8 @@ router.post('/modificar', indexController.modificarProducto);
 
 router.post('/borrar', indexController.borrarProducto);
 
+router.post ('/borrarComentario', indexController.borrarComentario);
+
 
 const multerAdd = multer.diskStorage({
   destination: (req, file, cb) => {

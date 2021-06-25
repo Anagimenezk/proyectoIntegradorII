@@ -182,7 +182,15 @@ const controlador = {
             });
     
     },
-
+    borrarComentario: (req,res) =>{
+        db.Comentario.destroy({
+            where: {
+                id:req.body.id,
+            }
+        }).then (() => {
+            res.redirect ('/')
+        })
+    },
 
     search: (req,res)=> {
         const filtro = {
@@ -273,6 +281,7 @@ usuario.productos.forEach(element =>{
             res.redirect('/allProducts')
         })
     },
+
 
     
     allProducts: (req,res) => {
