@@ -220,7 +220,7 @@ const controlador = {
             image:req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
-            userId: req.session.usuario.id
+            user_id: req.session.usuario.id
     
         }).then(productoCreado =>{
                 res.redirect('/product/'+ productoCreado.id);
