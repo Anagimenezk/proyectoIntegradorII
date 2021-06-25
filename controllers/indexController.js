@@ -143,7 +143,6 @@ const controlador = {
 
         let contraEncriptada = bcrypt.hashSync (req.body.contraseña);
             db.Usuario.update ({
-                id: req.session.user.id,
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 mail: req.body.mail,
