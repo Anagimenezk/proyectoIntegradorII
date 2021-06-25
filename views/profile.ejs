@@ -20,7 +20,7 @@
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
 
-					<h1 class="main-title"> <%= usuario.nombre + usuario.apellido %> </h1>
+					<h1 class="main-title"> <%= usuario.nombre + " " + usuario.apellido %> </h1>
 					<!--on click que cami-bie a "siguiendo"-->
 				
 					
@@ -35,10 +35,17 @@
 				<!--<a class="editar-perfil" href="/profile-edit">Editar perfil</a>-->
 				<div>
 					<ul class="el-usuario">
-						<li class="infoUsuario">8 productos</li>
+						<li class="infoUsuario"> Fecha de nacimiento: <%= usuario.fecha %></li>
+						<li class="infoUsuario"> Comentarios: <%=usuario.comentarios.length %></li>
+						<li class="infoUsuario"> Productos: <%=usuario.productos.length %></li>
+
 					
 					</ul>
 				</div>
+				<div>
+
+				</div>
+
 			</div>
 		</div>
 	</section>
@@ -51,8 +58,9 @@
 				<h2 class="products-title"> Sus Restaurantes </h2>
 			</div>
 			
+		
 			
-			<!-- NO ANDA ESTE SHOW DE RESTAURANTS -->
+		
 			
 			<% usuario.productos.forEach(element=> { %> 
 

@@ -20,7 +20,7 @@
 		<div class="d-flex align-items-center">
 			<h2 class="products-title">
 				<%= producto.nombre %></h2> 
-		<!--if (locals.logueado && locals.userId == producto.usuarios.id){-->
+<% if (locals.logueado && locals.userId == producto.usuarios.id){ %> 
 			<p class="product-detail-description">
 				<form class="tablaRegistracion" action="/modificar" method="GET">
 					<input type="hidden" name="id" value="<%= producto.id %>">
@@ -31,7 +31,7 @@
 					<input  class="actualizar-perfil" type="submit" value="Borrar">
 				  </form>
 			</p>
-			<!--}-->
+			<% }%> 
 		</div>
 
 		<div class="product-detail">
@@ -45,11 +45,10 @@
 				<div class="col-12 col-lg-4">
 					<section class="comments">
       
-				<% producto.comentarios.forEach(element => { %>
-					<a href="/profile/<%= element.user_id %> ">
-						<article>
+			<% producto.comentarios.forEach(element => { %>
+				<a href="/profile/<%= element.user_id %> ">
+					<article>
 						
-				
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
@@ -58,15 +57,18 @@
 
 								<p> <%= element.usuarios.nombre %> <%= element.usuarios.apellido %></p>
 								<strong>  <%=element.texto %></strong>
-
-
-								</div>
+								<form action="/borrarComentario" method="POST">
+									<input type="hidden" name="id" value="<%= element.id %> ">
+									<button type="submit" value="borrar" > Eliminar</button>
+								</form>
 							</div>
-							
-			
-						</article>
-					</a>
-						<% }) %> 
+						</div>
+						
+					</article>
+				</a>
+				
+				
+			<% }) %> 
 			<!--CORREGIR ESTO PAR que anden el detalle con los comentarios etc -->
 					
 
