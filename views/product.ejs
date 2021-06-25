@@ -37,7 +37,7 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src= "<%= producto.image %> " alt="" class="product-detail-img">
+					<img src= "<%=producto.image%> " alt="" class="product-detail-img">
 					<p class="product-detail-description"> <%= producto.descripcion %>  </p>
 				</article>
 
@@ -48,10 +48,20 @@
 			<% producto.comentarios.forEach(element => { %>
 				<a href="/profile/<%= element.user_id %> ">
 					<article>
-						
+						<% if (element.usuarios.image == null)  {%> 
 							<div class="icono-usuario-comentario">
 								<i class="far fa-user"></i>
 							</div>
+
+							<% } %> 
+						
+							<div class="icono-usuario-comentario">
+								<li>
+									<%= element.usuarios.image  %> 
+								</li>
+							</div>
+						
+
 						<div class="data">
 							<div class="user">
 
