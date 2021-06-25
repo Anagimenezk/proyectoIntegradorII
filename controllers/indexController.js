@@ -52,7 +52,7 @@ const controlador = {
             mail: req.body.mail,
             telefono: req.body.telefono,
             fecha: req.body.fecha,
-            image: req.file.filename,
+            image: 'images/users/'+req.file.filename,
             contraseña: contraseñaEncriptada
 
             
@@ -155,7 +155,7 @@ const controlador = {
                 mail: req.body.mail,
                 telefono: req.body.telefono,
                 fecha: req.body.fecha,
-                image: req.file.filename,
+                image: 'images/users/'+ req.file.filename,
                 contraseña: contraEncriptada
     
             },{
@@ -238,7 +238,7 @@ usuario.productos.forEach(element =>{
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,
-            image:req.file.filename,
+            image:'images/products/' + req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
             user_id: req.session.usuario.id
@@ -261,7 +261,7 @@ usuario.productos.forEach(element =>{
     modificarProducto: (req,res)=> {
         db.Producto.update ({
             nombre: req.body.nombre,
-            image:req.file.filename,
+            image:'images/products/' + req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion
 
