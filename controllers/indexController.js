@@ -238,8 +238,10 @@ usuario.productos.forEach(element =>{
                 res.redirect('/product/'+ productoCreado.id);
 
             });
-    
+     
     },
+
+    
 
     modificarForm: (req,res) => { 
         db.Producto.findByPk (req.query.id).then (
