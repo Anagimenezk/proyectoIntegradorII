@@ -38,6 +38,13 @@
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
 					<img src= "<%=producto.image%> " alt="" class="product-detail-img">
+					<div class="productDescriptionBox">
+						
+							<strong class="product-detail-description2" >
+								<a href="/profile/<%=producto.usuarios.id  %> "> <%= producto.usuarios.nombre + " " + producto.usuarios.apellido %></a> </strong>
+						<div class="product-detail-description3">compartio este restaurant</div>
+					</div>
+					
 					<p class="product-detail-description"> <%= producto.descripcion %>  </p>
 				</article>
 
