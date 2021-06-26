@@ -85,7 +85,7 @@ const controlador = {
             mail: req.body.mail,
             telefono: req.body.telefono,
             fecha: req.body.fecha,
-            image: req.file.filename,
+            image: '/images/users/'+ req.file.filename,
             contraseña: contraseñaEncriptada
 
             
@@ -151,7 +151,9 @@ const controlador = {
             include: [
                 {association:'usuarios'},
                 {association:'comentarios', include: 'usuarios'}
-            ]
+            ],
+             order:[
+                ['comentarios','createdAt','DESC' ]]
         }
         db.Producto.findByPk(req.params.id,filtro).then(producto =>{
          console.log(producto) 
@@ -172,13 +174,6 @@ const controlador = {
     modificarUsuario: (req,res)=> {
         let errors = {}
 
-        if (res.locals.userId!= req.body.id){
-            errors.message = "Lo siento, usted no tiene acceso a la edicion de este perfil"
-            res.locals.errors = errors 
-            db.Usuario.findbyPk(req.body.id).then(usuario =>{
-                res.render('profile/'+ req.body.id)
-            })
-        }
         if(req.body.contraseña){
 
         let contraEncriptada = bcrypt.hashSync (req.body.contraseña);
@@ -188,7 +183,7 @@ const controlador = {
                 mail: req.body.mail,
                 telefono: req.body.telefono,
                 fecha: req.body.fecha,
-                image: req.file.filename,
+                image: '/images/users/'+ req.file.filename,
                 contraseña: contraEncriptada
     
             },{
@@ -198,7 +193,7 @@ const controlador = {
             } ).then(usuarioModificado => {
                 req.session.usuario= usuarioModificado
                 res.redirect ('/profile/'+ usuarioModificado.id)
-            })
+            }).catch (error => console.log(error))
         }
        
     },
@@ -271,7 +266,7 @@ usuario.productos.forEach(element =>{
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,
-            image:req.file.filename,
+            image:'/images/products/' + req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
             user_id: req.session.usuario.id
@@ -294,7 +289,7 @@ usuario.productos.forEach(element =>{
     modificarProducto: (req,res)=> {
         db.Producto.update ({
             nombre: req.body.nombre,
-            image:req.file.filename,
+            image:'/images/products/' + req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion
 
