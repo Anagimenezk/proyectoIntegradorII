@@ -135,7 +135,7 @@ hr {
   border-radius: 10px;
   height: 40px;
   font-size: 1.5em;
-  background-color: black;
+  background-color: #524a4d;
   color: white;
   
 }
@@ -144,9 +144,9 @@ hr {
   position: absolute;
   right: 2px;
   height: 60%;
-  background-color:black;
+  background-color:#524a4d;
   border: none;
-  border-left: solid 1px #111111;
+  border-left: solid 1px #524a4d;
   color: white;
   cursor: pointer;
   border-radius: 10%;
