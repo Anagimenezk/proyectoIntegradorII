@@ -47,7 +47,7 @@ const controlador = {
        // console.log(req.file)
        //console.log (req.body.telefono.length)
 
-       let errors = []
+       let errors = {}
 
        db.Usuario.findOne ({where: {mail:req.body.mail}})
        .then(usuario =>{
@@ -56,8 +56,8 @@ const controlador = {
            } else {
                mailExistente = null
            }
-           
-           if (req.body.mail == ''){
+
+          if (req.body.mail == ''){
                errors.message = 'Porfavor ingrese una direccion de email para poder registrarse';
                res.locals.errors = errors;
                return res.render ('register')
@@ -77,8 +77,7 @@ const controlador = {
                res.locals.errors = errors
                return res.render ('register')
            }
-    })  
-
+      
         db.Usuario.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
@@ -94,10 +93,10 @@ const controlador = {
             req.session.usuario = usuarioCreado
             res.redirect('/profile/'+ usuarioCreado.id)
         }).catch(error => console.log(error))
-
+    
         console.log(contraseñaEncriptada.length)
         console.log (req.file.filename)
-    },
+    })},
 
     
     login: (req,res) => {
