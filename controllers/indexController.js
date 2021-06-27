@@ -43,60 +43,64 @@ const controlador = {
     crearUsuario: (req,res)=> {
         const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
 
+    
        // console.log(req.body) 
        // console.log(req.file)
        //console.log (req.body.telefono.length)
 
-       let errors = {}
-
-       db.Usuario.findOne ({where: {mail:req.body.mail}})
-       .then(usuario =>{
-           if(usuario){
-               mailExistente = usuario.mail
-           } else {
-               mailExistente = null
-           }
-
-          if (req.body.mail == ''){
-               errors.message = 'Porfavor ingrese una direccion de email para poder registrarse';
-               res.locals.errors = errors;
-               return res.render ('register')
-           }
-           else if (mailExistente != null){
-               errors.message = 'La direccion de email ingresada ya existe'
-               res.locals.errors = errors
-               return res.render ('register')
-           }
-           else if (req.body.contraseña == ''){
-               error.message = 'Porfavor ingrese una contraseña para poder registrarse'
-               res.locals.error = errors
-               return res.render ('register')
-           }
-           else if (req.body.contraseña < 4){
-               errors.message = "La contraseña debe tener mas de 4 caracteres"
-               res.locals.errors = errors
-               return res.render ('register')
-           }
-      
-        db.Usuario.create({
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            mail: req.body.mail,
-            telefono: req.body.telefono,
-            fecha: req.body.fecha,
-            image: '/images/users/'+ req.file.filename,
-            contraseña: contraseñaEncriptada
-
-            
-
-        }).then (usuarioCreado => {
+     let errors = {};
+     if (req.body.mail == ""){
+         errors.register = "Por favor completar con su direccion de email"
+         res.locals.errors = errors
+         return res.render ('register')
+     }
+     else if (req.body.contraseña == ""){
+         errors.register = "Debe agregar una contraseña para poder registrarse"
+         res.locals.errors = errors
+         return res.render ('register')
+    
+     } else if (req.body.contraseña == ""){
+         errors.register = "Por favor reescribir la contraseña"
+         res.locals.errors = errors
+         return res.render ('register')
+     }else {
+         db.Usuario.findOne ({
+             where: [{
+                 mail:req.body.mail
+             }]
+         }) .then (usuario => {
+            if (usuario != null){
+                errors.register = "Esta direccion de email ya existe"
+                res.locals.errors = errors
+                return res.render ('register')
+            }else if (contraseña.lenght <4){
+            errors.register = "La contraseña no puede tener menos de 4 caracteres"
+            res.locals.errors = errors
+            return res.render ('register')
+         }else {
+           let usuario ={
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                mail: req.body.mail,
+                telefono: req.body.telefono,
+                fecha: req.body.fecha,
+                image: '/images/users/'+ req.file.filename,
+                contraseña: contraseñaEncriptada
+    
+             }
+         } usuario.create (usuarioCreado)
+         .then (usuarioCreado => {
             req.session.usuario = usuarioCreado
             res.redirect('/profile/'+ usuarioCreado.id)
         }).catch(error => console.log(error))
     
         console.log(contraseñaEncriptada.length)
         console.log (req.file.filename)
-    })},
+        } 
+        )
+     } 
+        
+    },
 
     
     login: (req,res) => {
