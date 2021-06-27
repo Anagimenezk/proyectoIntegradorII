@@ -322,21 +322,38 @@ usuario.productos.forEach(element =>{
     },
 
 
-    
+  
     allProducts: (req,res) => {
-     db.Producto.findAll({
-                
-            }).then(resultado =>{ 
-                res.render('allProducts',{productos:resultado})
-            })
-       
-       
+     
+        console.log(req.params)
+    const filtro = {
+        include: [
+            {association:'usuarios'},
+            {association:'comentarios', include: 'usuarios'}
+        ],
+    }
+    db.Producto.findAll().then(resultado =>{
         
-        
-        
-        //return res.render ('allProducts', {productos: productos.lista})
-    },
+     console.log(resultado) 
+     
 
+     //let respuesta= []
+    //resultado.comentarios.forEach(element =>{
+   // respuesta.push (element.id) })
+
+    res.render('allProducts', {productos:resultado})
+ 
+    
+  })
+        //db.Producto.findAll({
+                
+   // }).then(resultado =>{ 
+      //  res.render('allProducts',{productos:resultado})
+   // }) 
+         
+    },
+    
+   
  
     
    
