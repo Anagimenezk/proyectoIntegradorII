@@ -63,6 +63,7 @@ const controlador = {
          errors.register = "Por favor reescribir la contraseña"
          res.locals.errors = errors
          return res.render ('register')
+    
      }else {
          db.Usuario.findOne ({
              where: [{
@@ -73,7 +74,8 @@ const controlador = {
                 errors.register = "Esta direccion de email ya existe"
                 res.locals.errors = errors
                 return res.render ('register')
-            }else if (contraseña.lenght <4){
+                
+            } else if (contraseña.lenght <4){
             errors.register = "La contraseña no puede tener menos de 4 caracteres"
             res.locals.errors = errors
             return res.render ('register')
