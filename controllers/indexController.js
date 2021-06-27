@@ -64,7 +64,7 @@ const controlador = {
          res.locals.errors = errors
          return res.render ('register')
      }else {
-         user.findOne ({
+         db.Usuario.findOne ({
              where: [{
                  mail:req.body.mail
              }]
