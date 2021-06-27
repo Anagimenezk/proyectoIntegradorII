@@ -211,6 +211,7 @@ const controlador = {
 
         if (req.body.contraseña) {
 
+
             let contraEncriptada = bcrypt.hashSync(req.body.contraseña);
             db.Usuario.update({
                 nombre: req.body.nombre,
