@@ -232,6 +232,8 @@ const controlador = {
                 res.redirect ('/profile/'+ usuarioModificado.id)
             }).catch (error => console.log(error))
         }
+     
+
        
     },
 
@@ -301,17 +303,29 @@ usuario.productos.forEach(element =>{
     },
 
     crear: (req,res) => {
-        db.Producto.create( {
-            nombre: req.body.nombre,
-            image:'/images/products/' + req.file.filename,
-            fecha: req.body.fecha,
-            descripcion: req.body.descripcion,
-            user_id: req.session.usuario.id
-    
-        }).then(productoCreado =>{
-                res.redirect('/product/'+ productoCreado.id);
+        let errors = {};
 
-            });
+        db.Producto.findOne({
+            where: [{
+                nombre:req.body.nombre
+            }]
+        }).then (producto =>{
+        if (producto =! null){
+            errors.register = "El producto ingresado ya existe"
+            res.locals.errors = errors
+            return res.render ('product-add')}
+        })
+            db.Producto.create( {
+                nombre: req.body.nombre,
+                image:'/images/products/' + req.file.filename,
+                fecha: req.body.fecha,
+                descripcion: req.body.descripcion,
+                user_id: req.session.usuario.id
+        
+            }).then(productoCreado =>{
+            res.redirect('/product/'+ productoCreado.id);
+        })
+      
      
     },
 
