@@ -275,7 +275,13 @@ color:white;
   font-family: 'Poppins', sans-serif;
 }
 
-
+.alert{
+  border: 1px solid black;
+  background-color: rgba(111, 175, 191, 0.5) ;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  color: black;
+}
 
 /*====== Banner ======*/
 .banner {

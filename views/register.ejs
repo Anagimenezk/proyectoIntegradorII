@@ -21,6 +21,9 @@
 			<!-- Show the "ultimos" products -->
 			<div class="form-registracion">
 				<h2 class="col-12"> 
+				<% if (locals.errors) {%> 
+				<p class="alert"> <%= errors.register  %> </p>
+				<% } %> 
 					<form class="tablaRegistracion" action="/register" method="POST" enctype="multipart/form-data" > 
 					<ul class= "registracionItems">
 					  
@@ -57,7 +60,6 @@
 						<!-- <label class="form-label" for="contraseña">Contraseña:</label>-->
 						 <input class="form-input" type="password" id="contraseña"placeholder="Contraseña" name="contraseña">
 					 </li>
-	
 
 					 <button class="actualizar-perfil" type="submit" value="Register"> Registrarme</button>
 	

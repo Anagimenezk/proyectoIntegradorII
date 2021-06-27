@@ -41,6 +41,7 @@ const controlador = {
     },
 
     crearUsuario: (req,res)=> {
+        let contraseña = req.body.contraseña
         const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
 
     
@@ -53,8 +54,8 @@ const controlador = {
          errors.register = "Por favor completar con su direccion de email"
          res.locals.errors = errors
          return res.render ('register')
-     }
-     else if (req.body.contraseña == ""){
+    
+    } else if (req.body.contraseña == ""){
          errors.register = "Debe agregar una contraseña para poder registrarse"
          res.locals.errors = errors
          return res.render ('register')
@@ -64,23 +65,25 @@ const controlador = {
          res.locals.errors = errors
          return res.render ('register')
     
-     }else {
+    } else {
          db.Usuario.findOne ({
              where: [{
                  mail:req.body.mail
              }]
          }) .then (usuario => {
-            if (usuario != null){
-                errors.register = "Esta direccion de email ya existe"
+
+                 if (usuario != null){
+                errors.register = "Este email ya existe"
                 res.locals.errors = errors
                 return res.render ('register')
-                
-            } else if (contraseña.lenght <4){
-            errors.register = "La contraseña no puede tener menos de 4 caracteres"
-            res.locals.errors = errors
-            return res.render ('register')
-         }else {
-           let usuario ={
+
+             } else if (contraseña.lenght <4){
+             errors.register = "La contraseña no puede tener menos de 4 caracteres"
+             res.locals.errors = errors
+             return res.render ('register')
+         }
+         else {
+             db.Usuario.create ({
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 mail: req.body.mail,
@@ -88,18 +91,18 @@ const controlador = {
                 fecha: req.body.fecha,
                 image: '/images/users/'+ req.file.filename,
                 contraseña: contraseñaEncriptada
-    
-             }
-         } usuario.create (usuarioCreado)
-         .then (usuarioCreado => {
+             })
+         
+        .then (usuarioCreado => {
             req.session.usuario = usuarioCreado
             res.redirect('/profile/'+ usuarioCreado.id)
+
         }).catch(error => console.log(error))
     
         console.log(contraseñaEncriptada.length)
         console.log (req.file.filename)
-        } 
-        )
+        }
+      })
      } 
         
     },
