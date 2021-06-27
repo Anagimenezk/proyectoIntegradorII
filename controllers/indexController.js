@@ -42,17 +42,49 @@ const controlador = {
 
     crearUsuario: (req,res)=> {
         const contraseñaEncriptada = bcrypt.hashSync (req.body.contraseña, 10);
+
        // console.log(req.body) 
        // console.log(req.file)
        //console.log (req.body.telefono.length)
 
+       let errors = {}
+
+       db.Usuario.findOne ({where: {mail:req.body.mail}})
+       .then(usuario =>{
+           if(usuario){
+               mailExistente = usuario.mail
+           } else {
+               mailExistente = null
+           }
+
+          if (req.body.mail == ''){
+               errors.message = 'Porfavor ingrese una direccion de email para poder registrarse';
+               res.locals.errors = errors;
+               return res.render ('register')
+           }
+           else if (mailExistente != null){
+               errors.message = 'La direccion de email ingresada ya existe'
+               res.locals.errors = errors
+               return res.render ('register')
+           }
+           else if (req.body.contraseña == ''){
+               error.message = 'Porfavor ingrese una contraseña para poder registrarse'
+               res.locals.error = errors
+               return res.render ('register')
+           }
+           else if (req.body.contraseña < 4){
+               errors.message = "La contraseña debe tener mas de 4 caracteres"
+               res.locals.errors = errors
+               return res.render ('register')
+           }
+      
         db.Usuario.create({
             nombre: req.body.nombre,
             apellido: req.body.apellido,
             mail: req.body.mail,
             telefono: req.body.telefono,
             fecha: req.body.fecha,
-            image: req.file.filename,
+            image: '/images/users/'+ req.file.filename,
             contraseña: contraseñaEncriptada
 
             
@@ -61,10 +93,10 @@ const controlador = {
             req.session.usuario = usuarioCreado
             res.redirect('/profile/'+ usuarioCreado.id)
         }).catch(error => console.log(error))
-
+    
         console.log(contraseñaEncriptada.length)
         console.log (req.file.filename)
-    },
+    })},
 
     
     login: (req,res) => {
@@ -118,7 +150,9 @@ const controlador = {
             include: [
                 {association:'usuarios'},
                 {association:'comentarios', include: 'usuarios'}
-            ]
+            ],
+             order:[
+                ['comentarios','createdAt','DESC' ]]
         }
         db.Producto.findByPk(req.params.id,filtro).then(producto =>{
          console.log(producto) 
@@ -139,13 +173,6 @@ const controlador = {
     modificarUsuario: (req,res)=> {
         let errors = {}
 
-        if (res.locals.userId!= req.body.id){
-            errors.message = "Lo siento, usted no tiene acceso a la edicion de este perfil"
-            res.locals.errors = errors 
-            db.Usuario.findbyPk(req.body.id).then(usuario =>{
-                res.render('profile/'+ req.body.id)
-            })
-        }
         if(req.body.contraseña){
 
         let contraEncriptada = bcrypt.hashSync (req.body.contraseña);
@@ -155,7 +182,7 @@ const controlador = {
                 mail: req.body.mail,
                 telefono: req.body.telefono,
                 fecha: req.body.fecha,
-                image: req.file.filename,
+                image: '/images/users/'+ req.file.filename,
                 contraseña: contraEncriptada
     
             },{
@@ -165,7 +192,7 @@ const controlador = {
             } ).then(usuarioModificado => {
                 req.session.usuario= usuarioModificado
                 res.redirect ('/profile/'+ usuarioModificado.id)
-            })
+            }).catch (error => console.log(error))
         }
        
     },
@@ -195,7 +222,8 @@ const controlador = {
     search: (req,res)=> {
         const filtro = {
             where:{
-                nombre: {[Op.like]: '%'+ req.query.search+ '%'}
+                nombre: {[Op.like]: '%'+ req.query.search+  '%'},
+                descripcion: {[Op.like]:'%'+req.query.search + '%'}
             }
         }
         db.Producto.findAll(filtro).then(resultado =>{
@@ -237,7 +265,7 @@ usuario.productos.forEach(element =>{
     crear: (req,res) => {
         db.Producto.create( {
             nombre: req.body.nombre,
-            image:req.file.filename,
+            image:'/images/products/' + req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion,
             user_id: req.session.usuario.id
@@ -260,7 +288,7 @@ usuario.productos.forEach(element =>{
     modificarProducto: (req,res)=> {
         db.Producto.update ({
             nombre: req.body.nombre,
-            image:req.file.filename,
+            image:'/images/products/' + req.file.filename,
             fecha: req.body.fecha,
             descripcion: req.body.descripcion
 

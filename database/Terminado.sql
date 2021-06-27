@@ -150,3 +150,14 @@ MODIFY contraseña VARCHAR (300) NOT NULL;
 
 ALTER TABLE usuarios
 ADD image VARCHAR (500) NOT NULL;
+
+
+
+UPDATE productos 
+SET image = "/images/products/productImage-1624660990936.png"
+WHERE id = 13;
+
+
+UPDATE usuarios 
+SET image = "images/users/image-1624660801172.JPG"
+WHERE id = 6;

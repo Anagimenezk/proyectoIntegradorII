@@ -135,7 +135,7 @@ hr {
   border-radius: 10px;
   height: 40px;
   font-size: 1.5em;
-  background-color: white;
+  background-color: #524a4d;
   color: white;
   
 }
@@ -144,9 +144,9 @@ hr {
   position: absolute;
   right: 2px;
   height: 60%;
-  background-color:black;
+  background-color:#524a4d;
   border: none;
-  border-left: solid 1px #111111;
+  border-left: solid 1px #524a4d;
   color: white;
   cursor: pointer;
   border-radius: 10%;
@@ -475,10 +475,38 @@ margin-right: 0px;
   font-weight: 400;
   font-size: 2.8em;
 }
-
+.productDescriptionBox{
+  display: grid;
+  grid-template-columns: 35% 62%;
+  justify-content: space-around;
+  
+}
 .product-detail-description {
   padding: 15px 15px 15px 40px;
   font-size: 1.8em;
+  line-height: 1.5;
+  color: #4a2e3b;
+  font-family: 'PT Sans', sans-serif;
+
+}
+.product-detail-description2 {
+  padding: 0px 0px 0px 0px 0px;
+  margin: 20px 0px 15px 40px;
+  font-size: 2.2em;
+  line-height: 1.5;
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border: solid 1px white;
+  
+}
+.product-detail-description2  a:hover {
+  color: rgba(230, 238, 252, 0.5) ;
+}
+.product-detail-description3 {
+  padding: 20px 15px 15px 0px;
+  font-size: 2.2em;
   line-height: 1.5;
   color: #4a2e3b;
   font-family: 'PT Sans', sans-serif;
@@ -522,7 +550,7 @@ margin-right: 0px;
 
 .actions-list p {
   color: var(--gray);
-  font-size: 1.7em;
+  font-size: 1.3em;
   margin: 0;
 }
 .user{
@@ -530,6 +558,7 @@ margin-right: 0px;
   padding-top: 2px;
   
 }
+
 .icono-usuario-comentario{
   display: block;
   font-size: 20px;
@@ -580,7 +609,7 @@ margin-right: 0px;
   padding-bottom: 7.5px;
   border-bottom: 1px solid #dcdcdc;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .comments img{
   width: 40px;
@@ -589,6 +618,8 @@ margin-right: 0px;
 }
 .comments .data{
   width: 85%;
+  margin-left: 4px;
+  padding-top: 2px;
   
 }
 .comments p{
@@ -596,7 +627,9 @@ margin-right: 0px;
   margin-top: 0;
 }
 .comments .user{
-  font-size: 1.7em;
+  padding-left: 2px;
+  padding-top: 5px;
+  font-size: 1.4em;
 }
 
 /*====== Formularios ======*/
