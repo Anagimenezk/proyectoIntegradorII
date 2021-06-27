@@ -108,13 +108,22 @@ const controlador = {
     },
 
     loginUsuario: (req,res)=> {
-        
+        let contraseña = req.body.contraseña
         const filtro = {
             where: {
                 mail:req.body.mail
             }
         }
-        
+        db.Usuario.findOne({
+            where: [{
+                mail:req.body.mail
+            }]
+        }).then (usuario =>{
+        if (usuario == null){
+            errors.register = "El mail ingresado no existe"
+            res.locals.errors = errors
+            return res.render ('login')}
+        })
         let errors = {};
         db.Usuario.findOne(filtro).then(usuario =>{
             console.log(req.body.contrasenia)
@@ -122,11 +131,8 @@ const controlador = {
             console.log(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña))
        
        
-      if (usuario == null){
-          errors.register = "El mail ingresado no existe"
-          res.locals.errors = errors
-          return res.render ('login')
-      }
+     
+      
 
             if(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)){
                 req.session.usuario = {
