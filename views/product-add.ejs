@@ -20,6 +20,11 @@
 			
 	<div class="form-registracion">
 		<h2 class="col-12"> 
+			<% if (locals.errors) {%> 
+			<p class="alert"> <%= errors.register  %> </p>
+			<% } %> 
+		<h2 class="col-12"> 
+		<h2 class="col-12"> 
 		<form class="tablaRegistracion" action="/add" method="POST" enctype="multipart/form-data">
 			<ul class= "registracionItems">
 			  <li class="bordearDiferente"> 
