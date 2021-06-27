@@ -38,9 +38,22 @@ router.post('/profile-edit',uploadEdit.single('edit-image'), indexController.mod
 
 router.get ('/allProducts', indexController.allProducts);
 
+const multerModif = multer.diskStorage({
+  destination: (req, file, cb) => {
+    let direccion = 'public/images/products';
+    cb(null, direccion);
+  },
+  filename: (req, file, cb) => {
+    let nombreArchivo = file.fieldname + '-' + Date.now() + path.extname(file.originalname);
+    cb(null, nombreArchivo);
+  }
+});
+
+const uploadModif = multer({  storage: multerModif});
+
 router.get('/modificar', indexController.modificarForm);
 
-router.post('/modificar', indexController.modificarProducto);
+router.post('/modificar', uploadModif.single ('productModif'), indexController.modificarProducto);
 //falta agregar multer
 
 router.post('/borrar', indexController.borrarProducto);
