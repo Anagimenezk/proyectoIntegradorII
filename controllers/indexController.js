@@ -108,18 +108,21 @@ const controlador = {
     },
 
     loginUsuario: (req,res)=> {
+        
         const filtro = {
             where: {
                 mail:req.body.mail
             }
         }
+        
         let errors = {};
         db.Usuario.findOne(filtro).then(usuario =>{
             console.log(req.body.contrasenia)
             console.log(usuario.contraseña)
-            console.log(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña));
+            console.log(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña))
        
-      if (usuario){
+       
+      if (usuario == null){
           errors.register = "El mail ingresado no existe"
           res.locals.errors = errors
           return res.render ('login')
