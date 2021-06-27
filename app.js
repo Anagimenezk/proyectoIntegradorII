@@ -39,10 +39,7 @@ const db = require('./database/models');
 app.use(function(req, res, next) {
   if(req.cookies.userId && !req.session.usuario) {
     db.Usuario.findByPk(req.cookies.userId).then(resultado => {
-      req.session.usuario = {
-        mail: usuario.mail,
-        id: usuario.id
-      }
+      req.session.usuario = resultado
       return next();
     });
   } else {

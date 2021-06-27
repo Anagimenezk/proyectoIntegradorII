@@ -22,8 +22,7 @@
 				<%= producto.nombre %></h2> 
 <% if (locals.logueado && locals.userId == producto.usuarios.id){ %> 
 			<p class="product-detail-description">
-				<form class="tablaRegistracion" action="/modificar" method="GET">
-					<input type="hidden" name="id" value="<%= producto.id %>">
+				<form class="tablaRegistracion" action="/modificar/<%= producto.id %>" method="GET">
 					<input class="actualizar-perfil"  type="submit" value="Modificar">
 				  </form>
 				  <form class="tablaRegistracion" action="/borrar" method="POST">
