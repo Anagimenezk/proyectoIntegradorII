@@ -19,6 +19,10 @@
 			<!-- Show the "ultimos" products -->
 			<div class="form-registracion">
 				<h2 class="col-12"> 
+					<% if (locals.errors) {%> 
+					<p class="alert"> <%= errors.register  %> </p>
+					<% } %> 
+				<h2 class="col-12"> 
 				<!--FORMULARIO LOGIN-->
 					<form class="tablaRegistracion" action="/login" method="POST" id="form">
 					<ul class= "registracionItems">

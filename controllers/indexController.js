@@ -54,8 +54,7 @@ const controlador = {
          errors.register = "Por favor completar con su direccion de email"
          res.locals.errors = errors
          return res.render ('register')
-    
-    } else if (req.body.contraseña == ""){
+     }else if (req.body.contraseña == ""){
          errors.register = "Debe agregar una contraseña para poder registrarse"
          res.locals.errors = errors
          return res.render ('register')
@@ -64,26 +63,22 @@ const controlador = {
          errors.register = "Por favor reescribir la contraseña"
          res.locals.errors = errors
          return res.render ('register')
-    
-    } else {
+     }else {
          db.Usuario.findOne ({
              where: [{
                  mail:req.body.mail
              }]
          }) .then (usuario => {
-
-                 if (usuario != null){
+            if (usuario != null){
                 errors.register = "Este email ya existe"
                 res.locals.errors = errors
                 return res.render ('register')
-
-             } else if (contraseña.lenght <4){
-             errors.register = "La contraseña no puede tener menos de 4 caracteres"
-             res.locals.errors = errors
-             return res.render ('register')
-         }
-         else {
-             db.Usuario.create ({
+            }else if (contraseña.lenght <4){
+            errors.register = "La contraseña no puede tener menos de 4 caracteres"
+            res.locals.errors = errors
+            return res.render ('register')
+         }else {
+            db.Usuario.create ({
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
                 mail: req.body.mail,
@@ -91,18 +86,18 @@ const controlador = {
                 fecha: req.body.fecha,
                 image: '/images/users/'+ req.file.filename,
                 contraseña: contraseñaEncriptada
+    
              })
-         
-        .then (usuarioCreado => {
+      
+         .then (usuarioCreado => {
             req.session.usuario = usuarioCreado
             res.redirect('/profile/'+ usuarioCreado.id)
-
         }).catch(error => console.log(error))
     
         console.log(contraseñaEncriptada.length)
         console.log (req.file.filename)
-        }
-      })
+        } 
+    })
      } 
         
     },
@@ -118,6 +113,7 @@ const controlador = {
                 mail:req.body.mail
             }
         }
+        let errors = {};
         db.Usuario.findOne(filtro).then(usuario =>{
             console.log(req.body.contrasenia)
             console.log(usuario.contraseña)
@@ -136,10 +132,10 @@ const controlador = {
                     res.cookie('user_id',usuario.id,{maxAge: 1000 * 60 * 5})
                 }
                 res.redirect('/')
-            }
-            else{
-                console.log('contraseñaIncorrecta')
-                
+            }else {
+                errors.register = "Contraseña incorreta"
+                res.locals.errors = errors
+                return res.render ('login')
             }
             
         }).catch(error => console.log(error))
