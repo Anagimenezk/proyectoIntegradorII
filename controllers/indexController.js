@@ -119,7 +119,7 @@ const controlador = {
             console.log(usuario.contraseña)
             console.log(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña));
        
-      if (mail){
+      if (usuario){
           errors.register = "El mail ingresado no existe"
           res.locals.errors = errors
           return res.render ('login')
