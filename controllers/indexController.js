@@ -283,6 +283,7 @@ usuario.productos.forEach(element =>{
     },
 
     crear: (req,res) => {
+        let erros = {};
         db.Producto.create( {
             nombre: req.body.nombre,
             image:'/images/products/' + req.file.filename,
@@ -294,6 +295,19 @@ usuario.productos.forEach(element =>{
                 res.redirect('/product/'+ productoCreado.id);
 
             });
+
+            productos.findOne({
+                where:[{
+                    nombre: req.body.nombre
+                }]
+            }).then (producto=> {
+                if (producto == null){
+                    errors.register = "Este producto ya fue agregado"
+                    res.locals.erros = error
+                    return res.render ('product-add')
+
+                }
+            })
      
     },
 
