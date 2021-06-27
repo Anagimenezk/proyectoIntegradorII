@@ -8,6 +8,7 @@ const Op = db.Sequelize.Op;
 const bcrypt = require('bcryptjs');
 
 const controlador = {
+   
     index: (req, res) => {
         let filtro = {
             order: [
@@ -412,7 +413,7 @@ const controlador = {
                 }
             ],
         }
-        db.Producto.findAll().then(resultado => {
+        db.Producto.findAll(filtro).then(resultado => {
 
             console.log(resultado)
 
