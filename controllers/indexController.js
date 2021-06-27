@@ -361,19 +361,20 @@ usuario.productos.forEach(element =>{
             {association:'comentarios', include: 'usuarios'}
         ],
     }
-    db.Producto.findAll().then(resultado =>{
+    db.Producto.findAll(filtro).then(resultado =>{
         
      console.log(resultado) 
      
-
-     //let respuesta= []
-    //resultado.comentarios.forEach(element =>{
-   // respuesta.push (element.id) })
 
     res.render('allProducts', {productos:resultado})
  
     
   })
+
+    //let respuesta= []
+    //resultado.comentarios.forEach(element =>{
+   // respuesta.push (element.id) })
+
         //db.Producto.findAll({
                 
    // }).then(resultado =>{ 
