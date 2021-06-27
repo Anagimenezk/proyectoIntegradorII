@@ -21,6 +21,9 @@
 	
 			<div class="form-registracion">
 				<h2 class="col-12"> 
+					<% if (locals.errors) {%> 
+						<p class="alert"> <%= errors.register  %> </p>
+						<% } %> 
 					<form class="tablaRegistracion" action="/profile-edit" method="POST" enctype="multipart/form-data" > 
 						<ul class= "registracionItems">
 						  

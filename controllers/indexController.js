@@ -192,7 +192,7 @@ const controlador = {
 
     modificarUsuario: (req,res)=> {
         let errors = {}
-
+        
         if(req.body.contraseña){
 
         let contraEncriptada = bcrypt.hashSync (req.body.contraseña);
@@ -204,6 +204,24 @@ const controlador = {
                 fecha: req.body.fecha,
                 image: '/images/users/'+ req.file.filename,
                 contraseña: contraEncriptada
+    
+            },{
+                where: {
+                    id: req.body.id
+                }
+            } ).then(usuarioModificado => {
+                req.session.usuario= usuarioModificado
+                res.redirect ('/profile/'+ usuarioModificado.id)
+            }).catch (error => console.log(error))
+        }
+        else {
+            db.Usuario.update ({
+                nombre: req.body.nombre,
+                apellido: req.body.apellido,
+                mail: req.body.mail,
+                telefono: req.body.telefono,
+                fecha: req.body.fecha,
+                image: '/images/users/'+ req.file.filename,
     
             },{
                 where: {
