@@ -401,26 +401,31 @@ const controlador = {
     allProducts: (req, res) => {
 
         console.log(req.params)
-    const filtro = {
-        include: [
-            {association:'usuarios'},
-            {association:'comentarios', include: 'usuarios'}
-        ],
-    }
-    db.Producto.findAll(filtro).then(resultado =>{
-        
-     console.log(resultado) 
-     
+        const filtro = {
+            include: [{
+                    association: 'usuarios'
+                },
+                {
+                    association: 'comentarios',
+                    include: 'usuarios'
+                }
+            ],
+        }
+        db.Producto.findAll().then(resultado => {
 
-    res.render('allProducts', {productos:resultado})
- 
-    
-  })
+            console.log(resultado)
 
-    //let respuesta= []
-    //resultado.comentarios.forEach(element =>{
-   // respuesta.push (element.id) })
 
+            //let respuesta= []
+            //resultado.comentarios.forEach(element =>{
+            // respuesta.push (element.id) })
+
+            res.render('allProducts', {
+                productos: resultado
+            })
+
+
+        })
         //db.Producto.findAll({
 
         // }).then(resultado =>{ 
