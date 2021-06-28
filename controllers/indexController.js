@@ -342,7 +342,7 @@ const controlador = {
                 [Op.or]: [{
                 nombre: {
                     [Op.like]: '%' + req.query.search + '%'
-                },
+                } },{
                 descripcion: {
                     [Op.like]: '%' + req.query.search + '%'
                 }
