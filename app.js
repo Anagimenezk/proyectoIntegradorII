@@ -21,10 +21,10 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// Habilitamos a express a usar sesiones (req.session.abc)
+// Habilitamos a express a usar sesiones (req.session.abc) LO REQUERIMOS 
 
 const session = require('express-session');
-
+// configuramos 
 app.use(session( {
   secret: "sistema de login",
 	resave: false,

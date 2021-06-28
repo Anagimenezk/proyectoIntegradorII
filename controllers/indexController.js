@@ -83,7 +83,7 @@ const controlador = {
                     errors.register = "Este email ya existe"
                     res.locals.errors = errors
                     return res.render('register')
-                } else if (contraseña.lenght < 4) {
+                } else if (contraseña.length < 4) {
                     errors.register = "La contraseña no puede tener menos de 4 caracteres"
                     res.locals.errors = errors
                     return res.render('register')
@@ -236,6 +236,7 @@ const controlador = {
                     usuario: usuarioModificado,
                     error: "Estos campos no pueden estar vacios"
                 })
+                
             )
         }
         if (req.body.contraseña) {
