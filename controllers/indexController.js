@@ -327,7 +327,7 @@ const controlador = {
                 id: req.body.id,
             }
         }).then(() => {
-            res.redirect('/')
+            res.redirect('/product/' + req.body.product_id)
         })
     },
 

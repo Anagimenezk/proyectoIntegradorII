@@ -70,6 +70,7 @@
 						<% if (logueado && userId == element.usuarios.id) { %> 
 								<form action="/borrarComentario" method="POST">
 									<input type="hidden" name="id" value="<%= element.id %> ">
+									<input type="hidden" name="product_id" value="<%= element.product_id %> ">
 									<button class="btn mt-3 ml-4" type="submit" value="borrar" > Eliminar</button>
 								</form>
 							<% } %> 
