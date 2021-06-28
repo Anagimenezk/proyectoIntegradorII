@@ -324,6 +324,7 @@ const controlador = {
 
     },
     borrarComentario: (req, res) => {
+ 
         db.Comentario.destroy({
             where: {
                 id: req.body.id,
@@ -336,14 +337,16 @@ const controlador = {
     search: (req, res) => {
         //cambiar algo
         const filtro = {
+            include: [{association: 'usuarios'}],
             where: {
+                [Op.or]: [{
                 nombre: {
                     [Op.like]: '%' + req.query.search + '%'
                 },
                 descripcion: {
                     [Op.like]: '%' + req.query.search + '%'
                 }
-            }
+            }]}
         }
         db.Producto.findAll(filtro).then(resultado => {
             res.render('search-results', {

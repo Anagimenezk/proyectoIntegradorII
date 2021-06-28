@@ -54,12 +54,6 @@
 			<% producto.comentarios.forEach(element => { %>
 				<a href="/profile/<%= element.user_id %> ">
 					<article>
-						<% if (element.usuarios.image == undefined)  {%> 
-							<div class="icono-usuario-comentario">
-								<img src="/images/users/logo.png" alt="">
-							</div>
-
-						<% } %> 
 						
 						
 						<div class="icono-usuario-comentario">
