@@ -160,10 +160,6 @@ const controlador = {
             console.log(usuario.contraseña)
             console.log(bcrypt.compareSync(req.body.contrasenia, usuario.contraseña))
 
-
-
-
-
             if (bcrypt.compareSync(req.body.contrasenia, usuario.contraseña)) {
                 req.session.usuario = usuario
 
