@@ -8,7 +8,7 @@ const Op = db.Sequelize.Op;
 const bcrypt = require('bcryptjs');
 
 const controlador = {
-   
+
     index: (req, res) => {
         let filtro = {
             order: [
@@ -87,7 +87,7 @@ const controlador = {
                     errors.register = "La contraseña no puede tener menos de 4 caracteres"
                     res.locals.errors = errors
                     return res.render('register')
-                } else {
+                } else if (req.file) {
                     db.Usuario.create({
                             nombre: req.body.nombre,
                             apellido: req.body.apellido,
@@ -95,6 +95,25 @@ const controlador = {
                             telefono: req.body.telefono,
                             fecha: req.body.fecha,
                             image: '/images/users/' + req.file.filename,
+                            contraseña: contraseñaEncriptada
+
+                        })
+
+                        .then(usuarioCreado => {
+                            req.session.usuario = usuarioCreado
+                            res.redirect('/profile/' + usuarioCreado.id)
+                        }).catch(error => console.log(error))
+
+                    console.log(contraseñaEncriptada.length)
+                    console.log(req.file.filename)
+                } else {
+                    db.Usuario.create({
+                            nombre: req.body.nombre,
+                            apellido: req.body.apellido,
+                            mail: req.body.mail,
+                            telefono: req.body.telefono,
+                            fecha: req.body.fecha,
+                            image: '/images/users/sinFoto.jpg',
                             contraseña: contraseñaEncriptada
 
                         })
@@ -202,7 +221,8 @@ const controlador = {
     profiledit: (req, res) => {
         db.Usuario.findByPk(req.query.id).then(
             usuarioModificado => res.render('profile-edit', {
-                usuario: usuarioModificado
+                usuario: usuarioModificado,
+                error: null
             })
         )
     },
@@ -210,10 +230,52 @@ const controlador = {
     modificarUsuario: (req, res) => {
         let errors = {}
 
+        if (!req.body.nombre || !req.body.apellido || !req.body.mail || !req.body.telefono || !req.body.fecha) {
+            db.Usuario.findByPk(req.body.id).then(
+                usuarioModificado => res.render('profile-edit', {
+                    usuario: usuarioModificado,
+                    error: "Estos campos no pueden estar vacios"
+                })
+            )
+        }
         if (req.body.contraseña) {
+            if (req.file) {
+                let contraEncriptada = bcrypt.hashSync(req.body.contraseña);
+                db.Usuario.update({
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    mail: req.body.mail,
+                    telefono: req.body.telefono,
+                    fecha: req.body.fecha,
+                    image: '/images/users/' + req.file.filename,
+                    contraseña: contraEncriptada
 
+                }, {
+                    where: {
+                        id: req.body.id
+                    }
+                }).then(usuarioModificado => {
+                    res.redirect('/profile/' + req.body.id)
+                }).catch(error => console.log(error))
+            } else {
+                let contraEncriptada = bcrypt.hashSync(req.body.contraseña);
+                db.Usuario.update({
+                    nombre: req.body.nombre,
+                    apellido: req.body.apellido,
+                    mail: req.body.mail,
+                    telefono: req.body.telefono,
+                    fecha: req.body.fecha,
+                    contraseña: contraEncriptada
 
-            let contraEncriptada = bcrypt.hashSync(req.body.contraseña);
+                }, {
+                    where: {
+                        id: req.body.id
+                    }
+                }).then(usuarioModificado => {
+                    res.redirect('/profile/' + req.body.id)
+                }).catch(error => console.log(error))
+            }
+        } else if (req.file) {
             db.Usuario.update({
                 nombre: req.body.nombre,
                 apellido: req.body.apellido,
@@ -221,7 +283,6 @@ const controlador = {
                 telefono: req.body.telefono,
                 fecha: req.body.fecha,
                 image: '/images/users/' + req.file.filename,
-                contraseña: contraEncriptada
 
             }, {
                 where: {
@@ -237,8 +298,6 @@ const controlador = {
                 mail: req.body.mail,
                 telefono: req.body.telefono,
                 fecha: req.body.fecha,
-                image: '/images/users/' + req.file.filename,
-
             }, {
                 where: {
                     id: req.body.id
@@ -368,7 +427,7 @@ const controlador = {
             res.render('modificar', {
                 producto: productoModificado
             })
-            })
+        })
 
     },
 
