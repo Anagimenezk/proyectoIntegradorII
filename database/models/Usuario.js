@@ -29,12 +29,18 @@ module.exports = (sequelize, dataTypes) => {
         },
         image: {
             type: dataTypes.STRING(500)
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
         }
 
 
     }, {
         tableName: "usuarios",
-        timestamps: false
+   
     });
     
     Usuario.associate = (db)=> {

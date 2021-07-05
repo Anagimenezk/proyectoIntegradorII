@@ -21,12 +21,17 @@ module.exports = (sequelize, dataTypes) => {
         
         product_id: {
             type: dataTypes.INTEGER
+        },
+        createdAt: {
+            type: dataTypes.DATE
+        },
+        updatedAt: {
+            type: dataTypes.DATE
         }
-
 
     }, {
         tableName: "comentarios",
-        timestamps: false
+        
     })
    Comentario.associate = (db)=> {
        Comentario.belongsTo(db.Producto, {

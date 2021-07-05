@@ -23,12 +23,18 @@ module.exports = (sequelize, dataTypes) => {
             },
             user_id: {
                 type: dataTypes.INTEGER
+            },
+            createdAt: {
+                type: dataTypes.DATE
+            },
+            updatedAt: {
+                type: dataTypes.DATE
             }
 
 
         }, {
             tableName: "productos",
-            timestamps: false
+            
         });
        Product.associate = (db)=>{
           Product.hasMany (db.Comentario, {
